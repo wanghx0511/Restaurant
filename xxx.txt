@@ -7,7 +7,7 @@
 "debug":"{}",
 "fashion":"{\"strO\":1385,\"con\":1385,\"bone\":1385,\"dex\":1385,\"tenacityPct\":7000}",
 "fiveElements":"{\"atkO\":6300,\"atkI\":6300,\"defO\":12151,\"defI\":12151,\"hit\":3619,\"dodge\":2025,\"crit\":3619,\"tough\":2025,\"goldAtk\":1800,\"goldDef\":545,\"iceDef\":545,\"fireAtk\":1800,\"fireDef\":545,\"xuanAtk\":1800,\"xuanDef\":545,\"thunderAtk\":1800,\"hpMax\":153005}",
-"id":55754351,
+"id":55754351,大魔王明接我
 "itemEquip":"{\"atkI\":14756,\"defO\":6556,\"defI\":11497,\"hit\":424,\"crit\":1631,\"tough\":1740,\"hpMax\":254379}",
 "kungfuSecrets":"{\"atkI\":3805,\"defO\":3802,\"crit\":3488,\"goldDef\":3396,\"iceDef\":3790,\"fireDef\":3790,\"thunderAtk\":13278,\"hpMax\":116286,\"combat\":62000,\"hpMaxPct\":2000,\"atkIPct\":4000,\"dodgePct\":2000}",
 "level":"{\"strO\":670,\"strI\":0,\"con\":670,\"bone\":670,\"dex\":670}",
