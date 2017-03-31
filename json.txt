@@ -1,4 +1,4 @@
-擦擦擦，大魔王干啥呢！！"artifact":"{\"atkI\":27591,\"defO\":3445,\"defI\":3412,\"hit\":4407,\"dodge\":535,\"crit\":4359,\"tough\":540,\"hpMax\":575612}",
+"artifact":"{\"atkI\":27591,\"defO\":3445,\"defI\":3412,\"hit\":4407,\"dodge\":535,\"crit\":4359,\"tough\":540,\"hpMax\":575612}",
 "buddy":"{\"atkO\":62982,\"atkI\":62982,\"defO\":55610,\"defI\":55864,\"hit\":10200,\"dodge\":10017,\"crit\":10049,\"tough\":10199,\"goldAtk\":0,\"goldDef\":0,\"iceAtk\":0,\"iceDef\":0,\"fireAtk\":0,\"fireDef\":0,\"xuanAtk\":0,\"xuanDef\":0,\"thunderAtk\":0,\"thunderDef\":0,\"resDef\":0,\"hpMax\":1141042,\"mpMax\":0}",
 "buddyRelate":"{\"atkI\":3377,\"defO\":5043,\"defI\":5043,\"hit\":685,\"dodge\":601,\"crit\":685,\"tough\":601,\"hpMax\":67572}",
 "collection":"{\"atkI\":635,\"defO\":439,\"defI\":771,\"hit\":212,\"dodge\":197,\"crit\":106,\"tough\":196,\"hpMax\":10450}",
