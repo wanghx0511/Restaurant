@@ -1,4 +1,4 @@
 function warnUser(): void {
-    alert("This is my warning mess22age");
+    alert("This is my warning message");
 }
 warnUser();
