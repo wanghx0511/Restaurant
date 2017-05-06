@@ -35,7 +35,6 @@ class GameMain{
             {url:"res/json/ConfStage.json", type:Laya.Loader.JSON},
             {url:"res/json/ConfWorld.json", type:Laya.Loader.JSON},
         ];
-        new Stage();
         new Loading(res);
     }
 
