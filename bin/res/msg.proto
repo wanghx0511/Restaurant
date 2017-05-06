@@ -1,0 +1,13 @@
+message UserModel {
+	option msgid = 2;
+	required string UserNo	 = 1;
+	required string PassWord = 2;
+	required string Status	 = 3;
+}
+
+message UserModel2 {
+	option msgid = 12;
+	required string UserNo	 = 1;
+	required string PassWord = 2;
+	required string Status	 = 3;
+}

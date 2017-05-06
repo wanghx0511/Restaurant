@@ -1,0 +1,6 @@
+[
+{"bubblePic":"BubGuest03.png","bubblePosX":100,"name":"老王","needs":"[8]","picture":"customer-05.png","posY":450,"sn":1,"tip":20,"tiptime":10000,"waittime":50000},
+{"bubblePic":"BubGuest03.png","bubblePosX":100,"name":"老李","needs":"[8,7]","picture":"customer-04.png","posY":450,"sn":2,"tip":20,"tiptime":10000,"waittime":50000},
+{"bubblePic":"BubGuest03.png","bubblePosX":100,"name":"老张","needs":"[11,11]","picture":"customer-03.png","posY":450,"sn":3,"tip":20,"tiptime":10000,"waittime":50000},
+{"bubblePic":"BubGuest03.png","bubblePosX":100,"name":"山炮","needs":"[2]","picture":"customer-02.png","posY":450,"sn":4,"tip":20,"tiptime":10000,"waittime":50000}
+]

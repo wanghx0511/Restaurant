@@ -1,0 +1,16 @@
+[
+{"automatic":true,"cooldown":6,"id":1,"itemSn":7,"level":1,"lvupcost":"[20]","picture":"4302000.png","singetime":0,"sn":1,"spacenum":1,"unlock":0},
+{"automatic":true,"cooldown":6,"id":1,"itemSn":7,"level":2,"lvupcost":"[30,40]","picture":"4302000.png","singetime":0,"sn":2,"spacenum":2,"unlock":0},
+{"automatic":true,"cooldown":6,"id":1,"itemSn":7,"level":3,"lvupcost":"[50,60]","picture":"4302000.png","singetime":0,"sn":3,"spacenum":3,"unlock":0},
+{"automatic":true,"cooldown":6,"id":2,"itemSn":7,"level":1,"lvupcost":"[20]","picture":"4302000.png","singetime":0,"sn":4,"spacenum":1,"unlock":0},
+{"automatic":true,"cooldown":6,"id":2,"itemSn":7,"level":2,"lvupcost":"[30,40]","picture":"4302000.png","singetime":0,"sn":5,"spacenum":2,"unlock":0},
+{"automatic":true,"cooldown":6,"id":2,"itemSn":7,"level":3,"lvupcost":"[50,60]","picture":"4302000.png","singetime":0,"sn":6,"spacenum":3,"unlock":0},
+{"automatic":false,"cooldown":6,"id":3,"itemSn":5,"level":1,"lvupcost":"[20]","picture":"4002200.png","singetime":4,"sn":7,"spacenum":1,"unlock":0},
+{"automatic":false,"cooldown":6,"id":3,"itemSn":5,"level":2,"lvupcost":"[30,40]","picture":"4002200.png","singetime":4,"sn":8,"spacenum":2,"unlock":0},
+{"automatic":false,"cooldown":6,"id":3,"itemSn":5,"level":3,"lvupcost":"[50,60]","picture":"4002200.png","singetime":4,"sn":9,"spacenum":3,"unlock":0},
+{"automatic":false,"cooldown":6,"id":4,"itemSn":6,"level":1,"lvupcost":"[20]","picture":"4002200.png","singetime":4,"sn":10,"spacenum":1,"unlock":0},
+{"automatic":false,"cooldown":6,"id":4,"itemSn":6,"level":2,"lvupcost":"[30,40]","picture":"4002200.png","singetime":4,"sn":11,"spacenum":2,"unlock":0},
+{"automatic":false,"cooldown":6,"id":4,"itemSn":6,"level":3,"lvupcost":"[50,60]","picture":"4002200.png","singetime":4,"sn":12,"spacenum":3,"unlock":0},
+{"automatic":false,"cooldown":0,"id":5,"itemSn":1,"level":0,"lvupcost":"[]","picture":"plateServe.png","singetime":0,"sn":13,"spacenum":1,"unlock":0},
+{"automatic":false,"cooldown":0,"id":6,"itemSn":4,"level":0,"lvupcost":"[]","picture":"plateServe.png","singetime":0,"sn":14,"spacenum":1,"unlock":0}
+]
