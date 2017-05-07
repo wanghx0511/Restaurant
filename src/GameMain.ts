@@ -42,7 +42,7 @@ class GameMain{
     }
 
     public gameStart(): void {
-        console.log("gameStart")
+        console.log("gameStart");
     }
 
 }
