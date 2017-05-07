@@ -30,7 +30,7 @@ class Item extends Laya.Sprite{
         }
         //熟了直接找
         else if(this.progress == 1) {
-            var plates = gameMain.game.plates;
+            var plates = StageManager.stage.plates;
             for(var i = 0; i < plates.length; i++) {
                 var plate: Plate = plates[i];
                 if(plate.item != null && this.meger(plate.item)) {
@@ -40,12 +40,12 @@ class Item extends Laya.Sprite{
         }
         //焦了直接扔垃圾桶
         else if(this.progress == 2) {
-            gameMain.game.trashCanObj.abandon(this);
+            StageManager.stage.trashCanObj.abandon(this);
             return;
         }
 
         //已经选中的道具是否能合当前道具合成
-        var selectedItem: Item = gameMain.game.selected;
+        var selectedItem: Item = StageManager.stage.selected;
         if(selectedItem != null) {
             selectedItem.alpha = 1;
         }
@@ -54,7 +54,7 @@ class Item extends Laya.Sprite{
         if(!this.state) {
             //找到空盘子放进去
             if(this.confItem.ripe) {
-                var plates = gameMain.game.plates;
+                var plates = StageManager.stage.plates;
                 for(var i = 0; i < plates.length; i++) {
                     var plate: Plate = plates[i];
                     if(plate.item == null && plate.getMakeItemSn() == this.confItem.itemSn) {
@@ -72,7 +72,7 @@ class Item extends Laya.Sprite{
             }
             //找个锅做熟
             else {
-                var pots = gameMain.game.pots;
+                var pots = StageManager.stage.pots;
                 for(var i = 0; i < pots.length; i++) {
                     var pot: Pot = pots[i];
                     if(pot.item == null && pot.getMakeItemSn() == this.confItem.itemSn) {
@@ -92,16 +92,16 @@ class Item extends Laya.Sprite{
         //已经摆上柜台的道具点击选中
         else {
             this.alpha = 0.5;
-            gameMain.game.selected = this;
+            StageManager.stage.selected = this;
         }
     }
 
     public destroy(): void {
         super.destroy();
-        gameMain.game.selected = null;
+        StageManager.stage.selected = null;
         if(this.box == null) return;
         this.box.handle();
-        gameMain.game.selected = null;
+        StageManager.stage.selected = null;
     }
 
     //道具合成

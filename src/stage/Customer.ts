@@ -86,7 +86,7 @@ class Customer extends Laya.Sprite{
         if(this.moneyAdd > 0 ) {
             //有过成交，换图
             Laya.Tween.to(this, {x : Laya.stage.width}, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.mayDestory,[2]));
-            gameMain.game.addCashBag(this);
+            StageManager.stage.addCashBag(this);
             this.bubble.destroy();
         } else {
             //没成交过，gg
@@ -97,7 +97,7 @@ class Customer extends Laya.Sprite{
 
     private onCustomerClick(e : Laya.Event) {
         //当前选中的食物，给顾客了，瞎逼点的直接return
-        var item: Item = gameMain.game.selected;
+        var item: Item = StageManager.stage.selected;
         if(item == null) return;
 
         //先看看是不是要的那个
@@ -141,7 +141,7 @@ class Customer extends Laya.Sprite{
         this.bubble.destroy();
         //完成了，去掉客人图，换成钱图
         Laya.Tween.to(this, {x : Laya.stage.width}, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.mayDestory,[2]));
-        gameMain.game.addCashBag(this);
+        StageManager.stage.addCashBag(this);
 
         // this.graphics.clear();
         // if(this.tips) {
@@ -171,8 +171,8 @@ class Customer extends Laya.Sprite{
 
     public destroy(): void {
         super.destroy();
-        var rankList : Customer[] = gameMain.game.ranksCustomer;
-        var showList : any[] = gameMain.game.showCustomer;
+        var rankList : Customer[] = StageManager.stage.ranksCustomer;
+        var showList : any[] = StageManager.stage.showCustomer;
         var newShowList : any[] = [];
         var isHandled : boolean = false;
         for(var ele of showList) {
@@ -184,25 +184,25 @@ class Customer extends Laya.Sprite{
             newShowList.push(ele);
         }
         if(isHandled){
-            gameMain.game.showCustomer = newShowList;
+            StageManager.stage.showCustomer = newShowList;
         }
         //把横坐标还回去
-        gameMain.game.showPosX.push(this.useX);
+        StageManager.stage.showPosX.push(this.useX);
         if(rankList.length > 0) {
             //从rankList里去掉
             var customer = rankList.pop();
-            var posX = gameMain.game.showPosX.pop();
+            var posX = StageManager.stage.showPosX.pop();
             //添加到showList里
             var customerEle : [number, Customer] = [customer.confCustomer.sn, customer];
-            gameMain.game.showCustomer.push(customerEle);
+            StageManager.stage.showCustomer.push(customerEle);
             customer.y = customer.confCustomer.posY;
             customer.useX = posX;
             Laya.Tween.to(customer, {x : posX}, new Utils().calcTweenNeedTime(posX) , null, new Laya.Handler(customer, customer.addBubble));
             Laya.stage.addChild(customer);
         }
 
-        if(gameMain.game.showCustomer.length == 0 && gameMain.game.ranksCustomer.length == 0) {
-            gameMain.game.stageOver();
+        if(StageManager.stage.showCustomer.length == 0 && StageManager.stage.ranksCustomer.length == 0) {
+            //StageManager.stage.stageOver();
         }
     }
 

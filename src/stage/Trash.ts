@@ -15,7 +15,7 @@ class Trash extends Laya.Sprite{
 
     private onClick(e : Laya.Event) {
          //需要丢弃的食材
-        var item: Item = gameMain.game.selected;
+        var item: Item = StageManager.stage.selected;
         if(item == null) return;
 
         this.abandon(item);
@@ -32,7 +32,7 @@ class Trash extends Laya.Sprite{
         this.trashAni.play(0, false, "trashClose");
         this.trashAni.destroy();
         //扣分
-        gameMain.game.gameInfo.minusMoney(item.getConf().destroycost);
+        //gameMain.game.gameInfo.minusMoney(item.getConf().destroycost);
     }
 
 }

@@ -9,8 +9,8 @@ class CashBag extends Laya.Sprite {
     constructor (customer : Customer) {
         super();
         this.customer = customer;
-        this.cashTipsPic = "atlas/BgCoin.png";
-        this.cashPic = "atlas/BgCoin.png";
+        this.cashTipsPic = "atlas/lajitong.png";
+        this.cashPic = "atlas/lajitong2.png";
         if(this.customer.haveTips()) {
             this.loadImage(this.cashTipsPic);
         } else {
@@ -27,7 +27,7 @@ class CashBag extends Laya.Sprite {
         }
 
         var total : number = this.customer.moneyAdd + tipAdd;
-        gameMain.game.gameInfo.addMoney(total);
+        //gameMain.game.gameInfo.addMoney(total);
         this.customer.mayDestory(1);
         this.destroy();
     }
