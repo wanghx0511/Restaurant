@@ -21,6 +21,8 @@ var GameMain = (function () {
         Laya.loader.load(pro_res, Laya.Handler.create(this, this.onProLoaded));
     }
     GameMain.prototype.onProLoaded = function () {
+        //初始化事件
+        Eventinit.init();
         var res = [
             { url: "res/json/ConfItem.json", type: Laya.Loader.JSON },
             { url: "res/json/Confkitchenware.json", type: Laya.Loader.JSON },
@@ -29,8 +31,10 @@ var GameMain = (function () {
             { url: "res/json/ConfStage.json", type: Laya.Loader.JSON },
             { url: "res/json/ConfWorld.json", type: Laya.Loader.JSON },
         ];
-        new Stage();
-        new Loading(res);
+        new Loading(res, this.gameStart, null);
+    };
+    GameMain.prototype.gameStart = function () {
+        console.log("gameStart");
     };
     return GameMain;
 }());

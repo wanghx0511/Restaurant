@@ -1,26 +1,24 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var Loading = (function (_super) {
-    __extends(Loading, _super);
-    function Loading(res) {
-        var _this = _super.call(this) || this;
-        _this.res = res;
-        _this.bg = new Laya.Sprite();
-        _this.bg.loadImage("res/atlas/loading.jpg");
-        Laya.stage.addChild(_this.bg);
+var Loading = (function () {
+    function Loading(res, callback, context) {
+        /** 回调函数 */
+        this.callback = null;
+        /** 上下文 */
+        this.context = null;
+        this.res = res;
+        this.callback = callback;
+        this.context = context;
+        this.bg = new Laya.Sprite();
+        this.bg.loadImage("res/atlas/loading.jpg");
+        Laya.stage.addChild(this.bg);
         //显示进度条图片
-        _this.progressShow();
+        this.progressShow();
         //加载完进度条后执行onProLoaded方法
         if (res != null) {
-            Laya.loader.load(res, Laya.Handler.create(_this, _this.onProLoaded));
+            Laya.loader.load(res, Laya.Handler.create(this, this.onProLoaded));
         }
         else {
-            Laya.timer.once(1000, _this, _this.onLoadFinish);
+            Laya.timer.once(1000, this, this.onLoadFinish);
         }
-        return _this;
     }
     //回调函数触发下面的方法加载游戏资源
     Loading.prototype.onProLoaded = function () {
@@ -58,12 +56,14 @@ var Loading = (function (_super) {
     };
     //加载完成后的回调函数
     Loading.prototype.onLoadFinish = function () {
-        //laya.media.SoundManager.playMusic("res/atlas/bg.mp3",0);   
+        //laya.media.SoundManager.playMusic("res/atlas/bg.mp3",0);
         //移除进度条
         Laya.stage.removeChild(this.progressBar);
         Laya.stage.removeChild(this.bg);
-        Emitter.fire("nihao", "cyrwpj", 1);
+        //回调
+        if (this.callback != null)
+            this.callback.call(this.context);
     };
     return Loading;
-}(Laya.Node));
+}());
 //# sourceMappingURL=Loading.js.map

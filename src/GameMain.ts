@@ -27,6 +27,9 @@ class GameMain{
     }
 
     public onProLoaded(): void{
+        //初始化事件
+        Eventinit.init();
+
         var res:Array<any> = [ 
             {url:"res/json/ConfItem.json", type:Laya.Loader.JSON},
             {url:"res/json/Confkitchenware.json", type:Laya.Loader.JSON},
@@ -35,7 +38,11 @@ class GameMain{
             {url:"res/json/ConfStage.json", type:Laya.Loader.JSON},
             {url:"res/json/ConfWorld.json", type:Laya.Loader.JSON},
         ];
-        new Loading(res);
+        new Loading(res, this.gameStart, null);
+    }
+
+    public gameStart(): void {
+        console.log("gameStart")
     }
 
 }

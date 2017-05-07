@@ -1,12 +1,18 @@
-class Loading extends Laya.Node{
+class Loading{
 
     private progressBar:Laya.ProgressBar;  //进度条属性
     private bg: Laya.Sprite; //背景图
     private res: Array<any>;
+    /** 回调函数 */
+    private callback: Function = null;
+    /** 上下文 */
+    private context: any = null;
 
-    constructor(res:Array<any>) {
-        super();
+    constructor(res:Array<any>, callback: Function, context: any) {
         this.res = res;
+        this.callback = callback;
+        this.context = context;
+
         this.bg = new Laya.Sprite();
         this.bg.loadImage("res/atlas/loading.jpg");
         Laya.stage.addChild(this.bg);
@@ -46,8 +52,7 @@ class Loading extends Laya.Node{
     public onProgress(pro: number): void{
             //console.log("加载了总文件的:"+pro*100+"%");
             this.progressBar.value = pro;
-            if(this.progressBar.value == 1)
-            {
+            if(this.progressBar.value == 1){
                 //游戏主页面资源加载完成后执行这里的代码
                 //console.log("游戏加载完成咯！！");
                 //延迟1秒再显示游戏主页面
@@ -56,7 +61,6 @@ class Loading extends Laya.Node{
                 //this.progressBar.visible = false;
                // laya.media.SoundManager.playMusic("res/atlas/bg.mp3",0);       
             }
-
     }
 
     //进度条发生变化的时候触发下面的方法
@@ -66,10 +70,12 @@ class Loading extends Laya.Node{
     
     //加载完成后的回调函数
     public onLoadFinish():void{
-        //laya.media.SoundManager.playMusic("res/atlas/bg.mp3",0);   
+        //laya.media.SoundManager.playMusic("res/atlas/bg.mp3",0);
         //移除进度条
-        Laya.stage.removeChild(this.progressBar);  
-        Laya.stage.removeChild(this.bg); 
-        Emitter.fire("nihao", "cyrwpj", 1);
+        Laya.stage.removeChild(this.progressBar);
+        Laya.stage.removeChild(this.bg);
+        
+        //回调
+        if(this.callback != null ) this.callback.call(this.context);
     }
 }

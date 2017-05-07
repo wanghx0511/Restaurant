@@ -1,8 +1,7 @@
-class Stage extends Laya.Node{
+class Stage{
 
     constructor() {
-        super();
-        Emitter.register("nihao", this.test, this);
+        
     }
     
     public test() {
