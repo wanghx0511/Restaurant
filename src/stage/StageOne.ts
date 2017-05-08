@@ -1,6 +1,6 @@
 //1号餐厅场景
 class StageOne extends Laya.Sprite{
-    //public gameInfo: GameInfo;
+    public uiInfo: StageOneInfo;
     private configItem: ConfigItem = new ConfigItem();
     private configCustomer : ConfigCustomer = new ConfigCustomer();
     private configStage : ConfigStage = new ConfigStage();
@@ -48,10 +48,9 @@ class StageOne extends Laya.Sprite{
         caozuotai.pos(-275, 490);
         this.addChild(caozuotai);
 
-        //创建游戏信息UI
-        //this.gameInfo = new GameInfo(confStage);
-        //添加到舞台上
-        //Laya.stage.addChild(this.gameInfo);
+        //创建UI
+        this.uiInfo = new StageOneInfo();
+        this.addChild(this.uiInfo);
 
         // this.maxCustomer = confStage.maxCustomerNum;
         // this.showPosX = eval(confStage.customerShowPosX);

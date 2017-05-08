@@ -8,7 +8,6 @@ var StageOne = (function (_super) {
     __extends(StageOne, _super);
     function StageOne(stageSn) {
         var _this = _super.call(this) || this;
-        //public gameInfo: GameInfo;
         _this.configItem = new ConfigItem();
         _this.configCustomer = new ConfigCustomer();
         _this.configStage = new ConfigStage();
@@ -42,11 +41,10 @@ var StageOne = (function (_super) {
         caozuotai.loadImage("res/atlas/caozuotai.png");
         caozuotai.pos(-275, 490);
         _this.addChild(caozuotai);
+        //创建UI
+        _this.uiInfo = new StageOneInfo();
+        _this.addChild(_this.uiInfo);
         return _this;
-        //创建游戏信息UI
-        //this.gameInfo = new GameInfo(confStage);
-        //添加到舞台上
-        //Laya.stage.addChild(this.gameInfo);
         // this.maxCustomer = confStage.maxCustomerNum;
         // this.showPosX = eval(confStage.customerShowPosX);
         // this.startTimeStamp = this.customerTimer.currTimer;

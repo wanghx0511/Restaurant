@@ -9,5 +9,5 @@ var StageOneInfo = (function (_super) {
         return _super.call(this) || this;
     }
     return StageOneInfo;
-}(ui.MainInfoUI));
+}(ui.StageOneInfoUI));
 //# sourceMappingURL=StageOneInfo.js.map

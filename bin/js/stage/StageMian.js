@@ -8,15 +8,15 @@ var StageMain = (function (_super) {
     __extends(StageMain, _super);
     function StageMain() {
         var _this = _super.call(this) || this;
-        //创建游戏信息UI
-        var mainInfo = new MainInfo();
-        _this.mainInfo = mainInfo;
         //场景图
         var bg = new Laya.Sprite();
         bg.loadImage("res/atlas/MapBG01_1.jpg");
         _this.addChild(bg);
         //添加UI
+        var mainInfo = new MainInfo();
+        _this.mainInfo = mainInfo;
         _this.addChild(_this.mainInfo);
+        //事件
         _this.mainInfo.start.on(Laya.Event.CLICK, _this, _this.onStageClick);
         return _this;
     }

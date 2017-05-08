@@ -1,4 +1,4 @@
-class StageOneInfo extends ui.MainInfoUI{
+class StageOneInfo extends ui.StageOneInfoUI{
 
     constructor() {
         super();

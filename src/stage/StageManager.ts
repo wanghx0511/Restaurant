@@ -3,8 +3,6 @@ class StageManager{
 
     public createStage() {
         StageManager.stage = new StageOne(1);
-
-
         Laya.stage.addChild(StageManager.stage);
     }
 }

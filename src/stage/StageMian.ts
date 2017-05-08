@@ -5,17 +5,17 @@ class StageMain extends Laya.Sprite{
 
     constructor() {
         super();
-        //创建游戏信息UI
-        var mainInfo = new MainInfo();
-        this.mainInfo = mainInfo;
-
         //场景图
         var bg = new Laya.Sprite();
         bg.loadImage("res/atlas/MapBG01_1.jpg");
         this.addChild(bg);
-        
+
         //添加UI
+        var mainInfo = new MainInfo();
+        this.mainInfo = mainInfo;
         this.addChild(this.mainInfo);
+
+        //事件
         this.mainInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
     }
 
