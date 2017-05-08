@@ -30,15 +30,12 @@ var GameMain = (function () {
             { url: "res/json/ConfItemMerge.json", type: Laya.Loader.JSON },
             { url: "res/json/ConfStage.json", type: Laya.Loader.JSON },
             { url: "res/json/ConfWorld.json", type: Laya.Loader.JSON },
-            { url: "res/atlas/comp/ui.json", type: Laya.Loader.ATLAS },
+            { url: "res/atlas/ui.json", type: Laya.Loader.ATLAS },
         ];
         new Loading(res, this.gameStart, null);
     };
     GameMain.prototype.gameStart = function () {
-        //创建游戏信息UI
-        var mainInfo = new MainInfo();
-        //添加到舞台上
-        Laya.stage.addChild(mainInfo);
+        Laya.stage.addChild(new StageMain());
     };
     return GameMain;
 }());

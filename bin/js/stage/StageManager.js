@@ -2,11 +2,7 @@ var StageManager = (function () {
     function StageManager() {
     }
     StageManager.prototype.createStage = function () {
-        StageManager.stage = new Stage(1);
-        var bg = new Laya.Sprite();
-        bg.loadImage("res/atlas/beijing.jpg");
-        bg.pos(-488, 0);
-        StageManager.stage.addChild(bg);
+        StageManager.stage = new StageOne(1);
         Laya.stage.addChild(StageManager.stage);
     };
     return StageManager;

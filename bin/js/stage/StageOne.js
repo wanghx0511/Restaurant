@@ -3,10 +3,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-//游戏场景
-var Stage = (function (_super) {
-    __extends(Stage, _super);
-    function Stage(stageSn) {
+//1号餐厅场景
+var StageOne = (function (_super) {
+    __extends(StageOne, _super);
+    function StageOne(stageSn) {
         var _this = _super.call(this) || this;
         //public gameInfo: GameInfo;
         _this.configItem = new ConfigItem();
@@ -32,6 +32,16 @@ var Stage = (function (_super) {
         _this.stageSn = stageSn;
         console.log("当前关sn=" + stageSn);
         var confStage = _this.configStage.get(_this.stageSn);
+        //场景图
+        var bg = new Laya.Sprite();
+        bg.loadImage("res/atlas/beijing.jpg");
+        bg.pos(-488, 0);
+        _this.addChild(bg);
+        //操作台
+        var caozuotai = new Laya.Sprite();
+        caozuotai.loadImage("res/atlas/caozuotai.png");
+        caozuotai.pos(-275, 490);
+        _this.addChild(caozuotai);
         return _this;
         //创建游戏信息UI
         //this.gameInfo = new GameInfo(confStage);
@@ -92,10 +102,10 @@ var Stage = (function (_super) {
         // Laya.stage.addChild(coffeeMachine);
     }
     //同步分数时调用
-    Stage.prototype.setScore = function (score) {
+    StageOne.prototype.setScore = function (score) {
         this.scoreTotal = score;
     };
-    Stage.prototype.initCustomer = function () {
+    StageOne.prototype.initCustomer = function () {
         var confStage = this.configStage.get(this.stageSn);
         //出现顾客sn
         var customerToShow = eval(confStage.customerSn);
@@ -139,13 +149,13 @@ var Stage = (function (_super) {
         }
     };
     //顾客走后，加个钱袋子
-    Stage.prototype.addCashBag = function (customer) {
+    StageOne.prototype.addCashBag = function (customer) {
         var cashBag = new CashBag(customer);
         // var x : number = customer.x;
         // var y : number = customer.y;
         cashBag.pos(customer.x, customer.y);
         Laya.stage.addChild(cashBag);
     };
-    return Stage;
+    return StageOne;
 }(Laya.Sprite));
-//# sourceMappingURL=Stage.js.map
+//# sourceMappingURL=StageOne.js.map

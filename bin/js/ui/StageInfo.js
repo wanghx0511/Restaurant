@@ -3,11 +3,11 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var MainInfo = (function (_super) {
-    __extends(MainInfo, _super);
-    function MainInfo() {
-        return _super.call(this) || this;
+var StageInfo = (function (_super) {
+    __extends(StageInfo, _super);
+    function StageInfo() {
+        return _super.apply(this, arguments) || this;
     }
-    return MainInfo;
-}(ui.MainInfoUI));
-//# sourceMappingURL=MainInfo.js.map
+    return StageInfo;
+}(ui.StageInfoUI));
+//# sourceMappingURL=StageInfo.js.map

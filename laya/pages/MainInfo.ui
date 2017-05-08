@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":8,
+    "selecteID":2,
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
     "label":"View",
@@ -22,27 +22,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":0,"x":0,"width":1920,"skin":"comp/ui/MapBG01_1.jpg","height":1080},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":743,"x":426,"skin":"comp/ui/MapBG01_1.jpg"},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":2,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":30,"x":36,"width":174,"skin":"comp/ui/Icn84005.png","height":183},
+            "props":{"y":30,"x":36,"width":174,"skin":"ui/Icn84005.png","height":183},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -62,7 +42,7 @@
         {
             "x":15,
             "type":"ProgressBar",
-            "props":{"y":113,"x":220,"width":127,"skin":"comp/ui/progress_time.png","height":24},
+            "props":{"y":113,"x":220,"width":127,"skin":"ui/progress_time.png","height":24},
             "nodeParent":1,
             "label":"ProgressBar",
             "isDirectory":false,
@@ -102,7 +82,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":501,"x":839,"width":189,"var":"start","skin":"comp/ui/2306700.png","height":179},
+            "props":{"y":501,"x":839,"width":189,"var":"start","skin":"ui/2306700.png","height":179},
             "nodeParent":1,
             "label":"Image(start)",
             "isDirectory":false,
