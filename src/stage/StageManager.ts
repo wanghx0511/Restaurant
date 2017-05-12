@@ -1,5 +1,5 @@
 class StageManager{
-    public static stage: Laya.Sprite = null;
+    public static stage: StageOne = null;
 
     public createStage() {
         StageManager.stage = new StageOne(1);
