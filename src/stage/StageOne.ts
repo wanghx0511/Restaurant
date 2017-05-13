@@ -52,12 +52,16 @@ class StageOne extends Laya.Sprite{
         this.uiInfo = new StageOneInfo();
         this.addChild(this.uiInfo);
 
-        // this.maxCustomer = confStage.maxCustomerNum;
-        // this.showPosX = eval(confStage.customerShowPosX);
+        this.uiInfo.jiutong1.on(Laya.Event.CLICK, this, this.onJiuTongClick, [1]);
+        this.uiInfo.jiutong2.on(Laya.Event.CLICK, this, this.onJiuTongClick, [2]);
+        this.uiInfo.jiutong3.on(Laya.Event.CLICK, this, this.onJiuTongClick, [3]);
 
-        // this.startTimeStamp = this.customerTimer.currTimer;
-        // //计时器开始计时
-        // this.customerTimer.loop(100, this, this.initCustomer);
+        this.maxCustomer = confStage.maxCustomerNum;
+        this.showPosX = eval(confStage.customerShowPosX);
+
+        this.startTimeStamp = this.customerTimer.currTimer;
+        //计时器开始计时
+        this.customerTimer.loop(100, this, this.initCustomer);
 
         // //垃圾桶
         // var trashCan = new Trash();
@@ -118,6 +122,11 @@ class StageOne extends Laya.Sprite{
         // Laya.stage.addChild(coffeeMachine);
         
     }
+
+    public onJiuTongClick(e: Laya.Event) {
+        this.uiInfo.jiubei1.loadImage("ui/pijiu2.png");
+    }
+
     //同步分数时调用
     public setScore(score : number){
         this.scoreTotal = score;

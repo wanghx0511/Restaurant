@@ -23,7 +23,7 @@ var Customer = (function (_super) {
         _this.canDesTween = false;
         //顾客
         _this.confCustomer = confCustomer;
-        _this.customerPic = "atlas/" + _this.confCustomer.picture;
+        _this.customerPic = "customer/" + _this.confCustomer.picture;
         _this.loadImage(_this.customerPic);
         _this.useX = posX;
         _this.on("click", _this, _this.onCustomerClick);
@@ -35,7 +35,7 @@ var Customer = (function (_super) {
     Customer.prototype.addBubble = function () {
         //气泡
         this.bubble = new Laya.Sprite;
-        this.bubble.loadImage("atlas/" + this.confCustomer.bubblePic);
+        this.bubble.loadImage("customer/" + this.confCustomer.bubblePic);
         this.bubble.pos(this.confCustomer.bubblePosX, 0);
         //需求
         this.needs = eval(this.confCustomer.needs);
@@ -46,7 +46,7 @@ var Customer = (function (_super) {
             var config = configItem.getBy("itemSn", itemSn);
             // var config = configItem.get(itemSn);
             var image = new Laya.Image;
-            image.loadImage("atlas/" + config.picture);
+            image.loadImage("customer/" + config.picture);
             this.bubble.addChild(image);
             image.pos(0, needsPosY);
             needsPosY += 50;

@@ -28,7 +28,7 @@ class Customer extends Laya.Sprite{
         super();
         //顾客
         this.confCustomer = confCustomer;
-        this.customerPic = "atlas/" + this.confCustomer.picture;
+        this.customerPic = "customer/" + this.confCustomer.picture;
         this.loadImage(this.customerPic);
         this.useX = posX;
 
@@ -43,7 +43,7 @@ class Customer extends Laya.Sprite{
     public addBubble () {
         //气泡
         this.bubble = new Laya.Sprite;
-        this.bubble.loadImage("atlas/" + this.confCustomer.bubblePic);
+        this.bubble.loadImage("customer/" + this.confCustomer.bubblePic);
         this.bubble.pos(this.confCustomer.bubblePosX, 0);
         //需求
         this.needs = eval(this.confCustomer.needs);
@@ -53,7 +53,7 @@ class Customer extends Laya.Sprite{
             var config = configItem.getBy("itemSn", itemSn);
             // var config = configItem.get(itemSn);
             var image : Laya.Image = new Laya.Image;
-            image.loadImage("atlas/" + config.picture);
+            image.loadImage("customer/" + config.picture);
             this.bubble.addChild(image);
             image.pos(0, needsPosY);
             needsPosY += 50;

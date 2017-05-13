@@ -44,12 +44,15 @@ var StageOne = (function (_super) {
         //创建UI
         _this.uiInfo = new StageOneInfo();
         _this.addChild(_this.uiInfo);
+        _this.uiInfo.jiutong1.on(Laya.Event.CLICK, _this, _this.onJiuTongClick, [1]);
+        _this.uiInfo.jiutong2.on(Laya.Event.CLICK, _this, _this.onJiuTongClick, [2]);
+        _this.uiInfo.jiutong3.on(Laya.Event.CLICK, _this, _this.onJiuTongClick, [3]);
+        _this.maxCustomer = confStage.maxCustomerNum;
+        _this.showPosX = eval(confStage.customerShowPosX);
+        _this.startTimeStamp = _this.customerTimer.currTimer;
+        //计时器开始计时
+        _this.customerTimer.loop(100, _this, _this.initCustomer);
         return _this;
-        // this.maxCustomer = confStage.maxCustomerNum;
-        // this.showPosX = eval(confStage.customerShowPosX);
-        // this.startTimeStamp = this.customerTimer.currTimer;
-        // //计时器开始计时
-        // this.customerTimer.loop(100, this, this.initCustomer);
         // //垃圾桶
         // var trashCan = new Trash();
         // trashCan.pos(47, 832);
@@ -99,6 +102,9 @@ var StageOne = (function (_super) {
         // coffeeMachine.pos(468, 730);
         // Laya.stage.addChild(coffeeMachine);
     }
+    StageOne.prototype.onJiuTongClick = function (e) {
+        this.uiInfo.jiubei1.loadImage("ui/pijiu2.png");
+    };
     //同步分数时调用
     StageOne.prototype.setScore = function (score) {
         this.scoreTotal = score;

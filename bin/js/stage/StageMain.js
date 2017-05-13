@@ -36,4 +36,4 @@ var StageMain = (function (_super) {
     };
     return StageMain;
 }(Laya.Sprite));
-//# sourceMappingURL=StageMian.js.map
+//# sourceMappingURL=StageMain.js.map
