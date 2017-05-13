@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":4,
+    "selecteID":32,
     "props":{"width":1920,"sceneColor":"#000000","name":"Level","height":1080},
     "nodeParent":-1,
     "label":"View(Level)",
@@ -10,233 +10,640 @@
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
-    "frames":[
-        {
-            "type":1,
-            "props":{"width":600,"sceneColor":"#000000","height":400},
-            "frame":0,
-            "__InPool":false
-        }],
     "compId":1,
     "child":[
         {
             "x":15,
-            "type":"Sprite",
-            "props":{"y":177,"x":320,"width":1182.9999999999998,"name":"Furniture","height":321},
+            "type":"Image",
+            "props":{"y":915,"x":1554,"skin":"ui/rouchuan.png","name":"rouchuan"},
             "nodeParent":1,
-            "label":"Sprite(Furniture)",
-            "isOpen":true,
+            "label":"Image(rouchuan)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":32,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":544,"x":1308,"name":"kaolu"},
+            "nodeParent":1,
+            "label":"Sprite(kaolu)",
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":7,
+            "compId":37,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":120.99999999999999,"x":-83.00000000000001,"width":147,"skin":"ui/zhuozi2.png","name":"Desk1_R3","height":120},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R3)",
-                    "isOpen":true,
+                    "props":{"y":0,"x":10,"skin":"ui/kaolu.png"},
+                    "nodeParent":37,
+                    "label":"Image",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":26,
+                    "compId":33,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":120.99999999999999,"x":188.00000000000003,"width":147,"skin":"ui/zhuozi2.png","name":"Desk1_R3","height":120},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R3)",
+                    "props":{"y":81,"x":56,"skin":"ui/kaolu.png"},
+                    "nodeParent":37,
+                    "label":"Image",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":27,
+                    "compId":34,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":122,"x":783.0000000000001,"width":147,"skin":"ui/zhuozi2.png","name":"Desk1_R3","height":120},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R3)",
+                    "props":{"y":164,"x":107,"skin":"ui/kaolu.png"},
+                    "nodeParent":37,
+                    "label":"Image",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":28,
+                    "compId":35,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":122,"x":1035.9999999999998,"width":147,"skin":"ui/zhuozi2.png","name":"Desk1_R3","height":120},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R3)",
-                    "isOpen":true,
+                    "props":{"y":240,"x":156,"skin":"ui/kaolu.png"},
+                    "nodeParent":37,
+                    "label":"Image",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":29,
+                    "compId":36,
                     "child":[
-                        ],
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":177,"x":320},
+            "nodeParent":1,
+            "label":"Sprite",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":42,
+            "child":[
+                {
+                    "type":"Sprite",
+                    "props":{"width":1182.9999999999998,"name":"Furniture","height":321},
+                    "nodeParent":42,
+                    "label":"Sprite(Furniture)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":7,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"y":120.99999999999999,"x":-83.00000000000001,"width":147,"skin":"ui/zhuozi2.png","name":"Desk1_R3","height":120},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R3)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":26,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":120.99999999999999,"x":188.00000000000003,"width":147,"skin":"ui/zhuozi2.png","name":"Desk1_R3","height":120},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R3)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":27,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":122,"x":783.0000000000001,"width":147,"skin":"ui/zhuozi2.png","name":"Desk1_R3","height":120},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R3)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":28,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":122,"x":1035.9999999999998,"width":147,"skin":"ui/zhuozi2.png","name":"Desk1_R3","height":120},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R3)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":29,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":127.00000000000004,"x":280,"width":192,"skin":"ui/zhuozi2.png","name":"Desk1_R2","height":155},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R2)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":25,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":127.00000000000004,"x":629.9999999999998,"width":192,"skin":"ui/zhuozi2.png","name":"Desk1_R2","height":155},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R2)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":24,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":132,"x":9.000000000000043,"width":227,"skin":"ui/zhuozi2.png","name":"Desk1_R1","height":186},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R1)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":13,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":112,"x":430,"width":275,"skin":"ui/zhuozi2.png","name":"Desk1_R1","height":252},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R1)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":22,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":135,"x":865,"width":227,"skin":"ui/zhuozi2.png","name":"Desk1_R1","height":186},
+                            "nodeParent":7,
+                            "label":"Image(Desk1_R1)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":23,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        }],
                     "$HIDDEN":false
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":538,"x":1469,"name":"baowenlu"},
+            "nodeParent":1,
+            "label":"Sprite(baowenlu)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":43,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"skin":"ui/baowenlu.png"},
+                    "nodeParent":43,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":38,
+                    "child":[
+                        ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":127.00000000000004,"x":280,"width":192,"skin":"ui/zhuozi2.png","name":"Desk1_R2","height":155},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R2)",
-                    "isOpen":true,
+                    "props":{"y":75,"x":50,"skin":"ui/baowenlu.png"},
+                    "nodeParent":43,
+                    "label":"Image",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":25,
+                    "compId":39,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":127.00000000000004,"x":629.9999999999998,"width":192,"skin":"ui/zhuozi2.png","name":"Desk1_R2","height":155},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R2)",
-                    "isOpen":true,
+                    "props":{"y":147,"x":100,"skin":"ui/baowenlu.png"},
+                    "nodeParent":43,
+                    "label":"Image",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":24,
+                    "compId":40,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":132,"x":9.000000000000043,"width":227,"skin":"ui/zhuozi2.png","name":"Desk1_R1","height":186},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R1)",
-                    "isOpen":true,
+                    "props":{"y":228,"x":157,"skin":"ui/baowenlu.png"},
+                    "nodeParent":43,
+                    "label":"Image",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":13,
+                    "compId":41,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":775,"x":1088,"skin":"ui/huasheng.png","name":"huasheng"},
+            "nodeParent":1,
+            "label":"Image(huasheng)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":44,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":673,"x":1075,"skin":"ui/maodou.png","name":"maodou"},
+            "nodeParent":1,
+            "label":"Image(maodou)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":45,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":584,"x":1076,"skin":"ui/xiangcai.png","name":"xiangcai"},
+            "nodeParent":1,
+            "label":"Image(xiangcai)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":46,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":508,"x":193,"name":"jiutong"},
+            "nodeParent":1,
+            "label":"Sprite(jiutong)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":54,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"skin":"ui/pijiutong.png"},
+                    "nodeParent":54,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":47,
+                    "child":[
+                        ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":112,"x":430,"width":275,"skin":"ui/zhuozi2.png","name":"Desk1_R1","height":252},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R1)",
-                    "isOpen":true,
+                    "props":{"y":14,"x":109,"skin":"ui/pijiutong.png"},
+                    "nodeParent":54,
+                    "label":"Image",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":22,
+                    "compId":48,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":135,"x":865,"width":227,"skin":"ui/zhuozi2.png","name":"Desk1_R1","height":186},
-                    "nodeParent":7,
-                    "label":"Image(Desk1_R1)",
-                    "isOpen":true,
+                    "props":{"y":30,"x":211,"skin":"ui/pijiutong.png"},
+                    "nodeParent":54,
+                    "label":"Image",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/zhuozi2.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":23,
+                    "compId":49,
                     "child":[
-                        ],
-                    "$HIDDEN":false
-                }],
-            "$HIDDEN":false
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":677,"x":177,"name":"jiubei"},
+            "nodeParent":1,
+            "label":"Sprite(jiubei)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":55,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"skin":"ui/pijiu.png"},
+                    "nodeParent":55,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":50,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "props":{"y":14,"x":96,"skin":"ui/pijiu.png"},
+                    "nodeParent":55,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":51,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "props":{"y":29,"x":206,"skin":"ui/pijiu.png"},
+                    "nodeParent":55,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":52,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":519.0000000000001,"x":1161,"name":"guo"},
+            "nodeParent":1,
+            "label":"Sprite(guo)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":70,
+            "child":[
+                {
+                    "type":"Sprite",
+                    "props":{"y":46.999999999999886,"x":45},
+                    "nodeParent":70,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":60,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"skin":"ui/xiaolongxiaguodi.png"},
+                            "nodeParent":60,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":53,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":-46.999999999999886,"x":-45,"skin":"ui/xiaolongxiaguo.png"},
+                            "nodeParent":60,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":59,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "props":{"y":137.9999999999999,"x":89},
+                    "nodeParent":70,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":61,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"skin":"ui/xiaolongxiaguodi.png"},
+                            "nodeParent":61,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":62,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":-46.999999999999886,"x":-45,"skin":"ui/xiaolongxiaguo.png"},
+                            "nodeParent":61,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":63,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "props":{"y":220.9999999999999,"x":115},
+                    "nodeParent":70,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":64,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"skin":"ui/xiaolongxiaguodi.png"},
+                            "nodeParent":64,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":65,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":-46.999999999999886,"x":-45,"skin":"ui/xiaolongxiaguo.png"},
+                            "nodeParent":64,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":66,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "props":{"y":297.9999999999999,"x":156},
+                    "nodeParent":70,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":67,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"skin":"ui/xiaolongxiaguodi.png"},
+                            "nodeParent":67,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":68,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":-46.999999999999886,"x":-45,"skin":"ui/xiaolongxiaguo.png"},
+                            "nodeParent":67,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":69,
+                            "child":[
+                                ]
+                        }]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":864,"x":694,"name":"tuopan"},
+            "nodeParent":1,
+            "label":"Sprite(tuopan)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":73,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"skin":"ui/kaochuanpan.png"},
+                    "nodeParent":73,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":71,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "props":{"y":1,"x":160,"skin":"ui/kaochuanpan.png"},
+                    "nodeParent":73,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":72,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":864,"x":236,"skin":"ui/lajitong.png","name":"trash"},
+            "nodeParent":1,
+            "label":"Image(trash)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":74,
+            "child":[
+                ]
         }],
     "animations":[
         {
