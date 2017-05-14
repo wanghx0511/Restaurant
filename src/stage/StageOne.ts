@@ -4,6 +4,7 @@ class StageOne extends Laya.Sprite{
     private configItem: ConfigItem = new ConfigItem();
     private configCustomer : ConfigCustomer = new ConfigCustomer();
     private configStage : ConfigStage = new ConfigStage();
+    private configKitchenware : ConfigKitchenware = new ConfigKitchenware();
     public plates: any[] = [];
     public pots: any[] = [];
     public customers : any[] = [];
@@ -51,80 +52,56 @@ class StageOne extends Laya.Sprite{
         //创建UI
         this.uiInfo = new StageOneInfo();
         this.addChild(this.uiInfo);
-
-        this.uiInfo.jiutong1.on(Laya.Event.CLICK, this, this.onJiuTongClick, [1]);
-        this.uiInfo.jiutong2.on(Laya.Event.CLICK, this, this.onJiuTongClick, [2]);
-        this.uiInfo.jiutong3.on(Laya.Event.CLICK, this, this.onJiuTongClick, [3]);
-
-        this.maxCustomer = confStage.maxCustomerNum;
-        this.showPosX = eval(confStage.customerShowPosX);
-
-        this.startTimeStamp = this.customerTimer.currTimer;
-        //计时器开始计时
-        this.customerTimer.loop(100, this, this.initCustomer);
-
-        // //垃圾桶
-        // var trashCan = new Trash();
-        // trashCan.pos(47, 832);
-        // Laya.stage.addChild(trashCan);
-        // this.trashCanObj = trashCan;
-
-        // //汉堡面包
-        // var bread1 = this.configItem.getBy("itemSn", 1, "level", 1);
-        // var item1 = new Item(bread1);
-        // item1.pos(803, 780);
-        // Laya.stage.addChild(item1);
-
-        // //热狗面包
-        // var bread2 = this.configItem.getBy("itemSn", 4, "level", 1);
-        // var item2 = new Item(bread2);
-        // item2.pos(803, 885);
-        // Laya.stage.addChild(item2);
-
-        // //肉排
-        // var sausage = this.configItem.getBy("itemSn", 5, "level", 1);
-        // var item3 = new Item(sausage);
-        // item3.pos(1576, 970);
-        // Laya.stage.addChild(item3);
-
-        // //香肠
-        // var stake = this.configItem.getBy("itemSn", 6, "level", 1);
-        // var item4 = new Item(stake);
-        // item4.pos(1730, 970);
-        // Laya.stage.addChild(item4);
-
-        // //盘子
-        // var plate = new Plate(5);
-        // plate.pos(935, 768);
-        // Laya.stage.addChild(plate);
-        // this.plates.push(plate);
-
-        // //盘子
-        // var plate2 = new Plate(6);
-        // plate2.pos(1140, 768);
-        // Laya.stage.addChild(plate2);
-        // this.plates.push(plate2);
-
-        // //烤锅
-        // var pot = new Pot(3, 1);
-        // pot.pos(1583, 840);
-        // Laya.stage.addChild(pot);
-        // this.pots.push(pot);
-
-        // var pot2 = new Pot(4, 1);
-        // pot2.pos(1700, 840);
-        // Laya.stage.addChild(pot2);
-        // this.pots.push(pot2);
-
-        // //咖啡机
-        // var coffeeMachine = new CoffeeMachine(2, 1);
-        // coffeeMachine.pos(468, 730);
-        // Laya.stage.addChild(coffeeMachine);
         
-    }
+        //垃圾桶
+        var trashCan = new Trash();
+        trashCan.pos(this.uiInfo.trash.x, this.uiInfo.trash.y);
+        this.trashCanObj = trashCan;
+        this.addChild(trashCan);
+        this.uiInfo.trash.removeSelf;
 
-    public onJiuTongClick(e: Laya.Event) {
-        this.uiInfo.jiubei1.loadImage("ui/pijiu2.png");
+        // this.maxCustomer = confStage.maxCustomerNum;
+        // this.showPosX = eval(confStage.customerShowPosX);
+
+        // this.startTimeStamp = this.customerTimer.currTimer;
+        // //计时器开始计时
+        // this.customerTimer.loop(100, this, this.initCustomer);
+        
+        //创建场景内精灵
+        var sprites = {"item":{1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1}, "kitchenware":{1:1, 2:1, 3:1, 4:1}}; //模拟服务端发的数据
+        for(var sn in sprites["item"]){
+            var configItem = this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
+            var item = new Item(configItem);
+            var uiItem = this.uiInfo.getChildByName("itemSn" + sn) as Laya.Sprite;
+            item.pos(uiItem.x, uiItem.y);
+            item.scale(uiItem.scaleX, uiItem.scaleY);
+            this.addChild(item);
+            //替换后删除
+            this.uiInfo.removeChildByName("itemSn" + sn);
+        }
+
+        for(var id in sprites["kitchenware"]) {
+            var configKitchenware = this.configKitchenware.getBy("id", id, "level", sprites["kitchenware"][id]);
+            for(var i = 1; i <= configKitchenware.spacenum; i++) {
+                var uiKitchenware = this.uiInfo.getChildByName("kitchenwareSn" + id + "_" + i) as Laya.Sprite;
+                
+                var kitchenware = eval("new " + configKitchenware.type + "(" + id + "," + i + ")");
+                kitchenware.pos(uiKitchenware.x, uiKitchenware.y);
+                kitchenware.scale(uiKitchenware.scaleX, uiKitchenware.scaleY);
+                this.addChild(kitchenware);
+
+                //如果是放置台则加到列表里
+                if(configKitchenware.type == "Plate") {
+                    this.plates.push(kitchenware);
+                }
+                //如果是锅则加到列表里
+                else if(configKitchenware.type == "Pot") {
+                    this.pots.push(kitchenware);
+                }
+                //替换后删除
+                this.uiInfo.removeChildByName("kitchenwareSn" + id + "_" + i);
+            }
+        }
     }
 
     //同步分数时调用

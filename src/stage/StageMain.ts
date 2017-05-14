@@ -23,8 +23,9 @@ class StageMain extends Laya.Sprite{
         this.removeSelf();
         //加载关卡
         var res:Array<any> = [
-            //{url:"res/atlas/stage.json",type:Laya.Loader.ATLAS},
+            {url:"res/atlas/stage.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/beijing.jpg",type:Laya.Loader.IMAGE},
+            {url:"res/atlas/customer.json",type:Laya.Loader.ATLAS},
         ];
         new Loading(res, this.stageStart, null);
     }

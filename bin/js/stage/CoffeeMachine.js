@@ -9,8 +9,7 @@ var CoffeeMachine = (function (_super) {
         var _this = _super.call(this) || this;
         _this.item = null;
         _this.configKitchenware = new ConfigKitchenware().getBy("id", id, "level", level);
-        _this.loadImage("atlas/" + _this.configKitchenware.picture);
-        _this.scale(2, 2);
+        _this.loadImage("stage/" + _this.configKitchenware.picture);
         //如果是自动的就开始工作
         if (_this.configKitchenware.automatic) {
             _this.handle();

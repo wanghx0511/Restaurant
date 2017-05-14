@@ -6,10 +6,10 @@ class Trash extends Laya.Sprite{
     constructor(){
         super();
         this.trashCan = new Laya.Sprite;
-        this.trashCan.loadImage("atlas/trash_full-1.png");
+        this.trashCan.loadImage("stage/lajitong.png");
         this.addChild(this.trashCan);
-        Laya.Animation.createFrames(["atlas/trash_full-1.png","atlas/plateServe.png"],"trashOpen");
-        Laya.Animation.createFrames(["atlas/11033.png","atlas/11021.png"],"trashClose");
+        Laya.Animation.createFrames(["stage/lajitong.png","stage/lajitong2.png"],"trashOpen");
+        Laya.Animation.createFrames(["stage/lajitong2.png","stage/lajitong.png"],"trashClose");
         this.trashCan.on(Laya.Event.CLICK, this, this.onClick);
     }
 

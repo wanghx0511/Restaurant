@@ -10,7 +10,7 @@ class Item extends Laya.Sprite{
     constructor(confItem: any) {
         super();
         this.confItem = confItem;
-        this.loadImage("atlas/" + this.confItem.picture);
+        this.loadImage("stage/" + this.confItem.picture);
 
         //注册点击事件
         this.on(Laya.Event.CLICK, this, this.onClick);

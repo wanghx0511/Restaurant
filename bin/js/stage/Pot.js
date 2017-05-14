@@ -10,8 +10,7 @@ var Pot = (function (_super) {
         //锅里正在加工的食材
         _this.item = null;
         _this.configKitchenware = new ConfigKitchenware().getBy("id", id, "level", level);
-        _this.loadImage("atlas/" + _this.configKitchenware.picture);
-        _this.scale(1.5, 1.5);
+        _this.loadImage("stage/" + _this.configKitchenware.picture);
         return _this;
     }
     //开始加工

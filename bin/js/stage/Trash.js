@@ -8,10 +8,10 @@ var Trash = (function (_super) {
     function Trash() {
         var _this = _super.call(this) || this;
         _this.trashCan = new Laya.Sprite;
-        _this.trashCan.loadImage("atlas/trash_full-1.png");
+        _this.trashCan.loadImage("stage/lajitong.png");
         _this.addChild(_this.trashCan);
-        Laya.Animation.createFrames(["atlas/trash_full-1.png", "atlas/plateServe.png"], "trashOpen");
-        Laya.Animation.createFrames(["atlas/11033.png", "atlas/11021.png"], "trashClose");
+        Laya.Animation.createFrames(["stage/lajitong.png", "stage/lajitong2.png"], "trashOpen");
+        Laya.Animation.createFrames(["stage/lajitong2.png", "stage/lajitong.png"], "trashClose");
         _this.trashCan.on(Laya.Event.CLICK, _this, _this.onClick);
         return _this;
     }

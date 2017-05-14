@@ -10,7 +10,7 @@ var Item = (function (_super) {
         //是否出售状态
         _this.state = false;
         _this.confItem = confItem;
-        _this.loadImage("atlas/" + _this.confItem.picture);
+        _this.loadImage("stage/" + _this.confItem.picture);
         //注册点击事件
         _this.on(Laya.Event.CLICK, _this, _this.onClick);
         return _this;

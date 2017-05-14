@@ -7,8 +7,7 @@ class Pot extends Laya.Sprite{
     constructor(id: number, level: number) {
         super();
         this.configKitchenware = new ConfigKitchenware().getBy("id", id, "level", level);
-        this.loadImage("atlas/" + this.configKitchenware.picture);
-        this.scale(1.5, 1.5);
+        this.loadImage("stage/" + this.configKitchenware.picture);
     }
 
 

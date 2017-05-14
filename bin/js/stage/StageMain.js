@@ -24,8 +24,9 @@ var StageMain = (function (_super) {
         this.removeSelf();
         //加载关卡
         var res = [
-            //{url:"res/atlas/stage.json",type:Laya.Loader.ATLAS},
+            { url: "res/atlas/stage.json", type: Laya.Loader.ATLAS },
             { url: "res/atlas/beijing.jpg", type: Laya.Loader.IMAGE },
+            { url: "res/atlas/customer.json", type: Laya.Loader.ATLAS },
         ];
         new Loading(res, this.stageStart, null);
     };

@@ -6,8 +6,7 @@ class CoffeeMachine extends Laya.Sprite{
     constructor(id: number, level: number) {
         super();
         this.configKitchenware = new ConfigKitchenware().getBy("id", id, "level", level);
-        this.loadImage("atlas/" + this.configKitchenware.picture);
-        this.scale(2, 2);
+        this.loadImage("stage/" + this.configKitchenware.picture);
 
         //如果是自动的就开始工作
         if(this.configKitchenware.automatic) {
