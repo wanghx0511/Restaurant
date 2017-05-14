@@ -31,7 +31,8 @@ class Customer extends Laya.Sprite{
         this.customerPic = "customer/" + this.confCustomer.picture;
         this.loadImage(this.customerPic);
         this.useX = posX;
-
+        this.scaleY = 1.5;
+        this.scaleX = 1.5;
         this.on("click", this, this.onCustomerClick);
         
     }

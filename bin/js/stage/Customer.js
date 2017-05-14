@@ -26,6 +26,8 @@ var Customer = (function (_super) {
         _this.customerPic = "customer/" + _this.confCustomer.picture;
         _this.loadImage(_this.customerPic);
         _this.useX = posX;
+        _this.scaleY = 1.5;
+        _this.scaleX = 1.5;
         _this.on("click", _this, _this.onCustomerClick);
         return _this;
     }
