@@ -16,6 +16,19 @@ module ui {
 }
 
 module ui {
+    export class PreUpgradeInfoUI extends View {
+
+        public static  uiView:any ={"type":"View","props":{"width":300,"height":200},"child":[{"type":"Image","props":{"y":71,"x":76,"skin":"ui/shadow.png"}},{"type":"Image","props":{"y":100,"x":85,"skin":"ui/point.png"}},{"type":"Image","props":{"y":100,"x":135,"skin":"ui/point.png"}},{"type":"Image","props":{"y":100,"x":185,"skin":"ui/point.png"}}]};
+        constructor(){ super()}
+        createChildren():void {
+        
+            super.createChildren();
+            this.createView(ui.PreUpgradeInfoUI.uiView);
+        }
+    }
+}
+
+module ui {
     export class StageOneInfoUI extends View {
 		public rouchuan:Laya.Image;
 		public jiutong1:Laya.Image;
@@ -31,6 +44,19 @@ module ui {
         
             super.createChildren();
             this.createView(ui.StageOneInfoUI.uiView);
+        }
+    }
+}
+
+module ui {
+    export class UpgradeInfoUI extends View {
+
+        public static  uiView:any ={"type":"View","props":{"width":600,"height":400},"child":[{"type":"Image","props":{"y":68,"x":179,"skin":"ui/shadow_big.png"}},{"type":"Image","props":{"y":112,"x":198,"skin":"ui/point_big.png"}},{"type":"Image","props":{"y":112,"x":273,"skin":"ui/point_big.png"}},{"type":"Image","props":{"y":112,"x":348,"skin":"ui/point_big.png"}},{"type":"Image","props":{"y":243,"x":224,"skin":"ui/quick_finish.png"}},{"type":"Image","props":{"y":177,"x":35,"skin":"ui/upgrade.png"}},{"type":"Image","props":{"y":188,"x":413,"skin":"ui/info.png"}},{"type":"Image","props":{"y":198,"x":207,"skin":"ui/diamond_bar.png","scaleY":0.5,"scaleX":0.5}},{"type":"Image","props":{"y":132,"x":20,"skin":"ui/coin_bar.png","scaleY":0.5,"scaleX":0.5}}]};
+        constructor(){ super()}
+        createChildren():void {
+        
+            super.createChildren();
+            this.createView(ui.UpgradeInfoUI.uiView);
         }
     }
 }
