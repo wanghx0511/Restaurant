@@ -8,7 +8,7 @@ var Trash = (function (_super) {
     function Trash() {
         var _this = _super.call(this) || this;
         _this.trashCan = new Laya.Sprite;
-        _this.trashCan.loadImage("stage/lajitong.png");
+        //this.trashCan.loadImage("stage/lajitong.png");
         _this.addChild(_this.trashCan);
         Laya.Animation.createFrames(["stage/lajitong.png", "stage/lajitong2.png"], "trashOpen");
         Laya.Animation.createFrames(["stage/lajitong2.png", "stage/lajitong.png"], "trashClose");

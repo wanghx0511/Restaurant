@@ -46,18 +46,18 @@ var StageOne = (function (_super) {
         _this.uiInfo = new StageOneInfo();
         _this.addChild(_this.uiInfo);
         //垃圾桶
-        var trashCan = new Trash();
-        trashCan.pos(_this.uiInfo.trash.x, _this.uiInfo.trash.y);
-        _this.trashCanObj = trashCan;
-        _this.addChild(trashCan);
-        _this.uiInfo.trash.removeSelf;
+        // var trashCan = new Trash();
+        // trashCan.pos(this.uiInfo.trash.x, this.uiInfo.trash.y);
+        // this.trashCanObj = trashCan;
+        // this.addChild(trashCan);
+        // this.uiInfo.trash.removeSelf;
         // this.maxCustomer = confStage.maxCustomerNum;
         // this.showPosX = eval(confStage.customerShowPosX);
         // this.startTimeStamp = this.customerTimer.currTimer;
         // //计时器开始计时
         // this.customerTimer.loop(100, this, this.initCustomer);
         //创建场景内精灵
-        var sprites = { "item": { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1 }, "kitchenware": { 1: 1, 2: 1, 3: 1, 4: 1 } }; //模拟服务端发的数据
+        var sprites = { "item": { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1 } }; //模拟服务端发的数据
         for (var sn in sprites["item"]) {
             var configItem = _this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
             var item = new Item(configItem);

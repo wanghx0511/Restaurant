@@ -52,13 +52,6 @@ class StageOne extends Laya.Sprite{
         //创建UI
         this.uiInfo = new StageOneInfo();
         this.addChild(this.uiInfo);
-        
-        //垃圾桶
-        var trashCan = new Trash();
-        trashCan.pos(this.uiInfo.trash.x, this.uiInfo.trash.y);
-        this.trashCanObj = trashCan;
-        this.addChild(trashCan);
-        this.uiInfo.trash.removeSelf;
 
         // this.maxCustomer = confStage.maxCustomerNum;
         // this.showPosX = eval(confStage.customerShowPosX);
@@ -68,7 +61,7 @@ class StageOne extends Laya.Sprite{
         // this.customerTimer.loop(100, this, this.initCustomer);
         
         //创建场景内精灵
-        var sprites = {"item":{1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1}, "kitchenware":{1:1, 2:1, 3:1, 4:1}}; //模拟服务端发的数据
+        var sprites = {"item":{1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1}}; //模拟服务端发的数据
         for(var sn in sprites["item"]){
             var configItem = this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
             var item = new Item(configItem);
