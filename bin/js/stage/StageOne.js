@@ -45,12 +45,6 @@ var StageOne = (function (_super) {
         //创建UI
         _this.uiInfo = new StageOneInfo();
         _this.addChild(_this.uiInfo);
-        //垃圾桶
-        // var trashCan = new Trash();
-        // trashCan.pos(this.uiInfo.trash.x, this.uiInfo.trash.y);
-        // this.trashCanObj = trashCan;
-        // this.addChild(trashCan);
-        // this.uiInfo.trash.removeSelf;
         // this.maxCustomer = confStage.maxCustomerNum;
         // this.showPosX = eval(confStage.customerShowPosX);
         // this.startTimeStamp = this.customerTimer.currTimer;

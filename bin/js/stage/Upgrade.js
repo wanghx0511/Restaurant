@@ -6,8 +6,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Upgrade = (function (_super) {
     __extends(Upgrade, _super);
     function Upgrade() {
-        var _this;
-        return _this;
+        return _super.call(this) || this;
     }
     return Upgrade;
 }(Laya.Sprite));
