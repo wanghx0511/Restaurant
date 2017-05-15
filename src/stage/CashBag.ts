@@ -9,8 +9,8 @@ class CashBag extends Laya.Sprite {
     constructor (customer : Customer) {
         super();
         this.customer = customer;
-        this.cashTipsPic = "atlas/lajitong.png";
-        this.cashPic = "atlas/lajitong2.png";
+        this.cashTipsPic = "stage/caopiao.png";
+        this.cashPic = "stage/caopiao.png";
         if(this.customer.haveTips()) {
             this.loadImage(this.cashTipsPic);
         } else {

@@ -48,7 +48,8 @@ var Customer = (function (_super) {
             var config = configItem.getBy("itemSn", itemSn);
             // var config = configItem.get(itemSn);
             var image = new Laya.Image;
-            image.loadImage("customer/" + config.picture);
+            image.loadImage("stage/" + config.picture);
+            image.scale(0.4, 0.4);
             this.bubble.addChild(image);
             image.pos(0, needsPosY);
             needsPosY += 50;

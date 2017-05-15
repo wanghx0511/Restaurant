@@ -52,13 +52,16 @@ var Item = (function (_super) {
                 var plates = StageManager.stage.plates;
                 for (var i = 0; i < plates.length; i++) {
                     var plate = plates[i];
-                    if (plate.item == null && plate.getMakeItemSn() == this.confItem.itemSn) {
+                    if (plate.item != null && this.meger(plate.item)) {
+                        break;
+                    }
+                    else if (plate.item == null && plate.getMakeItemSn() == this.confItem.itemSn) {
                         var item = new Item(this.confItem);
                         item.state = true;
                         item.box = plate;
                         item.progress = 1;
-                        item.pos(plate.x + 30, plate.y + 60);
-                        Laya.stage.addChild(item);
+                        plate.addChild(item);
+                        item.pivot(plate.pivotX, plate.pivotY);
                         plate.item = item;
                         break;
                     }
@@ -73,7 +76,6 @@ var Item = (function (_super) {
                         item.state = true;
                         item.box = pot;
                         item.progress = 0;
-                        Laya.stage.addChild(item);
                         pot.item = item;
                         pot.machining();
                         break;
@@ -104,11 +106,12 @@ var Item = (function (_super) {
         var config = configItemMerge.getBy("itemSn", itemSn, "part", this.confItem.itemSn);
         //匹配可以合成
         if (config != null) {
-            this.destroy();
+            if (!this.confItem.ripe)
+                this.destroy();
             item.graphics.clear();
             var configItem = new ConfigItem();
             item.confItem = configItem.getBy("itemSn", config.mergeId, "level", 1);
-            item.loadImage("atlas/" + item.confItem.picture);
+            item.loadImage("stage/" + item.confItem.picture);
             return true;
         }
         return false;

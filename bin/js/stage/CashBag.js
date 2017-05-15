@@ -8,8 +8,8 @@ var CashBag = (function (_super) {
     function CashBag(customer) {
         var _this = _super.call(this) || this;
         _this.customer = customer;
-        _this.cashTipsPic = "atlas/lajitong.png";
-        _this.cashPic = "atlas/lajitong2.png";
+        _this.cashTipsPic = "stage/caopiao.png";
+        _this.cashPic = "stage/caopiao.png";
         if (_this.customer.haveTips()) {
             _this.loadImage(_this.cashTipsPic);
         }

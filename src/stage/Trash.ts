@@ -6,6 +6,7 @@ class Trash extends Laya.Sprite{
     constructor(){
         super();
         this.trashCan = new Laya.Sprite;
+        this.trashCan.loadImage("stage/lajitong.png");
         this.addChild(this.trashCan);
         Laya.Animation.createFrames(["stage/lajitong.png","stage/lajitong2.png"],"trashOpen");
         Laya.Animation.createFrames(["stage/lajitong2.png","stage/lajitong.png"],"trashClose");

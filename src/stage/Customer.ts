@@ -54,7 +54,8 @@ class Customer extends Laya.Sprite{
             var config = configItem.getBy("itemSn", itemSn);
             // var config = configItem.get(itemSn);
             var image : Laya.Image = new Laya.Image;
-            image.loadImage("customer/" + config.picture);
+            image.loadImage("stage/" + config.picture);
+            image.scale(0.4,0.4);
             this.bubble.addChild(image);
             image.pos(0, needsPosY);
             needsPosY += 50;

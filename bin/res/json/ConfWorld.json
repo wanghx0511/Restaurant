@@ -1,4 +1,4 @@
 [
-{"maxStar":30,"name":"快餐","picture":"house1.png","posX":800,"posY":400,"sn":1},
-{"maxStar":30,"name":"川菜","picture":"house2.png","posX":200,"posY":500,"sn":2}
+{"maxStar":30,"name":"快餐","picture":"house1.png","posX":540,"posY":960,"sn":1},
+{"maxStar":30,"name":"川菜","picture":"house2.png","posX":200,"posY":200,"sn":2}
 ]

@@ -53,15 +53,25 @@ class StageOne extends Laya.Sprite{
         this.uiInfo = new StageOneInfo();
         this.addChild(this.uiInfo);
 
-        // this.maxCustomer = confStage.maxCustomerNum;
-        // this.showPosX = eval(confStage.customerShowPosX);
+        //垃圾桶
+        var trashCan = new Trash();
+        var uiTrash = this.uiInfo.getChildByName("trash") as Laya.Sprite;
+        trashCan.pos(uiTrash.x, uiTrash.y);
+        trashCan.scale(uiTrash.scaleX, uiTrash.scaleY);
+        this.trashCanObj = trashCan;
+        this.addChild(this.trashCanObj);
+        //替换后删除
+        this.uiInfo.removeChildByName("trash");
 
-        // this.startTimeStamp = this.customerTimer.currTimer;
-        // //计时器开始计时
-        // this.customerTimer.loop(100, this, this.initCustomer);
+        this.maxCustomer = confStage.maxCustomerNum;
+        this.showPosX = eval(confStage.customerShowPosX);
+
+        this.startTimeStamp = this.customerTimer.currTimer;
+        //计时器开始计时
+        this.customerTimer.loop(100, this, this.initCustomer);
         
         //创建场景内精灵
-        var sprites = {"item":{1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1}}; //模拟服务端发的数据
+        var sprites = {"item":{1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1}, "kitchenware":{1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1, 8:1}}; //模拟服务端发的数据
         for(var sn in sprites["item"]){
             var configItem = this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
             var item = new Item(configItem);
@@ -81,6 +91,7 @@ class StageOne extends Laya.Sprite{
                 var kitchenware = eval("new " + configKitchenware.type + "(" + id + "," + i + ")");
                 kitchenware.pos(uiKitchenware.x, uiKitchenware.y);
                 kitchenware.scale(uiKitchenware.scaleX, uiKitchenware.scaleY);
+                kitchenware.pivot(uiKitchenware.pivotX, uiKitchenware.pivotY);
                 this.addChild(kitchenware);
 
                 //如果是放置台则加到列表里
@@ -128,7 +139,7 @@ class StageOne extends Laya.Sprite{
                     customer.y = confCustomer.posY;
                     //入场动画结束后 ，出现气泡
                     Laya.Tween.to(customer, {x : posX}, new Utils().calcTweenNeedTime(posX), null, new Laya.Handler(customer, customer.addBubble));
-                    Laya.stage.addChild(customer);
+                    this.addChild(customer);
                     // customer.addBubble();
                     var customerEle : [number, Customer] = [confCustomer.sn, customer];
                     this.showCustomer.push(customerEle);

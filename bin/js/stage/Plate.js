@@ -11,7 +11,6 @@ var Plate = (function (_super) {
         //装的食材
         _this.item = null;
         _this.configKitchenware = new ConfigKitchenware().getBy("id", id);
-        _this.loadImage("stage/" + _this.configKitchenware.picture);
         return _this;
     }
     Plate.prototype.handle = function () {

@@ -1,10 +1,9 @@
 [
-{"itemSn":1,"mergeId":8,"part":5,"sn":1},
-{"itemSn":1,"mergeId":9,"part":3,"sn":2},
+{"itemSn":6,"mergeId":8,"part":1,"sn":1},
+{"itemSn":8,"mergeId":9,"part":2,"sn":2},
 {"itemSn":8,"mergeId":10,"part":3,"sn":3},
-{"itemSn":9,"mergeId":10,"part":5,"sn":4},
-{"itemSn":4,"mergeId":11,"part":6,"sn":5},
-{"itemSn":4,"mergeId":12,"part":2,"sn":6},
-{"itemSn":11,"mergeId":13,"part":2,"sn":7},
-{"itemSn":12,"mergeId":13,"part":6,"sn":8}
+{"itemSn":9,"mergeId":11,"part":3,"sn":4},
+{"itemSn":10,"mergeId":11,"part":2,"sn":5},
+{"itemSn":7,"mergeId":12,"part":5,"sn":6},
+{"itemSn":12,"mergeId":13,"part":4,"sn":7}
 ]
