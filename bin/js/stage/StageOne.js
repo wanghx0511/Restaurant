@@ -67,6 +67,7 @@ var StageOne = (function (_super) {
             var uiItem = _this.uiInfo.getChildByName("itemSn" + sn);
             item.pos(uiItem.x, uiItem.y);
             item.scale(uiItem.scaleX, uiItem.scaleY);
+            item.pivot(uiItem.pivotX, uiItem.pivotY);
             _this.addChild(item);
             //替换后删除
             _this.uiInfo.removeChildByName("itemSn" + sn);

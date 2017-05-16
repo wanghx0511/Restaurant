@@ -15,9 +15,7 @@ var Pot = (function (_super) {
     }
     //开始加工
     Pot.prototype.machining = function () {
-        this.addChild(this.item);
         //设定加工时间
-        this.item.pivot(this.pivotX, this.pivotY);
         this.alpha = 1;
         Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.updateProgress, [1]);
     };

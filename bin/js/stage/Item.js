@@ -60,8 +60,9 @@ var Item = (function (_super) {
                         item.state = true;
                         item.box = plate;
                         item.progress = 1;
-                        plate.addChild(item);
-                        item.pivot(plate.pivotX, plate.pivotY);
+                        item.pivot(this.pivotX, this.pivotY);
+                        item.pos(plate.x, plate.y);
+                        StageManager.stage.addChild(item);
                         plate.item = item;
                         break;
                     }
@@ -76,6 +77,9 @@ var Item = (function (_super) {
                         item.state = true;
                         item.box = pot;
                         item.progress = 0;
+                        item.pivot(this.pivotX, this.pivotY);
+                        item.pos(pot.x, pot.y);
+                        StageManager.stage.addChild(item);
                         pot.item = item;
                         pot.machining();
                         break;

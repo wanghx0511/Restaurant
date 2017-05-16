@@ -78,6 +78,7 @@ class StageOne extends Laya.Sprite{
             var uiItem = this.uiInfo.getChildByName("itemSn" + sn) as Laya.Sprite;
             item.pos(uiItem.x, uiItem.y);
             item.scale(uiItem.scaleX, uiItem.scaleY);
+            item.pivot(uiItem.pivotX, uiItem.pivotY);
             this.addChild(item);
             //替换后删除
             this.uiInfo.removeChildByName("itemSn" + sn);
