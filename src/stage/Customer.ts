@@ -23,6 +23,8 @@ class Customer extends Laya.Sprite{
     private canDesTween : boolean = false;
     //占用的x坐标
     private useX : number;
+    //跑路中的就别截获了
+    private isRunning : boolean = false;
 
     constructor(confCustomer : any, posX : number) {
         super();
@@ -85,6 +87,7 @@ class Customer extends Laya.Sprite{
 
     //跑p了的
     private loseCustomer() {
+        this.isRunning = true;
         if(this.moneyAdd > 0 ) {
             //有过成交，换图
             Laya.Tween.to(this, {x : Laya.stage.width}, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.mayDestory,[2]));
@@ -101,6 +104,8 @@ class Customer extends Laya.Sprite{
         //当前选中的食物，给顾客了，瞎逼点的直接return
         var item: Item = StageManager.stage.selected;
         if(item == null) return;
+        //跑动中的不要截获
+        if(this.isRunning) return;
 
         //先看看是不是要的那个
         var confItem = item.getConf();

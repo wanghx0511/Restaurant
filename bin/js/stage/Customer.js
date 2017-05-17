@@ -21,6 +21,8 @@ var Customer = (function (_super) {
         _this.canDesClick = false;
         //是否销毁，条件2
         _this.canDesTween = false;
+        //跑路中的就别截获了
+        _this.isRunning = false;
         //顾客
         _this.confCustomer = confCustomer;
         _this.customerPic = "customer/" + _this.confCustomer.picture;
@@ -75,6 +77,7 @@ var Customer = (function (_super) {
     };
     //跑p了的
     Customer.prototype.loseCustomer = function () {
+        this.isRunning = true;
         if (this.moneyAdd > 0) {
             //有过成交，换图
             Laya.Tween.to(this, { x: Laya.stage.width }, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.mayDestory, [2]));
@@ -91,6 +94,9 @@ var Customer = (function (_super) {
         //当前选中的食物，给顾客了，瞎逼点的直接return
         var item = StageManager.stage.selected;
         if (item == null)
+            return;
+        //跑动中的不要截获
+        if (this.isRunning)
             return;
         //先看看是不是要的那个
         var confItem = item.getConf();
