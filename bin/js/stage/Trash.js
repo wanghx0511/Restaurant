@@ -10,8 +10,6 @@ var Trash = (function (_super) {
         _this.trashCan = new Laya.Sprite;
         _this.trashCan.loadImage("stage/lajitong.png");
         _this.addChild(_this.trashCan);
-        Laya.Animation.createFrames(["stage/lajitong.png", "stage/lajitong2.png"], "trashOpen");
-        Laya.Animation.createFrames(["stage/lajitong2.png", "stage/lajitong.png"], "trashClose");
         _this.trashCan.on(Laya.Event.CLICK, _this, _this.onClick);
         return _this;
     }
@@ -25,13 +23,19 @@ var Trash = (function (_super) {
     Trash.prototype.abandon = function (item) {
         //销毁
         item.destroy();
-        this.trashAni = new Laya.Animation;
-        this.trashAni.interval = 200;
-        this.addChild(this.trashAni);
-        this.trashAni.play(0, false, "trashClose");
-        this.trashAni.destroy();
+        this.trashCan.loadImage("stage/lajitong2.png");
+        Laya.timer.once(800, this, this.onChangeImage);
+        // console.log("trash animation")
+        // this.trashAni = new Laya.Animation;
+        // this.trashAni.interval = 200;
+        // this.addChild(this.trashAni);
+        // this.trashAni.play(0, false, "trashClose");
+        // this.trashAni.destroy();
         //扣分
         //gameMain.game.gameInfo.minusMoney(item.getConf().destroycost);
+    };
+    Trash.prototype.onChangeImage = function () {
+        this.trashCan.loadImage("stage/lajitong.png");
     };
     return Trash;
 }(Laya.Sprite));
