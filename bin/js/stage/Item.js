@@ -35,6 +35,16 @@ var Item = (function (_super) {
                     return;
                 }
             }
+            if (this.box instanceof Pot) {
+                var crispers = StageManager.stage.crisper;
+                for (var i = 0; i < crispers.length; i++) {
+                    var crisper = crispers[i];
+                    if (crisper.item == null) {
+                        crisper.addItem(this);
+                        return;
+                    }
+                }
+            }
         }
         else if (this.progress == 2) {
             StageManager.stage.trashCanObj.abandon(this);
@@ -47,11 +57,11 @@ var Item = (function (_super) {
         }
         //新的道具
         if (!this.state) {
-            //找到空盘子放进去
             if (this.confItem.ripe) {
                 var plates = StageManager.stage.plates;
                 for (var i = 0; i < plates.length; i++) {
                     var plate = plates[i];
+                    //是否有可以合成的
                     if (plate.item != null && this.meger(plate.item)) {
                         break;
                     }

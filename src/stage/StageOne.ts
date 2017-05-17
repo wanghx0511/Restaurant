@@ -7,6 +7,7 @@ class StageOne extends Laya.Sprite{
     private configKitchenware : ConfigKitchenware = new ConfigKitchenware();
     public plates: any[] = [];
     public pots: any[] = [];
+    public crisper: any[] = [];
     public customers : any[] = [];
     //被选中的道具
     public selected: any = null;
@@ -88,7 +89,8 @@ class StageOne extends Laya.Sprite{
             var configKitchenware = this.configKitchenware.getBy("id", id, "level", sprites["kitchenware"][id]);
             for(var i = 1; i <= configKitchenware.spacenum; i++) {
                 var uiKitchenware = this.uiInfo.getChildByName("kitchenwareSn" + id + "_" + i) as Laya.Sprite;
-                
+                if(uiKitchenware == null) continue;
+
                 var kitchenware = eval("new " + configKitchenware.type + "(" + id + "," + i + ")");
                 kitchenware.pos(uiKitchenware.x, uiKitchenware.y);
                 kitchenware.scale(uiKitchenware.scaleX, uiKitchenware.scaleY);
@@ -102,6 +104,10 @@ class StageOne extends Laya.Sprite{
                 //如果是锅则加到列表里
                 else if(configKitchenware.type == "Pot") {
                     this.pots.push(kitchenware);
+                }
+                //如果是保温炉加到列表里
+                else if(configKitchenware.type == "Crisper") {
+                    this.crisper.push(kitchenware);
                 }
                 //替换后删除
                 this.uiInfo.removeChildByName("kitchenwareSn" + id + "_" + i);

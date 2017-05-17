@@ -39,6 +39,7 @@ var Pot = (function (_super) {
     };
     Pot.prototype.handle = function () {
         this.item = null;
+        this.clearTimer(this, this.updateProgress);
     };
     return Pot;
 }(Laya.Sprite));

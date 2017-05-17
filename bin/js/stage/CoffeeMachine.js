@@ -30,8 +30,8 @@ var CoffeeMachine = (function (_super) {
         this.item = item;
         item.box = this;
         item.state = true;
-        item.pos(this.x, this.y + 120);
-        Laya.stage.addChild(item);
+        item.pos(394, 719);
+        StageManager.stage.addChild(item);
     };
     CoffeeMachine.prototype.onClick = function (e) {
         //自动的无需点击

@@ -41,5 +41,6 @@ class Pot extends Laya.Sprite{
 
     public handle() {
         this.item = null;
+        this.clearTimer(this, this.updateProgress);
     }
 }

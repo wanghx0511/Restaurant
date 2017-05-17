@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":140,
+    "selecteID":151,
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
     "label":"View",
@@ -19,26 +19,6 @@
         }],
     "compId":1,
     "child":[
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":490,"x":-279,"skin":"stage/caozuotai.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":801,"x":614,"skin":"stage/caozuotai.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":143,
-            "child":[
-                ]
-        },
         {
             "x":15,
             "type":"Sprite",
@@ -330,9 +310,9 @@
         {
             "x":15,
             "type":"Sprite",
-            "props":{"y":751,"x":1624,"name":"kitchenwareSn5_1"},
+            "props":{"y":751,"x":1624,"name":"kitchenwareSn3_1"},
             "nodeParent":1,
-            "label":"Sprite(kitchenwareSn5_1)",
+            "label":"Sprite(kitchenwareSn3_1)",
             "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
@@ -765,7 +745,7 @@
             "props":{"y":920,"x":943,"width":167,"pivotY":57.89473684210532,"pivotX":82.8947368421052,"name":"itemSn6","height":120},
             "nodeParent":1,
             "label":"Sprite(itemSn6)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
@@ -779,7 +759,6 @@
             "compId":126,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"skin":"stage/kaochuanpan.png"},
                     "nodeParent":126,
@@ -805,7 +784,7 @@
             "props":{"y":914,"x":776,"width":172,"pivotY":60,"pivotX":86,"name":"itemSn7","height":120},
             "nodeParent":1,
             "label":"Sprite(itemSn7)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
@@ -819,7 +798,6 @@
             "compId":127,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"skin":"stage/xiaolongxiapen.png"},
                     "nodeParent":127,
@@ -835,192 +813,6 @@
                             "__InPool":false
                         }],
                     "compId":125,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "props":{"y":557,"x":413,"name":"kitchenwareSn6_1"},
-            "nodeParent":1,
-            "label":"Sprite(kitchenwareSn6_1)",
-            "isOpen":{
-
-            },
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":557,"x":414},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":135,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"width":127,"skin":"stage/pijiutong.png","height":198},
-                    "nodeParent":135,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"y":641,"x":484,"skin":"stage/pijiutong.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":128,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":143,"x":-21.999999999999716,"skin":"stage/pijiu.png"},
-                    "nodeParent":135,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"y":770,"x":459,"skin":"stage/pijiu.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":133,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "props":{"y":549,"x":305,"name":"kitchenwareSn6_2"},
-            "nodeParent":1,
-            "label":"Sprite(kitchenwareSn6_2)",
-            "isOpen":{
-
-            },
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":549,"x":306},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":136,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"width":132,"skin":"stage/pijiutong.png","height":191},
-                    "nodeParent":136,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"y":641,"x":484,"skin":"stage/pijiutong.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":129,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":140,"x":-22,"skin":"stage/pijiu.png"},
-                    "nodeParent":136,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"y":751,"x":333,"skin":"stage/pijiu.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":132,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "props":{"y":531,"x":204,"name":"kitchenwareSn6_3"},
-            "nodeParent":1,
-            "label":"Sprite(kitchenwareSn6_3)",
-            "isOpen":{
-
-            },
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":532,"x":204},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":137,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"width":126,"skin":"stage/pijiutong.png","height":197},
-                    "nodeParent":137,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"y":641,"x":484,"skin":"stage/pijiutong.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":130,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":142.0000000000001,"x":-23.999999999999915,"skin":"stage/pijiu.png"},
-                    "nodeParent":137,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"y":758,"x":229,"skin":"stage/pijiu.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":131,
                     "child":[
                         ]
                 }]
@@ -1100,6 +892,47 @@
                             "__InPool":false
                         }],
                     "compId":145,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":589,"x":420,"name":"kitchenwareSn4_1"},
+            "nodeParent":1,
+            "label":"Sprite(kitchenwareSn4_1)",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "frames":[
+                {
+                    "type":1,
+                    "props":{"y":589,"x":420},
+                    "frame":0,
+                    "__InPool":false
+                }],
+            "compId":151,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"width":115,"skin":"stage/pijiutong.png","height":163},
+                    "nodeParent":151,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "frames":[
+                        {
+                            "type":1,
+                            "props":{"y":641,"x":484,"skin":"stage/pijiutong.png"},
+                            "frame":0,
+                            "__InPool":false
+                        }],
+                    "compId":128,
                     "child":[
                         ]
                 }]
