@@ -146,7 +146,7 @@ var StageOne = (function (_super) {
         var cashBag = new CashBag(customer);
         // var x : number = customer.x;
         // var y : number = customer.y;
-        cashBag.pos(customer.x, customer.y);
+        cashBag.pos(customer.x, customer.y + customer.height);
         Laya.stage.addChild(cashBag);
     };
     return StageOne;
