@@ -50,6 +50,11 @@ class StageOne extends Laya.Sprite{
         caozuotai.pos(-275, 490);
         this.addChild(caozuotai);
 
+        var json = Loader.getRes("res/json/stageOne.json");
+        for(var data in json) {
+            
+        }
+
         //创建UI
         this.uiInfo = new StageOneInfo();
         this.addChild(this.uiInfo);

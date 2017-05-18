@@ -27,6 +27,7 @@ var StageMain = (function (_super) {
             { url: "res/atlas/stage.json", type: Laya.Loader.ATLAS },
             { url: "res/atlas/beijing.jpg", type: Laya.Loader.IMAGE },
             { url: "res/atlas/customer.json", type: Laya.Loader.ATLAS },
+            { url: "res/json/stageOne.json", type: Laya.Loader.JSON },
         ];
         new Loading(res, this.stageStart, null);
     };
