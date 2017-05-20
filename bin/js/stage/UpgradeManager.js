@@ -2,8 +2,8 @@ var UpgradeManager = (function () {
     function UpgradeManager() {
     }
     UpgradeManager.prototype.createStage = function () {
-        UpgradeManager.upgrade = new StageOne(1);
-        Laya.stage.addChild(StageManager.stage);
+        UpgradeManager.upgrade = new Upgrade(1);
+        Laya.stage.addChild(UpgradeManager.upgrade);
     };
     return UpgradeManager;
 }());

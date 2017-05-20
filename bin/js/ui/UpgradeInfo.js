@@ -6,8 +6,34 @@ var __extends = (this && this.__extends) || function (d, b) {
 var UpgradeInfo = (function (_super) {
     __extends(UpgradeInfo, _super);
     function UpgradeInfo() {
-        return _super.call(this) || this;
+        var _this = _super.call(this) || this;
+        _this.stageManager = new StageManager();
+        _this.upgrade.on("click", _this, _this.onUpgradeClick);
+        _this.strength.on("click", _this, _this.onStrengthClick);
+        _this.info.on("click", _this, _this.onInfoClick);
+        return _this;
     }
+    UpgradeInfo.prototype.setParam = function (type, sn, level) {
+        this.type = type;
+        this.sn = sn;
+        this.level = level;
+    };
+    UpgradeInfo.prototype.onUpgradeClick = function () {
+        if (this.type == "item") {
+            var levelNow = this.level + 1;
+            this.stageManager.data["item"][this.sn] = levelNow;
+        }
+        if (this.type == "kitchenware") {
+            var levelNow = this.level + 1;
+            this.stageManager.data["kitchenware"][this.sn] = levelNow;
+        }
+        console.log(this.sn);
+        console.log(this.stageManager.data["kitchenware"][this.sn]);
+    };
+    UpgradeInfo.prototype.onStrengthClick = function () {
+    };
+    UpgradeInfo.prototype.onInfoClick = function () {
+    };
     return UpgradeInfo;
-}(ui.MainInfoUI));
+}(ui.UpgradeInfoUI));
 //# sourceMappingURL=UpgradeInfo.js.map
