@@ -34,7 +34,9 @@ var StageMain = (function (_super) {
     StageMain.prototype.stageStart = function () {
         // var stageManager = new StageManager();
         // stageManager.createStage();
-        var upgrade = new Upgrade(1);
+        var upgradeManager = new UpgradeManager();
+        upgradeManager.createStage();
+        // var upgrade = new Upgrade(1);
     };
     return StageMain;
 }(Laya.Sprite));

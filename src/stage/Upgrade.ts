@@ -92,7 +92,8 @@ class Upgrade extends Laya.Sprite{
 
         if(type == "k"){
             var uiView = this.uiInfo.getChildByName("kitchenwareSn" + sn + "_" + level + "_ui") as Laya.View;
-            this.upgradeUiInfo = new UpgradeInfo("kitchenware", sn, level);
+            this.upgradeUiInfo = new UpgradeInfo();
+            this.upgradeUiInfo.setParam("kitchenware", sn, level);
             this.upgradeUiInfo.pos(uiView.x, uiView.y);
             this.upgradeUiInfo.pivot(uiView.pivotX, uiView.pivotY);
             this.upgradeUiInfo.scale(uiView.scaleX, uiView.scaleY);
@@ -103,7 +104,8 @@ class Upgrade extends Laya.Sprite{
 
         if(type == "i") {
             var uiView = this.uiInfo.getChildByName("itemSn" + sn + "_" + level + "_ui") as Laya.View;
-            this.upgradeUiInfo = new UpgradeInfo("item", sn, level);
+            this.upgradeUiInfo = new UpgradeInfo();
+            this.upgradeUiInfo.setParam("item", sn, level);
             this.upgradeUiInfo.pos(uiView.x, uiView.y);
             this.upgradeUiInfo.pivot(uiView.pivotX, uiView.pivotY);
             this.upgradeUiInfo.scale(uiView.scaleX, uiView.scaleY);

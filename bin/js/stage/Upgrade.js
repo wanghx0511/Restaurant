@@ -86,7 +86,8 @@ var Upgrade = (function (_super) {
         var level = param[4];
         if (type == "k") {
             var uiView = this.uiInfo.getChildByName("kitchenwareSn" + sn + "_" + level + "_ui");
-            this.upgradeUiInfo = new UpgradeInfo("kitchenware", sn, level);
+            this.upgradeUiInfo = new UpgradeInfo();
+            this.upgradeUiInfo.setParam("kitchenware", sn, level);
             this.upgradeUiInfo.pos(uiView.x, uiView.y);
             this.upgradeUiInfo.pivot(uiView.pivotX, uiView.pivotY);
             this.upgradeUiInfo.scale(uiView.scaleX, uiView.scaleY);
@@ -95,7 +96,8 @@ var Upgrade = (function (_super) {
         }
         if (type == "i") {
             var uiView = this.uiInfo.getChildByName("itemSn" + sn + "_" + level + "_ui");
-            this.upgradeUiInfo = new UpgradeInfo("item", sn, level);
+            this.upgradeUiInfo = new UpgradeInfo();
+            this.upgradeUiInfo.setParam("item", sn, level);
             this.upgradeUiInfo.pos(uiView.x, uiView.y);
             this.upgradeUiInfo.pivot(uiView.pivotX, uiView.pivotY);
             this.upgradeUiInfo.scale(uiView.scaleX, uiView.scaleY);

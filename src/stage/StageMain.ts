@@ -34,6 +34,8 @@ class StageMain extends Laya.Sprite{
     private stageStart(): void {
         // var stageManager = new StageManager();
         // stageManager.createStage();
-        var upgrade = new Upgrade(1);
+        var upgradeManager = new UpgradeManager();
+        upgradeManager.createStage();
+        // var upgrade = new Upgrade(1);
     }
 }

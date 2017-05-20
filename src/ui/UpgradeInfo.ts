@@ -5,14 +5,17 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
     private level : number;
     private stageManager : StageManager = new StageManager();
 
-    constructor(type : string, sn : number, level : number) {
+    constructor() {
         super();
-        this.type = type;
-        this.sn = sn;
-        this.level = level;
         this.upgrade.on("click", this, this.onUpgradeClick);
         this.strength.on("click", this, this.onStrengthClick);
         this.info.on("click", this, this.onInfoClick);
+    }
+
+    public setParam(type : string, sn : number, level : number) {
+        this.type = type;
+        this.sn = sn;
+        this.level = level;
     }
 
     private onUpgradeClick(){
@@ -26,7 +29,7 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
             this.stageManager.data["kitchenware"][this.sn] = levelNow;
         }
         console.log(this.sn);
-        console.log(this.stageManager.data["kitchenware"] + ":::" +this.stageManager.data["kitchenware"][this.sn]);
+        console.log(this.stageManager.data["kitchenware"][this.sn]);
         
     }
 
