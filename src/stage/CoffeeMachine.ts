@@ -12,7 +12,7 @@ class CoffeeMachine extends Laya.Sprite{
         if(this.configKitchenware.automatic) {
             this.handle();
         }
-         //注册点击事件
+        //注册点击事件
         this.on(Laya.Event.CLICK, this, this.onClick);
     }
 
@@ -29,8 +29,8 @@ class CoffeeMachine extends Laya.Sprite{
         this.item = item;
         item.box = this;
         item.state = true;
-        item.pos(this.x, this.y + 120);
-        Laya.stage.addChild(item);
+        item.pos(394, 719);
+        StageManager.stage.addChild(item);
     }
 
     

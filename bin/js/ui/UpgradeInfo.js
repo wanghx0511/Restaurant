@@ -28,7 +28,7 @@ var UpgradeInfo = (function (_super) {
             this.stageManager.data["kitchenware"][this.sn] = levelNow;
         }
         console.log(this.sn);
-        console.log(this.stageManager.data["kitchenware"] + ":::" + this.stageManager.data["kitchenware"][this.sn]);
+        console.log(this.stageManager.data["kitchenware"][this.sn]);
     };
     UpgradeInfo.prototype.onStrengthClick = function () {
     };

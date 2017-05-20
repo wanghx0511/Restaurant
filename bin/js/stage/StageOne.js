@@ -14,6 +14,7 @@ var StageOne = (function (_super) {
         _this.configKitchenware = new ConfigKitchenware();
         _this.plates = [];
         _this.pots = [];
+        _this.crisper = [];
         _this.customers = [];
         //被选中的道具
         _this.selected = null;
@@ -42,6 +43,9 @@ var StageOne = (function (_super) {
         caozuotai.loadImage("res/atlas/caozuotai.png");
         caozuotai.pos(-275, 490);
         _this.addChild(caozuotai);
+        var json = Loader.getRes("res/json/stageOne.json");
+        for (var data in json) {
+        }
         //创建UI
         _this.uiInfo = new StageOneInfo();
         _this.addChild(_this.uiInfo);
@@ -77,6 +81,8 @@ var StageOne = (function (_super) {
             var configKitchenware = _this.configKitchenware.getBy("id", id, "level", sprites["kitchenware"][id]);
             for (var i = 1; i <= configKitchenware.spacenum; i++) {
                 var uiKitchenware = _this.uiInfo.getChildByName("kitchenwareSn" + id + "_" + i);
+                if (uiKitchenware == null)
+                    continue;
                 var kitchenware = eval("new " + configKitchenware.type + "(" + id + "," + i + ")");
                 kitchenware.pos(uiKitchenware.x, uiKitchenware.y);
                 kitchenware.scale(uiKitchenware.scaleX, uiKitchenware.scaleY);
@@ -88,6 +94,9 @@ var StageOne = (function (_super) {
                 }
                 else if (configKitchenware.type == "Pot") {
                     _this.pots.push(kitchenware);
+                }
+                else if (configKitchenware.type == "Crisper") {
+                    _this.crisper.push(kitchenware);
                 }
                 //替换后删除
                 _this.uiInfo.removeChildByName("kitchenwareSn" + id + "_" + i);

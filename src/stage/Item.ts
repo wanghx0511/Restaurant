@@ -37,6 +37,16 @@ class Item extends Laya.Sprite{
                     return;
                 }
             }
+            if(this.box instanceof Pot) {
+                var crispers = StageManager.stage.crisper;
+                for(var i = 0; i < crispers.length; i++) {
+                    var crisper: Crisper = crispers[i];
+                    if(crisper.item == null) {
+                        crisper.addItem(this);
+                        return;
+                    }
+                }
+            }
         }
         //焦了直接扔垃圾桶
         else if(this.progress == 2) {
@@ -52,14 +62,15 @@ class Item extends Laya.Sprite{
 
         //新的道具
         if(!this.state) {
-            //找到空盘子放进去
             if(this.confItem.ripe) {
                 var plates = StageManager.stage.plates;
                 for(var i = 0; i < plates.length; i++) {
                     var plate: Plate = plates[i];
+                    //是否有可以合成的
                     if(plate.item != null && this.meger(plate.item)) {
                         break;
                     }
+                    //是否有盘子可以放
                     else if(plate.item == null && plate.getMakeItemSn() == this.confItem.itemSn) {
                         var item = new Item(this.confItem);
                         item.state = true;

@@ -1,0 +1,622 @@
+{
+	"Image": [
+	  {
+		"y": "0",
+		"x": "495.99999999999994",
+		"skin": "stage/beijing.jpg",
+		"editorInfo": "compId=150"
+	  },
+	  {
+		"y": "490",
+		"x": "297",
+		"skin": "stage/caozuotai.png",
+		"name": "Table",
+		"editorInfo": "compId=143"
+	  },
+	  {
+		"y": "476",
+		"x": "1749",
+		"skin": "stage/jinbi.png",
+		"editorInfo": "compId=166"
+	  },
+	  {
+		"y": "990.0000000000001",
+		"x": "733.0000000000001",
+		"skin": "stage/bingjilinliceng.png",
+		"name": "itemSn16_bg",
+		"editorInfo": "compId=163"
+	  }
+	],
+	"Sprite": [
+	  {
+		"y": "123",
+		"x": "57",
+		"width": "1975",
+		"name": "Furniture",
+		"height": "377",
+		"editorInfo": "compId=7",
+		"Image": [
+		  {
+			"y": "93",
+			"x": "1870",
+			"skin": "stage/zhuozi2.png",
+			"scaleY": "0.67",
+			"scaleX": "0.67",
+			"name": "Desk1_R3",
+			"editorInfo": "compId=193"
+		  },
+		  {
+			"y": "93.00000000000003",
+			"x": "1415",
+			"skin": "stage/zhuozi2.png",
+			"scaleY": "0.67",
+			"scaleX": "0.67",
+			"name": "Desk1_R3",
+			"editorInfo": "compId=192"
+		  },
+		  {
+			"y": "92.00000000000006",
+			"x": "344",
+			"skin": "stage/zhuozi2.png",
+			"scaleY": "0.67",
+			"scaleX": "0.67",
+			"name": "Desk1_R3",
+			"editorInfo": "compId=191"
+		  },
+		  {
+			"y": "93",
+			"x": "142",
+			"skin": "stage/zhuozi2.png",
+			"scaleY": "0.67",
+			"scaleX": "0.67",
+			"name": "Desk1_R3",
+			"editorInfo": "compId=190"
+		  },
+		  {
+			"y": "106.99999999999997",
+			"x": "1149.9999999999998",
+			"skin": "stage/zhuozi2.png",
+			"scaleY": "0.82",
+			"scaleX": "0.82",
+			"name": "Desk1_R2",
+			"editorInfo": "compId=189"
+		  },
+		  {
+			"y": "105.99999999999997",
+			"x": "520.9999999999998",
+			"skin": "stage/zhuozi2.png",
+			"scaleY": "0.82",
+			"scaleX": "0.82",
+			"name": "Desk1_R2",
+			"editorInfo": "compId=187"
+		  },
+		  {
+			"y": "115",
+			"x": "28",
+			"skin": "stage/zhuozi2.png",
+			"name": "Desk1_R1",
+			"editorInfo": "compId=185"
+		  },
+		  {
+			"y": "109",
+			"x": "787",
+			"skin": "stage/zhuozi2.png",
+			"name": "Desk1_R1",
+			"editorInfo": "compId=186"
+		  },
+		  {
+			"y": "129.00000000000006",
+			"x": "1579",
+			"skin": "stage/zhuozi2.png",
+			"name": "Desk1_R1",
+			"editorInfo": "compId=188"
+		  }
+		]
+	  },
+	  {
+		"y": "599",
+		"x": "1228",
+		"width": "119",
+		"pivotY": "47.19008264462809",
+		"pivotX": "52.96340023612743",
+		"name": "kitchenwareSn2_4",
+		"height": "91",
+		"editorInfo": "compId=155",
+		"Image": {
+		  "y": "24",
+		  "x": "9",
+		  "skin": "stage/xiaolongxiaguodi.png",
+		  "scaleY": "0.75",
+		  "scaleX": "0.75",
+		  "editorInfo": "compId=156"
+		}
+	  },
+	  {
+		"y": "674",
+		"x": "1259",
+		"width": "119",
+		"pivotY": "47.19008264462809",
+		"pivotX": "52.96340023612743",
+		"name": "kitchenwareSn2_3",
+		"height": "91",
+		"editorInfo": "compId=153",
+		"Image": {
+		  "y": "21",
+		  "x": "10",
+		  "skin": "stage/xiaolongxiaguodi.png",
+		  "scaleY": "0.8",
+		  "scaleX": "0.8",
+		  "editorInfo": "compId=154"
+		}
+	  },
+	  {
+		"y": "755",
+		"x": "1302.9999999999998",
+		"width": "119",
+		"pivotY": "37.19008264462809",
+		"pivotX": "58.677685950413206",
+		"name": "kitchenwareSn2_2",
+		"height": "91",
+		"editorInfo": "compId=151",
+		"Image": {
+		  "y": "8",
+		  "x": "7",
+		  "skin": "stage/xiaolongxiaguodi.png",
+		  "scaleY": "0.9",
+		  "scaleX": "0.9",
+		  "editorInfo": "compId=152"
+		}
+	  },
+	  {
+		"y": "860",
+		"x": "1345",
+		"width": "119",
+		"pivotY": "37.19008264462809",
+		"pivotX": "58.677685950413206",
+		"name": "kitchenwareSn2_1",
+		"height": "91",
+		"editorInfo": "compId=102",
+		"Image": {
+		  "skin": "stage/xiaolongxiaguodi.png",
+		  "editorInfo": "compId=95"
+		}
+	  },
+	  {
+		"y": "585",
+		"x": "1380",
+		"width": "163",
+		"pivotY": "49.5867768595042",
+		"pivotX": "80.16528925619832",
+		"name": "kitchenwareSn1_4",
+		"height": "108",
+		"editorInfo": "compId=161",
+		"Image": {
+		  "y": "18",
+		  "x": "13",
+		  "skin": "stage/kaolu.png",
+		  "scaleY": "0.75",
+		  "scaleX": "0.75",
+		  "editorInfo": "compId=162"
+		}
+	  },
+	  {
+		"y": "661",
+		"x": "1418",
+		"width": "163",
+		"pivotY": "49.5867768595042",
+		"pivotX": "80.16528925619832",
+		"name": "kitchenwareSn1_3",
+		"height": "108",
+		"editorInfo": "compId=159",
+		"Image": {
+		  "y": "8",
+		  "x": "11",
+		  "skin": "stage/kaolu.png",
+		  "scaleY": "0.8",
+		  "scaleX": "0.8",
+		  "editorInfo": "compId=160"
+		}
+	  },
+	  {
+		"y": "736",
+		"x": "1465",
+		"width": "163",
+		"pivotY": "49.5867768595042",
+		"pivotX": "80.16528925619832",
+		"name": "kitchenwareSn1_2",
+		"height": "108",
+		"editorInfo": "compId=157",
+		"Image": {
+		  "y": "2",
+		  "x": "3",
+		  "skin": "stage/kaolu.png",
+		  "scaleY": "0.9",
+		  "scaleX": "0.9",
+		  "editorInfo": "compId=158"
+		}
+	  },
+	  {
+		"y": "818",
+		"x": "1512",
+		"width": "165",
+		"pivotY": "49.5867768595042",
+		"pivotX": "80.16528925619832",
+		"name": "kitchenwareSn1_1",
+		"height": "142",
+		"editorInfo": "compId=103",
+		"Image": {
+		  "y": "0.9999999999997726",
+		  "skin": "stage/kaolu.png",
+		  "editorInfo": "compId=99"
+		}
+	  },
+	  {
+		"y": "540",
+		"x": "1451",
+		"width": "145",
+		"name": "kitchenwareSn5_3",
+		"height": "100",
+		"editorInfo": "compId=183",
+		"Image": {
+		  "y": "12",
+		  "x": "12",
+		  "skin": "stage/baowenlu.png",
+		  "skewY": "4",
+		  "scaleY": "0.7",
+		  "scaleX": "0.7",
+		  "editorInfo": "compId=184"
+		}
+	  },
+	  {
+		"y": "600",
+		"x": "1495",
+		"width": "145",
+		"name": "kitchenwareSn5_3",
+		"height": "100",
+		"editorInfo": "compId=181",
+		"Image": {
+		  "y": "11",
+		  "x": "9",
+		  "skin": "stage/baowenlu.png",
+		  "skewY": "3",
+		  "scaleY": "0.75",
+		  "scaleX": "0.75",
+		  "editorInfo": "compId=182"
+		}
+	  },
+	  {
+		"y": "667",
+		"x": "1543",
+		"width": "145",
+		"name": "kitchenwareSn5_2",
+		"height": "100",
+		"editorInfo": "compId=179",
+		"Image": {
+		  "y": "7",
+		  "x": "2",
+		  "skin": "stage/baowenlu.png",
+		  "skewY": "2",
+		  "scaleY": "0.9",
+		  "scaleX": "0.9",
+		  "editorInfo": "compId=180"
+		}
+	  },
+	  {
+		"y": "752",
+		"x": "1599",
+		"name": "kitchenwareSn5_1",
+		"editorInfo": "compId=105",
+		"Image": {
+		  "skin": "stage/baowenlu.png",
+		  "editorInfo": "compId=104"
+		}
+	  },
+	  {
+		"y": "924",
+		"x": "290",
+		"name": "trash",
+		"editorInfo": "compId=89",
+		"Image": {
+		  "skin": "stage/lajitong.png",
+		  "editorInfo": "compId=142"
+		}
+	  },
+	  {
+		"y": "583",
+		"x": "1047",
+		"name": "itemSn4",
+		"editorInfo": "compId=106",
+		"Image": {
+		  "skin": "stage/xiangcai.png",
+		  "editorInfo": "compId=46"
+		}
+	  },
+	  {
+		"y": "759",
+		"x": "1069",
+		"name": "itemSn2",
+		"editorInfo": "compId=107",
+		"Image": {
+		  "skin": "stage/huasheng.png",
+		  "editorInfo": "compId=44"
+		}
+	  },
+	  {
+		"y": "664",
+		"x": "1052",
+		"name": "itemSn3",
+		"editorInfo": "compId=108",
+		"Image": {
+		  "skin": "stage/maodou.png",
+		  "editorInfo": "compId=45"
+		}
+	  },
+	  {
+		"y": "575",
+		"x": "716",
+		"width": "152",
+		"name": "kitchenwareSn8_3",
+		"height": "61",
+		"editorInfo": "compId=120",
+		"Image": {
+		  "y": "4",
+		  "x": "4",
+		  "width": "192",
+		  "skin": "ui/suo.png",
+		  "scaleY": "0.65",
+		  "scaleX": "0.73",
+		  "height": "95",
+		  "editorInfo": "compId=114"
+		}
+	  },
+	  {
+		"y": "630",
+		"x": "687",
+		"name": "kitchenwareSn8_2",
+		"editorInfo": "compId=119",
+		"Image": {
+		  "y": "9",
+		  "x": "4",
+		  "width": "192",
+		  "skin": "ui/suo.png",
+		  "scaleY": "0.8",
+		  "scaleX": "0.83",
+		  "height": "95",
+		  "editorInfo": "compId=109"
+		}
+	  },
+	  {
+		"y": "762",
+		"x": "754.0000000000001",
+		"width": "191",
+		"pivotY": "42.253521126760575",
+		"pivotX": "102.11267605633805",
+		"name": "kitchenwareSn8_1",
+		"height": "95",
+		"editorInfo": "compId=144",
+		"Image": {
+		  "y": "0.8121010566970881",
+		  "x": "1.9080620071877092",
+		  "width": "192",
+		  "skin": "ui/suo.png",
+		  "height": "95",
+		  "editorInfo": "compId=115"
+		}
+	  },
+	  {
+		"y": "573",
+		"x": "868",
+		"width": "124",
+		"name": "kitchenwareSn7_3",
+		"height": "58",
+		"editorInfo": "compId=123",
+		"Image": {
+		  "y": "2",
+		  "x": "20",
+		  "width": "192",
+		  "skin": "ui/suo.png",
+		  "skewX": "13",
+		  "scaleY": "0.65",
+		  "scaleX": "0.73",
+		  "height": "95",
+		  "editorInfo": "compId=178"
+		}
+	  },
+	  {
+		"y": "644",
+		"x": "858",
+		"width": "146",
+		"name": "kitchenwareSn7_2",
+		"height": "70",
+		"editorInfo": "compId=122",
+		"Image": {
+		  "y": "2",
+		  "x": "22",
+		  "width": "192",
+		  "skin": "ui/suo.png",
+		  "skewX": "13",
+		  "scaleY": "0.8",
+		  "scaleX": "0.83",
+		  "height": "95",
+		  "editorInfo": "compId=177"
+		}
+	  },
+	  {
+		"y": "763",
+		"x": "911",
+		"width": "163",
+		"pivotY": "38.15789473684208",
+		"pivotX": "81.57894736842104",
+		"name": "kitchenwareSn7_1",
+		"height": "86",
+		"editorInfo": "compId=121",
+		"Image": {
+		  "y": "2",
+		  "x": "11",
+		  "width": "192",
+		  "skin": "ui/suo.png",
+		  "skewX": "13",
+		  "height": "95",
+		  "editorInfo": "compId=176"
+		}
+	  },
+	  {
+		"y": "921",
+		"x": "930",
+		"width": "167",
+		"pivotY": "57.89473684210532",
+		"pivotX": "82.8947368421052",
+		"name": "itemSn6",
+		"height": "120",
+		"editorInfo": "compId=126",
+		"Image": {
+		  "skin": "stage/kaochuanpan.png",
+		  "editorInfo": "compId=124"
+		}
+	  },
+	  {
+		"y": "914",
+		"x": "758",
+		"width": "172",
+		"pivotY": "60",
+		"pivotX": "86",
+		"name": "itemSn7",
+		"height": "120",
+		"editorInfo": "compId=127",
+		"Image": {
+		  "skin": "stage/xiaolongxiapen.png",
+		  "editorInfo": "compId=125"
+		}
+	  },
+	  {
+		"y": "519",
+		"x": "148",
+		"width": "162",
+		"name": "kitchenwareSn6_3",
+		"height": "289",
+		"editorInfo": "compId=137",
+		"Image": {
+		  "y": "1",
+		  "x": "17.999999999999957",
+		  "skin": "stage/pijiu.png",
+		  "editorInfo": "compId=131"
+		}
+	  },
+	  {
+		"y": "542",
+		"x": "271",
+		"width": "116",
+		"name": "kitchenwareSn6_2",
+		"height": "287",
+		"editorInfo": "compId=136",
+		"Image": {
+		  "y": "8",
+		  "x": "26",
+		  "skin": "stage/pijiu.png",
+		  "editorInfo": "compId=132"
+		}
+	  },
+	  {
+		"y": "520",
+		"x": "372",
+		"width": "141",
+		"name": "kitchenwareSn6_1",
+		"height": "326",
+		"editorInfo": "compId=135",
+		"Image": {
+		  "y": "22",
+		  "x": "14",
+		  "skin": "stage/pijiu.png",
+		  "editorInfo": "compId=133"
+		}
+	  },
+	  {
+		"y": "972",
+		"x": "1606",
+		"width": "189",
+		"pivotY": "58.512396694214885",
+		"pivotX": "97.85123966942137",
+		"name": "itemSn1",
+		"height": "119",
+		"editorInfo": "compId=140",
+		"Image": {
+		  "skin": "stage/kucunrouchuan.png",
+		  "editorInfo": "compId=147"
+		}
+	  },
+	  {
+		"y": "991",
+		"x": "1408",
+		"width": "191",
+		"pivotY": "58.18181818181813",
+		"pivotX": "95.37190082644634",
+		"name": "itemSn5",
+		"height": "115",
+		"editorInfo": "compId=146",
+		"Image": {
+		  "skin": "stage/kucunxia.png",
+		  "editorInfo": "compId=148"
+		}
+	  },
+	  {
+		"y": "990",
+		"x": "694",
+		"width": "71",
+		"name": "itemSn16",
+		"height": "91",
+		"editorInfo": "compId=164",
+		"Image": {
+		  "y": "2",
+		  "x": "4",
+		  "skin": "stage/bingjilin.png",
+		  "editorInfo": "compId=165"
+		}
+	  },
+	  {
+		"y": "534",
+		"x": "599",
+		"width": "98",
+		"name": "itemSn15_3",
+		"height": "154",
+		"editorInfo": "compId=174",
+		"Image": {
+		  "y": "23",
+		  "x": "15",
+		  "skin": "stage/suanmeitang.png",
+		  "scaleY": "0.8",
+		  "scaleX": "0.8",
+		  "editorInfo": "compId=175"
+		}
+	  },
+	  {
+		"y": "617",
+		"x": "561.9999999999999",
+		"width": "98",
+		"name": "itemSn15_2",
+		"height": "154",
+		"editorInfo": "compId=172",
+		"Image": {
+		  "y": "35",
+		  "x": "22",
+		  "skin": "stage/suanmeitang.png",
+		  "scaleY": "0.9",
+		  "scaleX": "0.9",
+		  "editorInfo": "compId=173"
+		}
+	  },
+	  {
+		"y": "711",
+		"x": "517",
+		"width": "98",
+		"name": "itemSn15_1",
+		"height": "154",
+		"editorInfo": "compId=170",
+		"Image": {
+		  "y": "37",
+		  "x": "25",
+		  "skin": "stage/suanmeitang.png",
+		  "editorInfo": "compId=171"
+		}
+	  }
+	]
+}
