@@ -41,11 +41,8 @@ var StageOne = (function (_super) {
         //操作台
         var caozuotai = new Laya.Sprite();
         caozuotai.loadImage("res/atlas/caozuotai.png");
-        caozuotai.pos(-275, 490);
+        caozuotai.pos(-297, 490);
         _this.addChild(caozuotai);
-        var json = Loader.getRes("res/json/stageOne.json");
-        for (var data in json) {
-        }
         //创建UI
         _this.uiInfo = new StageOneInfo();
         _this.addChild(_this.uiInfo);
