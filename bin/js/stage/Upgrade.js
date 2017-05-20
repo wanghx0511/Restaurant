@@ -26,8 +26,7 @@ var Upgrade = (function (_super) {
         //创建UI
         _this.uiInfo = new StageOneUpgradeInfo();
         _this.addChild(_this.uiInfo);
-        var stageManager = new StageManager();
-        var sprites = stageManager.data;
+        var sprites = StageManager.data;
         for (var sn in sprites["item"]) {
             var configItem = _this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
             var item = new Item(configItem);

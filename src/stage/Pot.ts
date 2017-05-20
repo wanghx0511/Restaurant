@@ -15,6 +15,9 @@ class Pot extends Laya.Sprite{
     public machining(): void {
         //设定加工时间
         this.alpha = 1;
+        this.item.graphics.clear();
+        this.item.loadImage("stage/" + this.item.getConf().picture1);
+        this.item.pivot(this.item.width/2, this.item.height/2);
         Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.updateProgress, [1]);
     }
 
@@ -25,12 +28,12 @@ class Pot extends Laya.Sprite{
         this.item.graphics.clear();
         //熟了
         if(progress == 1) {
-            this.item.loadImage("stage/" + this.item.getConf().picture1);
+            this.item.loadImage("stage/" + this.item.getConf().picture2);
             //烧焦定时
             Laya.timer.once(this.configKitchenware.singetime * 1000, this, this.updateProgress, [2]);
         }
         else if(progress == 2){
-            this.item.loadImage("stage/" + this.item.getConf().picture2);
+            this.item.loadImage("stage/" + this.item.getConf().picture3);
         }
 
     }

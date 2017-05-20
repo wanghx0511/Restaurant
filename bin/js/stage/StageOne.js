@@ -43,62 +43,50 @@ var StageOne = (function (_super) {
         caozuotai.loadImage("res/atlas/caozuotai.png");
         caozuotai.pos(-297, 490);
         _this.addChild(caozuotai);
-        //创建UI
-        _this.uiInfo = new StageOneInfo();
-        _this.addChild(_this.uiInfo);
-        //垃圾桶
-        var trashCan = new Trash();
-        var uiTrash = _this.uiInfo.getChildByName("trash");
-        trashCan.pos(uiTrash.x, uiTrash.y);
-        trashCan.scale(uiTrash.scaleX, uiTrash.scaleY);
-        _this.trashCanObj = trashCan;
-        _this.addChild(_this.trashCanObj);
-        //替换后删除
-        _this.uiInfo.removeChildByName("trash");
+        //初始化关卡物品
+        var kitchenwares = eval(confStage.initKitchenware);
+        var configPos = new ConfigPos();
+        for (var _i = 0, kitchenwares_1 = kitchenwares; _i < kitchenwares_1.length; _i++) {
+            var sn = kitchenwares_1[_i];
+            var level = StageManager.data["kitchenware"][sn];
+            var pos = configPos.getBy("type", 1, "itemSn", sn, "level", level);
+            if (pos == null)
+                continue;
+            var kitchenware = eval("new " + pos.class + "(" + sn + "," + 1 + ")");
+            kitchenware.pos(pos.x, pos.y);
+            kitchenware.scale(pos.scaleX, pos.scaleY);
+            kitchenware.pivot(pos.pivotX, pos.pivotY);
+            _this.addChild(kitchenware);
+            //如果是放置台则加到列表里
+            if (pos.class == "Plate") {
+                _this.plates.push(kitchenware);
+            }
+            else if (pos.class == "Pot") {
+                _this.pots.push(kitchenware);
+            }
+            else if (pos.class == "Crisper") {
+                _this.crisper.push(kitchenware);
+            }
+        }
+        var items = eval(confStage.initItem);
+        for (var _a = 0, items_1 = items; _a < items_1.length; _a++) {
+            var itemSn = items_1[_a];
+            level = StageManager.data["kitchenware"][sn];
+            var pos = configPos.getBy("type", 2, "itemSn", itemSn, "level", level);
+            if (pos == null)
+                continue;
+            var configItem = _this.configItem.getBy("itemSn", itemSn, "level", level);
+            var item = new Item(configItem);
+            item.pos(pos.x, pos.y);
+            item.scale(pos.scaleX, pos.scaleY);
+            item.pivot(pos.pivotX, pos.pivotY);
+            _this.addChild(item);
+        }
         _this.maxCustomer = confStage.maxCustomerNum;
         _this.showPosX = eval(confStage.customerShowPosX);
         _this.startTimeStamp = _this.customerTimer.currTimer;
         //计时器开始计时
         _this.customerTimer.loop(100, _this, _this.initCustomer);
-        //创建场景内精灵
-        var stageManager = new StageManager();
-        var sprites = stageManager.data;
-        for (var sn in sprites["item"]) {
-            var configItem = _this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
-            var item = new Item(configItem);
-            var uiItem = _this.uiInfo.getChildByName("itemSn" + sn);
-            item.pos(uiItem.x, uiItem.y);
-            item.scale(uiItem.scaleX, uiItem.scaleY);
-            item.pivot(uiItem.pivotX, uiItem.pivotY);
-            _this.addChild(item);
-            //替换后删除
-            _this.uiInfo.removeChildByName("itemSn" + sn);
-        }
-        for (var id in sprites["kitchenware"]) {
-            var configKitchenware = _this.configKitchenware.getBy("id", id, "level", sprites["kitchenware"][id]);
-            for (var i = 1; i <= configKitchenware.spacenum; i++) {
-                var uiKitchenware = _this.uiInfo.getChildByName("kitchenwareSn" + id + "_" + i);
-                if (uiKitchenware == null)
-                    continue;
-                var kitchenware = eval("new " + configKitchenware.type + "(" + id + "," + i + ")");
-                kitchenware.pos(uiKitchenware.x, uiKitchenware.y);
-                kitchenware.scale(uiKitchenware.scaleX, uiKitchenware.scaleY);
-                kitchenware.pivot(uiKitchenware.pivotX, uiKitchenware.pivotY);
-                _this.addChild(kitchenware);
-                //如果是放置台则加到列表里
-                if (configKitchenware.type == "Plate") {
-                    _this.plates.push(kitchenware);
-                }
-                else if (configKitchenware.type == "Pot") {
-                    _this.pots.push(kitchenware);
-                }
-                else if (configKitchenware.type == "Crisper") {
-                    _this.crisper.push(kitchenware);
-                }
-                //替换后删除
-                _this.uiInfo.removeChildByName("kitchenwareSn" + id + "_" + i);
-            }
-        }
         return _this;
     }
     //同步分数时调用

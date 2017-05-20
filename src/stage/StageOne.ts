@@ -50,19 +50,45 @@ class StageOne extends Laya.Sprite{
         caozuotai.pos(-297, 490);
         this.addChild(caozuotai);
 
-        //创建UI
-        this.uiInfo = new StageOneInfo();
-        this.addChild(this.uiInfo);
+        //初始化关卡物品
+        var kitchenwares = eval(confStage.initKitchenware);
+        var configPos = new ConfigPos();
+        for(var sn of kitchenwares) {
+            var level = StageManager.data["kitchenware"][sn];
+            var pos = configPos.getBy("type", 1, "itemSn", sn, "level", level);
+            if(pos == null) continue;
+            var kitchenware = eval("new " + pos.class + "(" + sn + "," + 1 + ")");
+            kitchenware.pos(pos.x, pos.y);
+            kitchenware.scale(pos.scaleX, pos.scaleY);
+            kitchenware.pivot(pos.pivotX, pos.pivotY);
+            this.addChild(kitchenware);
+            //如果是放置台则加到列表里
+            if(pos.class == "Plate") {
+                this.plates.push(kitchenware);
+            }
+            //如果是锅则加到列表里
+            else if(pos.class == "Pot") {
+                this.pots.push(kitchenware);
+            }
+            //如果是保温炉加到列表里
+            else if(pos.class == "Crisper") {
+                this.crisper.push(kitchenware);
+            }
+        }
 
-        //垃圾桶
-        var trashCan = new Trash();
-        var uiTrash = this.uiInfo.getChildByName("trash") as Laya.Sprite;
-        trashCan.pos(uiTrash.x, uiTrash.y);
-        trashCan.scale(uiTrash.scaleX, uiTrash.scaleY);
-        this.trashCanObj = trashCan;
-        this.addChild(this.trashCanObj);
-        //替换后删除
-        this.uiInfo.removeChildByName("trash");
+        var items = eval(confStage.initItem);
+        for(var itemSn of items) {
+            level = StageManager.data["kitchenware"][sn];
+            var pos = configPos.getBy("type", 2, "itemSn", itemSn, "level", level);
+            if(pos == null) continue;
+            var configItem = this.configItem.getBy("itemSn", itemSn, "level", level);
+
+            var item = new Item(configItem);
+            item.pos(pos.x, pos.y);
+            item.scale(pos.scaleX, pos.scaleY);
+            item.pivot(pos.pivotX, pos.pivotY);
+            this.addChild(item);
+        }
 
         this.maxCustomer = confStage.maxCustomerNum;
         this.showPosX = eval(confStage.customerShowPosX);
@@ -70,50 +96,6 @@ class StageOne extends Laya.Sprite{
         this.startTimeStamp = this.customerTimer.currTimer;
         //计时器开始计时
         this.customerTimer.loop(100, this, this.initCustomer);
-        
-        //创建场景内精灵
-        var stageManager = new StageManager();
-        var sprites = stageManager.data;
-        for(var sn in sprites["item"]){
-            var configItem = this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
-            var item = new Item(configItem);
-            var uiItem = this.uiInfo.getChildByName("itemSn" + sn) as Laya.Sprite;
-            item.pos(uiItem.x, uiItem.y);
-            item.scale(uiItem.scaleX, uiItem.scaleY);
-            item.pivot(uiItem.pivotX, uiItem.pivotY);
-            this.addChild(item);
-            //替换后删除
-            this.uiInfo.removeChildByName("itemSn" + sn);
-        }
-
-        for(var id in sprites["kitchenware"]) {
-            var configKitchenware = this.configKitchenware.getBy("id", id, "level", sprites["kitchenware"][id]);
-            for(var i = 1; i <= configKitchenware.spacenum; i++) {
-                var uiKitchenware = this.uiInfo.getChildByName("kitchenwareSn" + id + "_" + i) as Laya.Sprite;
-                if(uiKitchenware == null) continue;
-
-                var kitchenware = eval("new " + configKitchenware.type + "(" + id + "," + i + ")");
-                kitchenware.pos(uiKitchenware.x, uiKitchenware.y);
-                kitchenware.scale(uiKitchenware.scaleX, uiKitchenware.scaleY);
-                kitchenware.pivot(uiKitchenware.pivotX, uiKitchenware.pivotY);
-                this.addChild(kitchenware);
-
-                //如果是放置台则加到列表里
-                if(configKitchenware.type == "Plate") {
-                    this.plates.push(kitchenware);
-                }
-                //如果是锅则加到列表里
-                else if(configKitchenware.type == "Pot") {
-                    this.pots.push(kitchenware);
-                }
-                //如果是保温炉加到列表里
-                else if(configKitchenware.type == "Crisper") {
-                    this.crisper.push(kitchenware);
-                }
-                //替换后删除
-                this.uiInfo.removeChildByName("kitchenwareSn" + id + "_" + i);
-            }
-        }
     }
 
     //同步分数时调用

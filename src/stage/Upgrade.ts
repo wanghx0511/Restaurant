@@ -29,8 +29,7 @@ class Upgrade extends Laya.Sprite{
         this.uiInfo = new StageOneUpgradeInfo();
         this.addChild(this.uiInfo);
 
-        var stageManager = new StageManager();
-        var sprites = stageManager.data;
+        var sprites = StageManager.data;
         for(var sn in sprites["item"]){
             var configItem = this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
             var item = new Item(configItem);
