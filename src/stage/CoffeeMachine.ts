@@ -2,21 +2,23 @@ class CoffeeMachine extends Laya.Sprite{
     //配置
     private configKitchenware: any;
     private item: Item = null;
+    private ani: Laya.Animation;
 
     constructor(id: number, level: number) {
         super();
         this.configKitchenware = new ConfigKitchenware().getBy("id", id, "level", level);
         this.loadImage("stage/" + this.configKitchenware.picture);
-
-        //如果是自动的就开始工作
-        if(this.configKitchenware.automatic) {
-            this.handle();
-        }
+        Laya.Animation.createFrames("res/atlas/sfx.json", "sfx");
+        // if(this.configKitchenware.automatic) {
+        //     this.handle();
+        // }
         //注册点击事件
         this.on(Laya.Event.CLICK, this, this.onClick);
+        this.on(Laya.Event.ADDED, this, this.handle);
     }
 
     public handle() {
+        this.createAnimation();
         Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
     }
 
@@ -30,7 +32,8 @@ class CoffeeMachine extends Laya.Sprite{
         item.box = this;
         item.state = true;
         item.pos(this.x, this.y);
-        StageManager.stage.addChild(item);
+        this.stage.addChild(item);
+        this.ani.clear();
     }
 
     
@@ -41,4 +44,15 @@ class CoffeeMachine extends Laya.Sprite{
         if(this.item != null) return;
         this.handle();
     }
+
+    private createAnimation(): void {
+			this.ani = new Laya.Animation();
+			this.ani.interval = 300; // 设置播放间隔（单位：毫秒）
+            this.stage.addChild(this.ani);
+			this.ani.play(0, true, "sfx"); // 播放图集动画
+
+            //获取动画大小区域
+            var bounds: Laya.Rectangle = this.ani.getGraphicBounds();
+            //this.ani.pos(48, 156);
+	}
 }

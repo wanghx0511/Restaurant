@@ -1,5 +1,5 @@
 [
-{"customerNum":4,"customerShowPosX":"[780,1080,1380]","customerShowTime":"[1000,4000,5000,8000]","customerSn":"[1,2,3,1]","initItem":"[1,2,3,4,5,6,7,8]","initKitchenware":"[1,2,3,4,5,6,7,8]","maxCustomerNum":3,"name":"1-1","onestar":30,"sn":1,"threestar":100,"twostar":60,"worldSn":1},
+{"customerNum":4,"customerShowPosX":"[780,1080,1380]","customerShowTime":"[1000,4000,5000,8000]","customerSn":"[1,2,3,1]","initItem":"[1,2,3,4,5,6,7,8]","initKitchenware":"[1,2,3,4,6,7,8]","maxCustomerNum":3,"name":"1-1","onestar":30,"sn":1,"threestar":100,"twostar":60,"worldSn":1},
 {"customerNum":3,"customerShowPosX":"[780,1080,1380]","customerShowTime":"[1000,4000,5000]","customerSn":"[4,2,3]","initItem":"[1,2,3,4,5,6,7,8]","initKitchenware":"[1,2,3,4,5,6,7,8]","maxCustomerNum":3,"name":"1-2","onestar":30,"sn":2,"threestar":100,"twostar":60,"worldSn":1},
 {"customerNum":4,"customerShowPosX":"[780,1080,1380]","customerShowTime":"[1000,4000,5000,8000]","customerSn":"[3,4,5,6]","initItem":"[1,2,3,4,5,6,7]","initKitchenware":"[1,2,3,4,5,6,7,8]","maxCustomerNum":3,"name":"1-3","onestar":30,"sn":3,"threestar":100,"twostar":60,"worldSn":1}
 ]

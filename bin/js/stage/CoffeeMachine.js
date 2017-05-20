@@ -10,15 +10,17 @@ var CoffeeMachine = (function (_super) {
         _this.item = null;
         _this.configKitchenware = new ConfigKitchenware().getBy("id", id, "level", level);
         _this.loadImage("stage/" + _this.configKitchenware.picture);
-        //如果是自动的就开始工作
-        if (_this.configKitchenware.automatic) {
-            _this.handle();
-        }
+        Laya.Animation.createFrames("res/atlas/sfx.json", "sfx");
+        // if(this.configKitchenware.automatic) {
+        //     this.handle();
+        // }
         //注册点击事件
         _this.on(Laya.Event.CLICK, _this, _this.onClick);
+        _this.on(Laya.Event.ADDED, _this, _this.handle);
         return _this;
     }
     CoffeeMachine.prototype.handle = function () {
+        this.createAnimation();
         Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
     };
     CoffeeMachine.prototype.finish = function () {
@@ -31,7 +33,8 @@ var CoffeeMachine = (function (_super) {
         item.box = this;
         item.state = true;
         item.pos(this.x, this.y);
-        StageManager.stage.addChild(item);
+        this.stage.addChild(item);
+        this.ani.clear();
     };
     CoffeeMachine.prototype.onClick = function (e) {
         //自动的无需点击
@@ -40,6 +43,15 @@ var CoffeeMachine = (function (_super) {
         if (this.item != null)
             return;
         this.handle();
+    };
+    CoffeeMachine.prototype.createAnimation = function () {
+        this.ani = new Laya.Animation();
+        this.ani.interval = 300; // 设置播放间隔（单位：毫秒）
+        this.stage.addChild(this.ani);
+        this.ani.play(0, true, "sfx"); // 播放图集动画
+        //获取动画大小区域
+        var bounds = this.ani.getGraphicBounds();
+        //this.ani.pos(48, 156);
     };
     return CoffeeMachine;
 }(Laya.Sprite));
