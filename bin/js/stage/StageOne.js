@@ -60,7 +60,8 @@ var StageOne = (function (_super) {
         //计时器开始计时
         _this.customerTimer.loop(100, _this, _this.initCustomer);
         //创建场景内精灵
-        var sprites = { "item": { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1 }, "kitchenware": { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1 } }; //模拟服务端发的数据
+        var stageManager = new StageManager();
+        var sprites = stageManager.data;
         for (var sn in sprites["item"]) {
             var configItem = _this.configItem.getBy("itemSn", sn, "level", sprites["item"][sn]);
             var item = new Item(configItem);

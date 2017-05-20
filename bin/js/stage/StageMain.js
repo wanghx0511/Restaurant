@@ -32,8 +32,9 @@ var StageMain = (function (_super) {
     };
     //关卡开始
     StageMain.prototype.stageStart = function () {
-        var stageManager = new StageManager();
-        stageManager.createStage();
+        // var stageManager = new StageManager();
+        // stageManager.createStage();
+        var upgrade = new Upgrade(1);
     };
     return StageMain;
 }(Laya.Sprite));
