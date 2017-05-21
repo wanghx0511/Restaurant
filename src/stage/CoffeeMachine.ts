@@ -9,15 +9,13 @@ class CoffeeMachine extends Laya.Sprite{
         this.configKitchenware = new ConfigKitchenware().getBy("id", id, "level", level);
         this.loadImage("stage/" + this.configKitchenware.picture);
         Laya.Animation.createFrames("res/atlas/sfx.json", "sfx");
-        // if(this.configKitchenware.automatic) {
-        //     this.handle();
-        // }
         //注册点击事件
         this.on(Laya.Event.CLICK, this, this.onClick);
-        this.on(Laya.Event.ADDED, this, this.handle);
+        this.on(Laya.Event.ADDED, this, this.onAdded);
     }
 
-    public handle() {
+    public onAdded() {
+        if(!this.configKitchenware.automatic) return;
         this.createAnimation();
         Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
     }
@@ -42,17 +40,15 @@ class CoffeeMachine extends Laya.Sprite{
         if(this.configKitchenware.automatic) return;
 
         if(this.item != null) return;
-        this.handle();
+        Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
     }
 
     private createAnimation(): void {
 			this.ani = new Laya.Animation();
 			this.ani.interval = 300; // 设置播放间隔（单位：毫秒）
-            this.stage.addChild(this.ani);
+            this.addChild(this.ani);
 			this.ani.play(0, true, "sfx"); // 播放图集动画
 
-            //获取动画大小区域
-            var bounds: Laya.Rectangle = this.ani.getGraphicBounds();
-            //this.ani.pos(48, 156);
+            this.ani.pos(48, 156);
 	}
 }

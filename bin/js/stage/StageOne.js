@@ -37,12 +37,12 @@ var StageOne = (function (_super) {
         var bg = new Laya.Sprite();
         bg.loadImage("res/atlas/beijing.jpg");
         bg.pos(-488, 0);
-        //this.addChild(bg);
+        _this.addChild(bg);
         //操作台
         var caozuotai = new Laya.Sprite();
         caozuotai.loadImage("res/atlas/caozuotai.png");
         caozuotai.pos(-297, 490);
-        //this.addChild(caozuotai);
+        _this.addChild(caozuotai);
         //初始化关卡物品
         var kitchenwares = eval(confStage.initKitchenware);
         var configPos = new ConfigPos();

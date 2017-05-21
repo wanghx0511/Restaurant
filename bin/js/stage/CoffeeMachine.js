@@ -11,15 +11,14 @@ var CoffeeMachine = (function (_super) {
         _this.configKitchenware = new ConfigKitchenware().getBy("id", id, "level", level);
         _this.loadImage("stage/" + _this.configKitchenware.picture);
         Laya.Animation.createFrames("res/atlas/sfx.json", "sfx");
-        // if(this.configKitchenware.automatic) {
-        //     this.handle();
-        // }
         //注册点击事件
         _this.on(Laya.Event.CLICK, _this, _this.onClick);
-        _this.on(Laya.Event.ADDED, _this, _this.handle);
+        _this.on(Laya.Event.ADDED, _this, _this.onAdded);
         return _this;
     }
-    CoffeeMachine.prototype.handle = function () {
+    CoffeeMachine.prototype.onAdded = function () {
+        if (!this.configKitchenware.automatic)
+            return;
         this.createAnimation();
         Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
     };
@@ -42,16 +41,14 @@ var CoffeeMachine = (function (_super) {
             return;
         if (this.item != null)
             return;
-        this.handle();
+        Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
     };
     CoffeeMachine.prototype.createAnimation = function () {
         this.ani = new Laya.Animation();
         this.ani.interval = 300; // 设置播放间隔（单位：毫秒）
-        this.stage.addChild(this.ani);
+        this.addChild(this.ani);
         this.ani.play(0, true, "sfx"); // 播放图集动画
-        //获取动画大小区域
-        var bounds = this.ani.getGraphicBounds();
-        //this.ani.pos(48, 156);
+        this.ani.pos(48, 156);
     };
     return CoffeeMachine;
 }(Laya.Sprite));
