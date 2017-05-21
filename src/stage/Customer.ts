@@ -110,16 +110,20 @@ class Customer extends Laya.Sprite{
         //先看看是不是要的那个
         var confItem = item.getConf();
         var isNeed : boolean = false;
+        var needList : number[] = [];
         for(var i = 0; i < this.needs.length; i++) {
-            if(isNeed) break;
+            // if(isNeed) break;
             if(confItem.itemSn == this.needs[i]) {
                 isNeed = true;
+            } else {
+                needList.push(this.needs[i]);
             }
         }
+        this.needs = needList;
         if(!isNeed) {
-            console.log("py失败，给的是" + confItem.sn + "， 要的是" + this.needs);
+            console.log("py失败，给的是" + confItem.itemSn + "， 要的是" + this.needs);
             return;
-        }
+        } 
         //到这了，说明是有需求的
         var money = confItem.price;
         this.moneyAdd += money;
