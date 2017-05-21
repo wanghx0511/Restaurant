@@ -21,10 +21,12 @@ var StageMain = (function (_super) {
         return _this;
     }
     StageMain.prototype.onStageClick = function (e) {
-        var stageChooseInfo = new StageChooseInfo();
-        this.addChild(stageChooseInfo);
-        stageChooseInfo.pivot(stageChooseInfo.width / 2, stageChooseInfo.height / 2);
-        stageChooseInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
+        // var stageChooseInfo = new StageChooseInfo();
+        // this.addChild(stageChooseInfo);
+        // stageChooseInfo.pivot(stageChooseInfo.width/2, stageChooseInfo.height/2);
+        // stageChooseInfo.pos(Laya.stage.width/2, Laya.stage.height/2);
+        var stageManager = new StageManager();
+        stageManager.createStage();
     };
     //关卡开始
     StageMain.prototype.stageStart = function () {

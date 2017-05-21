@@ -74,6 +74,10 @@ class StageOne extends Laya.Sprite{
             else if(pos.class == "Crisper") {
                 this.crisper.push(kitchenware);
             }
+
+            else if(pos.class == "Trash") {
+                this.trashCanObj = new Trash();
+            }
         }
 
         var items = eval(confStage.initItem);

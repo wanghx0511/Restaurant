@@ -67,6 +67,9 @@ var StageOne = (function (_super) {
             else if (pos.class == "Crisper") {
                 _this.crisper.push(kitchenware);
             }
+            else if (pos.class == "Trash") {
+                _this.trashCanObj = new Trash();
+            }
         }
         var items = eval(confStage.initItem);
         for (var _a = 0, items_1 = items; _a < items_1.length; _a++) {
