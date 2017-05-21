@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":1,
-    "selecteID":4,
+    "selectedBox":41,
+    "selecteID":8,
     "props":{"width":1316,"sceneColor":"#000000","height":919},
     "nodeParent":-1,
     "label":"View",
@@ -620,7 +620,7 @@
             "props":{"y":662,"x":446,"width":419,"name":"Promote","height":234},
             "nodeParent":1,
             "label":"Sprite(Promote)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
@@ -634,11 +634,12 @@
             "compId":41,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":20.000000000000114,"x":-4,"skin":"ui/FurniturePromote/BT_Green.png","name":"Promote"},
+                    "props":{"y":20.000000000000114,"x":-4,"var":"btn_upgrade","skin":"ui/FurniturePromote/BT_Green.png","name":"Promote"},
                     "nodeParent":41,
-                    "label":"Image(Promote)",
-                    "isOpen":false,
+                    "label":"Image(btn_upgrade)",
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -652,6 +653,7 @@
                     "compId":8,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":35.999999999999886,"x":142.00000000000045,"skin":"ui/FurniturePromote/Lable_Promote.png"},
                             "nodeParent":8,
@@ -674,6 +676,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":165,"x":109.99999999999977,"skin":"ui/FurniturePromote/JB_little.png","name":"JB"},
                     "nodeParent":41,
@@ -694,6 +697,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "props":{"y":169.0000000000001,"x":191,"width":108,"text":"3000","name":"Price","height":59,"fontSize":40,"font":"Microsoft YaHei","color":"#ffffff"},
                     "nodeParent":41,

@@ -40,6 +40,9 @@ class GameMain{
             {url:"res/json/ConfPos.json", type:Laya.Loader.JSON},
             {url:"res/atlas/ui.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/ui/StageChoose.json",type:Laya.Loader.ATLAS},
+            {url:"res/atlas/ui/FurniturePromote.json",type:Laya.Loader.ATLAS},
+            {url:"res/atlas/stage.json",type:Laya.Loader.ATLAS},
+            {url:"res/atlas/beijing.jpg",type:Laya.Loader.IMAGE},
         ];
         new Loading(res, this.gameStart, null);
     }
