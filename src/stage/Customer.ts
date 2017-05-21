@@ -209,7 +209,7 @@ class Customer extends Laya.Sprite{
         }
 
         if(StageManager.stage.showCustomer.length == 0 && StageManager.stage.ranksCustomer.length == 0) {
-            //StageManager.stage.stageOver();
+            StageManager.stage.stageOver();
         }
     }
 

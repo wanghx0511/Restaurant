@@ -27,22 +27,13 @@ var StageMain = (function (_super) {
         return _this;
     }
     StageMain.prototype.onStageClick = function (e) {
+        if (this.getChildByName("stageChooseInfo") != null)
+            return;
         var stageChooseInfo = new StageChooseInfo();
+        stageChooseInfo.name = "stageChooseInfo";
         this.addChild(stageChooseInfo);
         stageChooseInfo.pivot(stageChooseInfo.width / 2, stageChooseInfo.height / 2);
         stageChooseInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
-    };
-    //关卡开始
-    StageMain.prototype.stageStart = function () {
-        this.removeSelf();
-        //加载关卡
-        var res = [
-            { url: "res/atlas/stage.json", type: Laya.Loader.ATLAS },
-            { url: "res/atlas/beijing.jpg", type: Laya.Loader.IMAGE },
-            { url: "res/atlas/customer.json", type: Laya.Loader.ATLAS },
-            { url: "res/atlas/sfx.json", type: Laya.Loader.ATLAS },
-        ];
-        new Loading(res, this.stageStart, null);
     };
     return StageMain;
 }(Laya.Sprite));

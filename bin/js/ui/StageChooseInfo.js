@@ -19,11 +19,17 @@ var StageChooseInfo = (function (_super) {
         var confStage = new ConfigStage();
         var confJson = confStage.findAll();
         var i = 0;
-        var initX = 40;
+        var initX = 53;
         var initY = 132;
         for (var _i = 0, confJson_1 = confJson; _i < confJson_1.length; _i++) {
             var conf = confJson_1[_i];
             this.createStageInfo(conf.sn, initX, initY);
+            initX += 250;
+            i++;
+            if (i % 5 == 0) {
+                initX = 53;
+                initY += 230;
+            }
         }
     };
     StageChooseInfo.prototype.createStageInfo = function (stageSn, initX, initY) {
@@ -52,8 +58,9 @@ var StageChooseInfo = (function (_super) {
         bg.addChild(dayGreen);
         dayGreen.pos(54, 143);
         stageInfo.pos(initX, initY);
+        stageInfo.size(bg.width, bg.height);
+        stageInfo.on(Laya.Event.CLICK, this, this.onClick, [stageSn]);
         this.addChild(stageInfo);
-        this.on(Laya.Event.CLICK, this, this.onClick, [stageSn]);
     };
     StageChooseInfo.prototype.onClick = function (stageSn) {
         this.removeSelf();
@@ -63,6 +70,7 @@ var StageChooseInfo = (function (_super) {
             { url: "res/atlas/beijing.jpg", type: Laya.Loader.IMAGE },
             { url: "res/atlas/customer.json", type: Laya.Loader.ATLAS },
             { url: "res/atlas/sfx.json", type: Laya.Loader.ATLAS },
+            { url: "res/atlas/ui/StageSettlement.json", type: Laya.Loader.ATLAS },
         ];
         new Loading(res, this.startStage, stageSn);
     };

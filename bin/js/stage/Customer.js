@@ -201,6 +201,7 @@ var Customer = (function (_super) {
             Laya.stage.addChild(customer);
         }
         if (StageManager.stage.showCustomer.length == 0 && StageManager.stage.ranksCustomer.length == 0) {
+            StageManager.stage.stageOver();
         }
     };
     return Customer;

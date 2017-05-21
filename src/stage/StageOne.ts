@@ -3,7 +3,7 @@ class StageOne extends Laya.Sprite{
     public uiInfo: StageOneInfo;
     private configItem: ConfigItem = new ConfigItem();
     private configCustomer : ConfigCustomer = new ConfigCustomer();
-    private configStage : ConfigStage = new ConfigStage();
+    public configStage : ConfigStage = new ConfigStage();
     private configKitchenware : ConfigKitchenware = new ConfigKitchenware();
     public plates: any[] = [];
     public pots: any[] = [];
@@ -30,7 +30,7 @@ class StageOne extends Laya.Sprite{
     //顾客出现的横坐标集
     public showPosX : number[];
     //总分
-    private scoreTotal : number;
+    private scoreTotal : number = 0;
 
     constructor(stageSn : number) {
         super();
@@ -103,8 +103,9 @@ class StageOne extends Laya.Sprite{
     }
 
     //同步分数时调用
-    public setScore(score : number){
-        this.scoreTotal = score;
+    public addScore(score : number){
+        console.log("加钱" + score);
+        this.scoreTotal += score;
     }
 
     public initCustomer() {
@@ -157,5 +158,10 @@ class StageOne extends Laya.Sprite{
         // var y : number = customer.y;
         cashBag.pos(customer.x, customer.y + customer.height);
         Laya.stage.addChild(cashBag);
+    }
+
+    public stageOver() {
+        var stageSettlementInfo = new StageSettlementInfo(this.stageSn, this.scoreTotal);
+        this.addChild(stageSettlementInfo);
     }
 }

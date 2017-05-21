@@ -26,7 +26,7 @@ var CashBag = (function (_super) {
             tipAdd = this.customer.moneyAdd * this.customer.confCustomer.tip / 100;
         }
         var total = this.customer.moneyAdd + tipAdd;
-        //gameMain.game.gameInfo.addMoney(total);
+        StageManager.stage.addScore(total);
         this.customer.mayDestory(1);
         this.destroy();
     };

@@ -30,6 +30,8 @@ var StageOne = (function (_super) {
         _this.startTimeStamp = 0;
         //init I
         _this.initLoop = 0;
+        //总分
+        _this.scoreTotal = 0;
         _this.stageSn = stageSn;
         console.log("当前关sn=" + stageSn);
         var confStage = _this.configStage.get(_this.stageSn);
@@ -93,8 +95,9 @@ var StageOne = (function (_super) {
         return _this;
     }
     //同步分数时调用
-    StageOne.prototype.setScore = function (score) {
-        this.scoreTotal = score;
+    StageOne.prototype.addScore = function (score) {
+        console.log("加钱" + score);
+        this.scoreTotal += score;
     };
     StageOne.prototype.initCustomer = function () {
         var confStage = this.configStage.get(this.stageSn);
@@ -146,6 +149,10 @@ var StageOne = (function (_super) {
         // var y : number = customer.y;
         cashBag.pos(customer.x, customer.y + customer.height);
         Laya.stage.addChild(cashBag);
+    };
+    StageOne.prototype.stageOver = function () {
+        var stageSettlementInfo = new StageSettlementInfo(this.stageSn, this.scoreTotal);
+        this.addChild(stageSettlementInfo);
     };
     return StageOne;
 }(Laya.Sprite));

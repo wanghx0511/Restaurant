@@ -27,7 +27,7 @@ class CashBag extends Laya.Sprite {
         }
 
         var total : number = this.customer.moneyAdd + tipAdd;
-        //gameMain.game.gameInfo.addMoney(total);
+        StageManager.stage.addScore(total);
         this.customer.mayDestory(1);
         this.destroy();
     }
