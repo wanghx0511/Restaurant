@@ -20,6 +20,15 @@ class StageMain extends Laya.Sprite{
     }
 
     private onStageClick(e: Laya.Event) {
+        var stageChooseInfo = new StageChooseInfo();
+        this.addChild(stageChooseInfo);
+        stageChooseInfo.pivot(stageChooseInfo.width/2, stageChooseInfo.height/2);
+        stageChooseInfo.pos(Laya.stage.width/2, Laya.stage.height/2);
+        
+    }
+
+    //关卡开始
+    private stageStart(): void {
         this.removeSelf();
         //加载关卡
         var res:Array<any> = [
@@ -29,14 +38,5 @@ class StageMain extends Laya.Sprite{
             {url:"res/atlas/sfx.json",type:Laya.Loader.ATLAS},
         ];
         new Loading(res, this.stageStart, null);
-    }
-
-    //关卡开始
-    private stageStart(): void {
-        // var stageManager = new StageManager();
-        // stageManager.createStage();
-        var upgradeManager = new UpgradeManager();
-        upgradeManager.createStage();
-        // var upgrade = new Upgrade(1);
     }
 }

@@ -37,6 +37,21 @@ var ui;
     ui.PreUpgradeInfoUI = PreUpgradeInfoUI;
 })(ui || (ui = {}));
 (function (ui) {
+    var StageChooseInfoUI = (function (_super) {
+        __extends(StageChooseInfoUI, _super);
+        function StageChooseInfoUI() {
+            return _super.call(this) || this;
+        }
+        StageChooseInfoUI.prototype.createChildren = function () {
+            _super.prototype.createChildren.call(this);
+            this.createView(ui.StageChooseInfoUI.uiView);
+        };
+        return StageChooseInfoUI;
+    }(View));
+    StageChooseInfoUI.uiView = { "type": "View", "props": { "width": 1315, "height": 928 }, "child": [{ "type": "Sprite", "props": { "y": 0, "x": 0, "width": 1315, "name": "Window", "height": 928 }, "child": [{ "type": "Image", "props": { "y": 9, "x": 9, "width": 1302, "skin": "ui/StageChoose/Bg_Window.png", "name": "Bg_Window", "height": 896 } }, { "type": "Image", "props": { "y": 50, "x": 1207.0000000000002, "var": "close", "skin": "ui/StageChoose/BT_Close.png" } }, { "type": "Image", "props": { "y": 41, "x": 555, "skin": "ui/StageChoose/Lable_Title.png", "name": "Title" } }] }, { "type": "Sprite", "props": { "y": 132, "x": 30, "width": 233, "name": "Stage_Open", "height": 224 }, "child": [{ "type": "Image", "props": { "y": 5.000000000000057, "x": 12, "skin": "ui/StageChoose/Bg_Blue.png", "name": "Bg" } }, { "type": "Image", "props": { "y": 129, "x": 14.000000000000114, "skin": "ui/StageChoose/BT_Green.png", "name": "Stage" } }, { "type": "Image", "props": { "y": 148, "x": 65.99999999999994, "skin": "ui/StageChoose/Lable_Day_Green.png", "name": "Day_Green" } }, { "type": "Image", "props": { "y": 48, "x": 11, "skin": "ui/StageChoose/Star_Bg_left.png", "name": "bg_left" } }, { "type": "Image", "props": { "y": 48, "x": 11, "skin": "ui/StageChoose/Star_left.png", "name": "Star_left" } }, { "type": "Image", "props": { "y": 16, "x": 69, "skin": "ui/StageChoose/Star_Bg_mid.png", "name": "bg_mid" } }, { "type": "Image", "props": { "y": 14, "x": 70, "skin": "ui/StageChoose/Star_mid.png", "name": "Star_mid" } }, { "type": "Image", "props": { "y": 48, "x": 153, "skin": "ui/StageChoose/Star_Bg_right.png", "name": "bg_right" } }, { "type": "Image", "props": { "y": 48, "x": 154, "skin": "ui/StageChoose/Star_right.png", "name": "Star_right" } }] }, { "type": "Sprite", "props": { "y": 132, "x": 30, "width": 233, "name": "Stage_Close", "height": 224 }, "child": [{ "type": "Image", "props": { "y": 5.000000000000057, "x": 12, "skin": "ui/StageChoose/Bg_Grey.png", "name": "Bg" } }, { "type": "Image", "props": { "y": 129, "x": 14.000000000000114, "skin": "ui/StageChoose/BT_Grey.png", "name": "Stage" } }, { "type": "Image", "props": { "y": 149, "x": 65.99999999999994, "skin": "ui/StageChoose/Lable_Day_Grey.png", "name": "Day_Grey" } }, { "type": "Image", "props": { "y": 40, "x": 83, "skin": "ui/StageChoose/Lock.png", "name": "Lock" } }] }] };
+    ui.StageChooseInfoUI = StageChooseInfoUI;
+})(ui || (ui = {}));
+(function (ui) {
     var StageOneInfoUI = (function (_super) {
         __extends(StageOneInfoUI, _super);
         function StageOneInfoUI() {

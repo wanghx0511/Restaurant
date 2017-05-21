@@ -21,6 +21,13 @@ var StageMain = (function (_super) {
         return _this;
     }
     StageMain.prototype.onStageClick = function (e) {
+        var stageChooseInfo = new StageChooseInfo();
+        this.addChild(stageChooseInfo);
+        stageChooseInfo.pivot(stageChooseInfo.width / 2, stageChooseInfo.height / 2);
+        stageChooseInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
+    };
+    //关卡开始
+    StageMain.prototype.stageStart = function () {
         this.removeSelf();
         //加载关卡
         var res = [
@@ -30,14 +37,6 @@ var StageMain = (function (_super) {
             { url: "res/atlas/sfx.json", type: Laya.Loader.ATLAS },
         ];
         new Loading(res, this.stageStart, null);
-    };
-    //关卡开始
-    StageMain.prototype.stageStart = function () {
-        // var stageManager = new StageManager();
-        // stageManager.createStage();
-        var upgradeManager = new UpgradeManager();
-        upgradeManager.createStage();
-        // var upgrade = new Upgrade(1);
     };
     return StageMain;
 }(Laya.Sprite));

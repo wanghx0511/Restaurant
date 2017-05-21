@@ -32,6 +32,7 @@ var GameMain = (function () {
             { url: "res/json/ConfWorld.json", type: Laya.Loader.JSON },
             { url: "res/json/ConfPos.json", type: Laya.Loader.JSON },
             { url: "res/atlas/ui.json", type: Laya.Loader.ATLAS },
+            { url: "res/atlas/ui/StageChoose.json", type: Laya.Loader.ATLAS },
         ];
         new Loading(res, this.gameStart, null);
     };
