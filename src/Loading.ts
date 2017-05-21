@@ -76,6 +76,6 @@ class Loading{
         Laya.stage.removeChild(this.bg);
         
         //回调
-        if(this.callback != null ) this.callback.call(this.context);
+        if(this.callback != null ) this.callback.call(this.context, this.context);
     }
 }

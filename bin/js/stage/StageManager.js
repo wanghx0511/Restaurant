@@ -1,9 +1,9 @@
 var StageManager = (function () {
     function StageManager() {
     }
-    StageManager.prototype.createStage = function () {
+    StageManager.createStage = function (stageSn) {
         // Laya.stage.destroy();
-        StageManager.stage = new StageOne(1);
+        StageManager.stage = new StageOne(stageSn);
         Laya.stage.addChild(StageManager.stage);
         console.log(StageManager.data["kitchenware"][7]);
     };

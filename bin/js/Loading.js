@@ -62,7 +62,7 @@ var Loading = (function () {
         Laya.stage.removeChild(this.bg);
         //回调
         if (this.callback != null)
-            this.callback.call(this.context);
+            this.callback.call(this.context, this.context);
     };
     return Loading;
 }());

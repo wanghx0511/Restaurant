@@ -24,7 +24,6 @@ class StageMain extends Laya.Sprite{
         this.addChild(stageChooseInfo);
         stageChooseInfo.pivot(stageChooseInfo.width/2, stageChooseInfo.height/2);
         stageChooseInfo.pos(Laya.stage.width/2, Laya.stage.height/2);
-        
     }
 
     //关卡开始
