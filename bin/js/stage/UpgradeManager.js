@@ -1,11 +1,8 @@
-var UpgradeManager = (function () {
-    function UpgradeManager() {
-    }
-    UpgradeManager.prototype.createStage = function () {
-        UpgradeManager.upgrade = new Upgrade(1);
-        Laya.stage.addChild(UpgradeManager.upgrade);
-    };
-    return UpgradeManager;
-}());
-UpgradeManager.upgrade = null;
+// class UpgradeManager{
+//     public static upgrade : Upgrade = null;
+//     public createStage() {
+//         UpgradeManager.upgrade = new Upgrade(1);
+//         Laya.stage.addChild(UpgradeManager.upgrade);
+//     }
+// } 
 //# sourceMappingURL=UpgradeManager.js.map

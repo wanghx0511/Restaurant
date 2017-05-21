@@ -14,11 +14,11 @@
 {"automatic":false,"cooldown":5,"id":5,"itemSn":0,"level":1,"lvupcost":"[50,62]","picture":"suanmeitangji.png","singetime":0,"sn":16,"spacenum":0,"type":"CoffeeMachine","unlock":0},
 {"automatic":false,"cooldown":5,"id":5,"itemSn":0,"level":2,"lvupcost":"[20]","picture":"suanmeitangji.png","singetime":0,"sn":17,"spacenum":0,"type":"CoffeeMachine","unlock":0},
 {"automatic":false,"cooldown":5,"id":5,"itemSn":0,"level":3,"lvupcost":"[20]","picture":"suanmeitangji.png","singetime":0,"sn":18,"spacenum":0,"type":"CoffeeMachine","unlock":0},
-{"automatic":false,"cooldown":0,"id":6,"itemSn":6,"level":1,"lvupcost":"[50,62]","picture":"suo.png","singetime":0,"sn":19,"spacenum":1,"type":"Plate","unlock":0},
-{"automatic":false,"cooldown":0,"id":6,"itemSn":6,"level":2,"lvupcost":"[20]","picture":"suo.png","singetime":0,"sn":20,"spacenum":2,"type":"Plate","unlock":0},
-{"automatic":false,"cooldown":0,"id":6,"itemSn":6,"level":3,"lvupcost":"[20]","picture":"suo.png","singetime":0,"sn":21,"spacenum":3,"type":"Plate","unlock":0},
-{"automatic":false,"cooldown":0,"id":7,"itemSn":7,"level":1,"lvupcost":"[50,62]","picture":"suo.png","singetime":0,"sn":22,"spacenum":1,"type":"Plate","unlock":0},
-{"automatic":false,"cooldown":0,"id":7,"itemSn":7,"level":2,"lvupcost":"[20]","picture":"suo.png","singetime":0,"sn":23,"spacenum":2,"type":"Plate","unlock":0},
-{"automatic":false,"cooldown":0,"id":7,"itemSn":7,"level":3,"lvupcost":"[20]","picture":"suo.png","singetime":0,"sn":24,"spacenum":3,"type":"Plate","unlock":0},
+{"automatic":false,"cooldown":0,"id":6,"itemSn":6,"level":1,"lvupcost":"[50,62]","picture":"longxiapandian.png","singetime":0,"sn":19,"spacenum":1,"type":"Plate","unlock":0},
+{"automatic":false,"cooldown":0,"id":6,"itemSn":6,"level":2,"lvupcost":"[20]","picture":"longxiapandian.png","singetime":0,"sn":20,"spacenum":2,"type":"Plate","unlock":0},
+{"automatic":false,"cooldown":0,"id":6,"itemSn":6,"level":3,"lvupcost":"[20]","picture":"longxiapandian.png","singetime":0,"sn":21,"spacenum":3,"type":"Plate","unlock":0},
+{"automatic":false,"cooldown":0,"id":7,"itemSn":7,"level":1,"lvupcost":"[50,62]","picture":"rouchuanpandian.png","singetime":0,"sn":22,"spacenum":1,"type":"Plate","unlock":0},
+{"automatic":false,"cooldown":0,"id":7,"itemSn":7,"level":2,"lvupcost":"[20]","picture":"rouchuanpandian.png","singetime":0,"sn":23,"spacenum":2,"type":"Plate","unlock":0},
+{"automatic":false,"cooldown":0,"id":7,"itemSn":7,"level":3,"lvupcost":"[20]","picture":"rouchuanpandian.png","singetime":0,"sn":24,"spacenum":3,"type":"Plate","unlock":0},
 {"automatic":false,"cooldown":0,"id":8,"itemSn":0,"level":1,"lvupcost":"[20]","picture":"lajitong.png","singetime":0,"sn":25,"spacenum":0,"type":"Trash","unlock":0}
 ]

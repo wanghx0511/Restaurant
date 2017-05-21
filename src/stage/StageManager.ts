@@ -8,6 +8,5 @@ class StageManager{
         // Laya.stage.destroy();
         StageManager.stage = new StageOne(stageSn);
         Laya.stage.addChild(StageManager.stage);
-        console.log(StageManager.data["kitchenware"][7]);
     }
 }

@@ -19,6 +19,9 @@ var CoffeeMachine = (function (_super) {
     CoffeeMachine.prototype.onAdded = function () {
         if (!this.configKitchenware.automatic)
             return;
+        this.handle();
+    };
+    CoffeeMachine.prototype.handle = function () {
         this.createAnimation();
         Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
     };
@@ -41,7 +44,7 @@ var CoffeeMachine = (function (_super) {
             return;
         if (this.item != null)
             return;
-        Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
+        this.handle();
     };
     CoffeeMachine.prototype.createAnimation = function () {
         this.ani = new Laya.Animation();

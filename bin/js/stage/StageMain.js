@@ -10,14 +10,20 @@ var StageMain = (function (_super) {
         var _this = _super.call(this) || this;
         //场景图
         var bg = new Laya.Sprite();
-        bg.loadImage("res/atlas/MapBG01_1.jpg");
+        bg.loadImage("res/atlas/beijing.jpg");
+        bg.pos(-488, 0);
         _this.addChild(bg);
+        //操作台
+        var caozuotai = new Laya.Sprite();
+        caozuotai.loadImage("res/atlas/caozuotai.png");
+        caozuotai.pos(-275, 490);
+        _this.addChild(caozuotai);
         //添加UI
-        var mainInfo = new MainInfo();
-        _this.mainInfo = mainInfo;
-        _this.addChild(_this.mainInfo);
+        var stageOneInfo = new StageOneInfo();
+        _this.stageOneInfo = stageOneInfo;
+        _this.addChild(_this.stageOneInfo);
         //事件
-        _this.mainInfo.start.on(Laya.Event.CLICK, _this, _this.onStageClick);
+        _this.stageOneInfo.start.on(Laya.Event.CLICK, _this, _this.onStageClick);
         return _this;
     }
     StageMain.prototype.onStageClick = function (e) {

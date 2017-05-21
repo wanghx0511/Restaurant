@@ -8,6 +8,7 @@ class Plate extends Laya.Sprite{
     constructor(id: number, level: number) {
         super();
         this.configKitchenware = new ConfigKitchenware().getBy("id", id);
+        this.loadImage("stage/" + this.configKitchenware.picture);
     }
 
     public handle() {

@@ -16,6 +16,10 @@ class CoffeeMachine extends Laya.Sprite{
 
     public onAdded() {
         if(!this.configKitchenware.automatic) return;
+        this.handle();
+    }
+
+    public handle() {
         this.createAnimation();
         Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
     }
@@ -40,7 +44,7 @@ class CoffeeMachine extends Laya.Sprite{
         if(this.configKitchenware.automatic) return;
 
         if(this.item != null) return;
-        Laya.timer.once(this.configKitchenware.cooldown * 1000, this, this.finish);
+        this.handle();
     }
 
     private createAnimation(): void {

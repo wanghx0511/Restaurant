@@ -19,12 +19,14 @@ var StageChooseInfo = (function (_super) {
         var confStage = new ConfigStage();
         var confJson = confStage.findAll();
         var i = 0;
+        var initX = 40;
+        var initY = 132;
         for (var _i = 0, confJson_1 = confJson; _i < confJson_1.length; _i++) {
             var conf = confJson_1[_i];
-            this.createStageInfo(conf.sn);
+            this.createStageInfo(conf.sn, initX, initY);
         }
     };
-    StageChooseInfo.prototype.createStageInfo = function (stageSn) {
+    StageChooseInfo.prototype.createStageInfo = function (stageSn, initX, initY) {
         var stageInfo = new Laya.Sprite();
         var bg = new Laya.Image();
         bg.loadImage("ui/StageChoose/Bg_Blue.png");
@@ -49,7 +51,7 @@ var StageChooseInfo = (function (_super) {
         dayGreen.loadImage("ui/StageChoose/Lable_Day_Green.png");
         bg.addChild(dayGreen);
         dayGreen.pos(54, 143);
-        stageInfo.pos(40, 132);
+        stageInfo.pos(initX, initY);
         this.addChild(stageInfo);
         this.on(Laya.Event.CLICK, this, this.onClick, [stageSn]);
     };

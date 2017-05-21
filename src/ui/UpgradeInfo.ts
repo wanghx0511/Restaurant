@@ -1,9 +1,11 @@
 class UpgradeInfo extends ui.UpgradeInfoUI{
 
     private type : string;
-    private sn : number;
-    private level : number;
+    private listName : string;
+    private stageOneInfo : StageOneInfo;
+    private uiVar : string;
     private stageManager : StageManager = new StageManager();
+    private promoteInfo : PromoteInfo;
 
     constructor() {
         super();
@@ -12,25 +14,19 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
         this.info.on("click", this, this.onInfoClick);
     }
 
-    public setParam(type : string, sn : number, level : number) {
+    public setParam(type : string, listName : string, stageOneInfo : StageOneInfo, uiVar : string) {
         this.type = type;
-        this.sn = sn;
-        this.level = level;
+        this.listName = listName;
+        this.stageOneInfo = stageOneInfo;
+        this.uiVar = uiVar;
     }
 
     private onUpgradeClick(){
-
-        if(this.type == "item") {
-            var levelNow : number= this.level + 1;
-            this.stageManager.data["item"][this.sn] = levelNow;
-        }
-        if(this.type == "kitchenware") {
-            var levelNow : number= this.level + 1;
-            this.stageManager.data["kitchenware"][this.sn] = levelNow;
-        }
-        console.log(this.sn);
-        console.log(this.stageManager.data["kitchenware"][this.sn]);
-        
+        this.promoteInfo = new PromoteInfo();
+        this.promoteInfo.setParam(this.type, this.listName, this.stageOneInfo);
+        this.stageOneInfo.addChild(this.promoteInfo);
+        eval("this.stageOneInfo." + this.uiVar + ".visible = true;");
+        this.removeSelf();
     }
 
     private onStrengthClick(){

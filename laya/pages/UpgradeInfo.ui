@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":9,
+    "selecteID":12,
     "props":{"width":600,"sceneColor":"#000000","height":400},
     "nodeParent":-1,
     "label":"View",
@@ -10,6 +10,13 @@
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
+    "frames":[
+        {
+            "type":1,
+            "props":{"width":600,"sceneColor":"#000000","height":400},
+            "frame":0,
+            "__InPool":false
+        }],
     "compId":1,
     "child":[
         {
@@ -21,6 +28,13 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
+            "frames":[
+                {
+                    "type":1,
+                    "props":{"y":4,"x":174,"skin":"ui/shadow_big.png"},
+                    "frame":0,
+                    "__InPool":false
+                }],
             "compId":2,
             "child":[
                 ]
@@ -34,6 +48,13 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
+            "frames":[
+                {
+                    "type":1,
+                    "props":{"y":48,"x":193,"skin":"ui/point_big.png"},
+                    "frame":0,
+                    "__InPool":false
+                }],
             "compId":4,
             "child":[
                 ]
@@ -47,6 +68,13 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
+            "frames":[
+                {
+                    "type":1,
+                    "props":{"y":48,"x":268,"skin":"ui/point_big.png"},
+                    "frame":0,
+                    "__InPool":false
+                }],
             "compId":5,
             "child":[
                 ]
@@ -60,6 +88,13 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
+            "frames":[
+                {
+                    "type":1,
+                    "props":{"y":48,"x":343,"skin":"ui/point_big.png"},
+                    "frame":0,
+                    "__InPool":false
+                }],
             "compId":6,
             "child":[
                 ]
@@ -73,6 +108,13 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
+            "frames":[
+                {
+                    "type":1,
+                    "props":{"y":243,"x":224,"var":"strength","skin":"ui/quick_finish.png"},
+                    "frame":0,
+                    "__InPool":false
+                }],
             "compId":7,
             "child":[
                 ]
@@ -86,6 +128,13 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
+            "frames":[
+                {
+                    "type":1,
+                    "props":{"y":177,"x":35,"var":"upgrade","skin":"ui/upgrade.png"},
+                    "frame":0,
+                    "__InPool":false
+                }],
             "compId":8,
             "child":[
                 ]
@@ -99,20 +148,14 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
+            "frames":[
+                {
+                    "type":1,
+                    "props":{"y":188,"x":413,"var":"info","skin":"ui/info.png"},
+                    "frame":0,
+                    "__InPool":false
+                }],
             "compId":9,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Text",
-            "props":{"y":113,"x":244,"var":"name","fontSize":60,"color":"#fbf8f8"},
-            "nodeParent":1,
-            "label":"Text(name)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":12,
             "child":[
                 ]
         }],
