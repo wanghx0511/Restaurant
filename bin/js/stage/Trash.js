@@ -23,7 +23,7 @@ var Trash = (function (_super) {
     Trash.prototype.abandon = function (item) {
         //销毁
         item.destroy();
-        this.trashCan.graphics.destroy();
+        this.trashCan.graphics.clear();
         this.trashCan.loadImage("stage/lajitong2.png");
         Laya.timer.once(800, this, this.onChangeImage);
         // console.log("trash animation")
@@ -36,7 +36,7 @@ var Trash = (function (_super) {
         //gameMain.game.gameInfo.minusMoney(item.getConf().destroycost);
     };
     Trash.prototype.onChangeImage = function () {
-        this.trashCan.graphics.destroy();
+        this.trashCan.graphics.clear();
         this.trashCan.loadImage("stage/lajitong.png");
     };
     return Trash;

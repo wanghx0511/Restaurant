@@ -24,6 +24,8 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
     private onUpgradeClick(){
         this.promoteInfo = new PromoteInfo();
         this.promoteInfo.setParam(this.type, this.listName, this.stageOneInfo);
+        this.promoteInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
+        this.promoteInfo.pivot(this.promoteInfo.width / 2, this.promoteInfo.height /2);
         this.stageOneInfo.addChild(this.promoteInfo);
         eval("this.stageOneInfo." + this.uiVar + ".visible = true;");
         this.removeSelf();
@@ -34,7 +36,9 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
     }
 
     private onInfoClick(){
-
+        this.removeSelf();
+        eval("this.stageOneInfo." + this.uiVar + ".visible = true;");
+        this.stageOneInfo.releaseUpdating();
     }
 
 }
