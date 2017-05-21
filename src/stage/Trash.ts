@@ -23,7 +23,7 @@ class Trash extends Laya.Sprite{
     public abandon(item: Item) {
         //销毁
         item.destroy();
-        this.trashCan.graphics.destroy();
+        this.trashCan.graphics.clear();
         this.trashCan.loadImage("stage/lajitong2.png");
         Laya.timer.once(800, this, this.onChangeImage);
 
@@ -38,7 +38,7 @@ class Trash extends Laya.Sprite{
     }
 
     private onChangeImage(){
-        this.trashCan.graphics.destroy();
+        this.trashCan.graphics.clear();
         this.trashCan.loadImage("stage/lajitong.png");
     }
 
