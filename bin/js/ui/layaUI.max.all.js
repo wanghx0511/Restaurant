@@ -22,6 +22,21 @@ var ui;
     ui.FurniturePromoteUI = FurniturePromoteUI;
 })(ui || (ui = {}));
 (function (ui) {
+    var MainInfoUI = (function (_super) {
+        __extends(MainInfoUI, _super);
+        function MainInfoUI() {
+            return _super.call(this) || this;
+        }
+        MainInfoUI.prototype.createChildren = function () {
+            _super.prototype.createChildren.call(this);
+            this.createView(ui.MainInfoUI.uiView);
+        };
+        return MainInfoUI;
+    }(View));
+    MainInfoUI.uiView = { "type": "View", "props": { "width": 1920, "height": 1080 }, "child": [{ "type": "Image", "props": { "y": 30, "x": 36, "width": 174, "skin": "ui/Icn84005.png", "height": 183 } }, { "type": "ProgressBar", "props": { "y": 113, "x": 220, "width": 127, "skin": "ui/progress_time.png", "height": 24 } }, { "type": "Label", "props": { "y": 59, "x": 215, "width": 135, "text": "大魔王", "strokeColor": "#9f4342", "stroke": 3, "height": 46, "fontSize": 40, "color": "#f9f3f3", "bold": true } }, { "type": "Image", "props": { "y": 501, "x": 839, "width": 189, "var": "start", "skin": "ui/2306700.png", "height": 179 } }] };
+    ui.MainInfoUI = MainInfoUI;
+})(ui || (ui = {}));
+(function (ui) {
     var MainTownUI = (function (_super) {
         __extends(MainTownUI, _super);
         function MainTownUI() {

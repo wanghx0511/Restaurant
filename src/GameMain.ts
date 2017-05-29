@@ -38,7 +38,6 @@ class GameMain{
             {url:"res/json/ConfStage.json", type:Laya.Loader.JSON},
             {url:"res/json/ConfWorld.json", type:Laya.Loader.JSON},
             {url:"res/json/ConfPos.json", type:Laya.Loader.JSON},
-            {url:"res/atlas/ui.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/ui/StageChoose.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/ui/FurniturePromote.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/ui/MainTown.json",type:Laya.Loader.ATLAS},
