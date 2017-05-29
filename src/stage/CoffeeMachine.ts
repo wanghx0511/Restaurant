@@ -48,11 +48,11 @@ class CoffeeMachine extends Laya.Sprite{
     }
 
     private createAnimation(): void {
-			this.ani = new Laya.Animation();
-			this.ani.interval = 300; // 设置播放间隔（单位：毫秒）
-            this.addChild(this.ani);
-			this.ani.play(0, true, "sfx"); // 播放图集动画
+        this.ani = new Laya.Animation();
+        this.ani.interval = 300; // 设置播放间隔（单位：毫秒）
+        this.addChild(this.ani);
+        this.ani.play(0, true, "sfx"); // 播放图集动画
 
-            this.ani.pos(48, 156);
+        this.ani.pos(48, 156);
 	}
 }

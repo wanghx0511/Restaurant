@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":1,
-    "selecteID":37,
+    "selectedBox":49,
+    "selecteID":89,
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
     "label":"View",
@@ -10,13 +10,6 @@
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
-    "frames":[
-        {
-            "type":1,
-            "props":{"width":1920,"sceneColor":"#000000","height":1080},
-            "frame":0,
-            "__InPool":false
-        }],
     "compId":1,
     "child":[
         {
@@ -28,13 +21,6 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"skin":"ui/StageSettlement/BT_Back.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":41,
             "child":[
                 ],
@@ -46,21 +32,13 @@
             "props":{"y":108.00000000000003,"x":274,"width":1395,"visible":false,"var":"defeat","height":168},
             "nodeParent":1,
             "label":"Sprite(defeat)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":16,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":64,"x":-274,"skin":"ui/StageSettlement/Bg_Defeat.png","name":"BG"},
                     "nodeParent":16,
@@ -68,20 +46,12 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Bg_Defeat.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":46,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":19,"x":17,"skin":"ui/StageSettlement/Title_Defeat.png","name":"Title_bg"},
                     "nodeParent":16,
@@ -89,20 +59,12 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Title_Defeat.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":13,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":-7.000000000000071,"x":477.9999999999999,"skin":"ui/StageSettlement/Defeat.png","name":"Defeat"},
                     "nodeParent":16,
@@ -110,20 +72,12 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Defeat.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":14,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "props":{"y":160.99999999999991,"x":360.0000000000001,"width":667,"name":"Star","height":197},
                     "nodeParent":16,
@@ -132,13 +86,6 @@
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":3,
                     "child":[
                         {
@@ -149,13 +96,6 @@
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "frames":[
-                                {
-                                    "type":1,
-                                    "props":{"skin":"ui/StageSettlement/Star_Bg_left.png"},
-                                    "frame":0,
-                                    "__InPool":false
-                                }],
                             "compId":7,
                             "child":[
                                 ],
@@ -169,13 +109,6 @@
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "frames":[
-                                {
-                                    "type":1,
-                                    "props":{"skin":"ui/StageSettlement/Star_Bg_mid.png"},
-                                    "frame":0,
-                                    "__InPool":false
-                                }],
                             "compId":8,
                             "child":[
                                 ],
@@ -189,13 +122,6 @@
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "frames":[
-                                {
-                                    "type":1,
-                                    "props":{"skin":"ui/StageSettlement/Star_Bg_right.png"},
-                                    "frame":0,
-                                    "__InPool":false
-                                }],
                             "compId":9,
                             "child":[
                                 ],
@@ -204,7 +130,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":750,"x":455,"var":"retry","skin":"ui/StageSettlement/BT_Green.png"},
                     "nodeParent":16,
@@ -213,13 +138,6 @@
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/BT_Green.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":47,
                     "child":[
                         {
@@ -230,13 +148,6 @@
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "frames":[
-                                {
-                                    "type":1,
-                                    "props":{"skin":"ui/StageSettlement/Lable_retry.png"},
-                                    "frame":0,
-                                    "__InPool":false
-                                }],
                             "compId":48,
                             "child":[
                                 ],
@@ -245,7 +156,7 @@
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
@@ -257,13 +168,6 @@
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":17,
             "child":[
                 {
@@ -274,13 +178,6 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Bg_Victory.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":40,
                     "child":[
                         ],
@@ -294,13 +191,6 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Title_Victory.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":11,
                     "child":[
                         ],
@@ -314,13 +204,6 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Lable_Victory.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":12,
                     "child":[
                         ],
@@ -335,13 +218,6 @@
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/BT_Green.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":42,
                     "child":[
                         {
@@ -352,13 +228,6 @@
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "frames":[
-                                {
-                                    "type":1,
-                                    "props":{"skin":"ui/StageSettlement/Lable_Next.png"},
-                                    "frame":0,
-                                    "__InPool":false
-                                }],
                             "compId":45,
                             "child":[
                                 ],
@@ -375,13 +244,6 @@
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/BT_Blue.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":43,
                     "child":[
                         {
@@ -392,13 +254,6 @@
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "frames":[
-                                {
-                                    "type":1,
-                                    "props":{"skin":"ui/StageSettlement/Lable_Again.png"},
-                                    "frame":0,
-                                    "__InPool":false
-                                }],
                             "compId":44,
                             "child":[
                                 ]
@@ -413,13 +268,6 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Star_Bg_left.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":62,
                     "child":[
                         ],
@@ -434,13 +282,6 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Star_left.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":63,
                     "child":[
                         ],
@@ -454,13 +295,6 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Star_Bg_mid.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":64,
                     "child":[
                         ],
@@ -474,13 +308,6 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Star_mid.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":65,
                     "child":[
                         ],
@@ -494,13 +321,6 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Star_Bg_right.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":66,
                     "child":[
                         ],
@@ -514,41 +334,28 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Star_right.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":67,
                     "child":[
                         ],
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
-            "$HIDDEN":true
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Sprite",
-            "props":{"y":453.99999999999983,"x":385.9999999999999,"width":1141,"name":"Detail","height":256},
+            "props":{"y":453.99999999999983,"x":380.9999999999999,"width":1141,"var":"detail","height":256},
             "nodeParent":1,
-            "label":"Sprite(Detail)",
-            "isOpen":false,
+            "label":"Sprite(detail)",
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":49,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":15.999999999999886,"x":29.000000000000057,"skin":"ui/StageSettlement/bg_01.png","name":"bg"},
                     "nodeParent":49,
@@ -556,19 +363,13 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/bg_01.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":50,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":60.000000000000114,"x":333.9999999999999,"skin":"ui/StageSettlement/xian.png","name":"line01"},
                     "nodeParent":49,
@@ -577,19 +378,13 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/xian.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":51,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":60.000000000000114,"x":636.0000000000002,"skin":"ui/StageSettlement/xian.png","name":"line02"},
                     "nodeParent":49,
@@ -598,19 +393,13 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/xian.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":52,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":147,"x":96,"skin":"ui/StageSettlement/JB_little.png","name":"JB"},
                     "nodeParent":49,
@@ -618,19 +407,13 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/JB_little.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":53,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "props":{"y":47.00000000000006,"x":140.00000000000006,"width":88,"text":"盈利","name":"Interest","height":61,"fontSize":42,"font":"Microsoft YaHei","color":"#ffffff"},
                     "nodeParent":49,
@@ -638,18 +421,12 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"text":"label"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":54,
                     "child":[
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":147,"x":412,"skin":"ui/StageSettlement/Free_little.png","name":"Free"},
                     "nodeParent":49,
@@ -657,19 +434,13 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Free_little.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":55,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "props":{"y":47.00000000000006,"x":446.00000000000017,"width":91,"text":"小费","name":"Free","height":66,"fontSize":42,"font":"Microsoft YaHei","color":"#ffffff"},
                     "nodeParent":49,
@@ -677,18 +448,12 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"text":"label"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":56,
                     "child":[
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":148,"x":699.9999999999995,"skin":"ui/StageSettlement/Satisfied.png","name":"Satisfied"},
                     "nodeParent":49,
@@ -696,19 +461,13 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Satisfied.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":57,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":148,"x":918.0000000000002,"skin":"ui/StageSettlement/Unsatisfied.png","name":"Unsatisfied"},
                     "nodeParent":49,
@@ -716,19 +475,13 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/StageSettlement/Unsatisfied.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":58,
                     "child":[
                         ],
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "props":{"y":48.00000000000006,"x":744,"width":265,"text":"顾客满意情况","name":"CustomerDes","height":66,"fontSize":42,"font":"Microsoft YaHei","color":"#ffffff"},
                     "nodeParent":49,
@@ -736,14 +489,59 @@
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"text":"label"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
                     "compId":59,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":157,"x":171,"width":99,"var":"money","text":"1000","height":45,"fontSize":40,"color":"#f4d80d","bold":true},
+                    "nodeParent":49,
+                    "label":"Label(money)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":88,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":157,"x":476,"width":99,"var":"tip","text":"1000","height":45,"fontSize":40,"color":"#f4d80d","bold":true},
+                    "nodeParent":49,
+                    "label":"Label(tip)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":89,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":157,"x":769,"width":99,"var":"manyi","text":"1000","height":45,"fontSize":40,"color":"#f4d80d","bold":true},
+                    "nodeParent":49,
+                    "label":"Label(manyi)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":90,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":157,"x":990,"width":99,"var":"bumanyi","text":"1000","height":45,"fontSize":40,"color":"#f4d80d","bold":true},
+                    "nodeParent":49,
+                    "label":"Label(bumanyi)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":91,
                     "child":[
                         ]
                 }],
@@ -752,20 +550,13 @@
         {
             "x":15,
             "type":"ProgressBar",
-            "props":{"y":749,"x":699,"var":"progress","skin":"ui/StageSettlement/Progress.png","height":50},
+            "props":{"y":749,"x":699,"width":822,"var":"progress","skin":"ui/StageSettlement/Progress.png","height":50},
             "nodeParent":1,
             "label":"ProgressBar(progress)",
             "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":84,
             "child":[
                 ]
@@ -779,13 +570,6 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"skin":"ui/StageSettlement/JB.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":32,
             "child":[
                 ],
@@ -801,13 +585,6 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"text":"label"},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":33,
             "child":[
                 ]
@@ -815,19 +592,12 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":731.9999999999998,"x":1007,"skin":"ui/StageSettlement/Star_little_yellow.png","name":"Star_JB"},
+            "props":{"y":769,"x":1045,"var":"starOne","skin":"ui/StageSettlement/Star_little_yellow.png","gray":true,"anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
-            "label":"Image(Star_JB)",
+            "label":"Image(starOne)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"skin":"ui/StageSettlement/Star_little_yellow.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":38,
             "child":[
                 ],
@@ -836,19 +606,12 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":731.9999999999998,"x":1208,"skin":"ui/StageSettlement/Star_little_yellow.png","name":"Star_JB"},
+            "props":{"y":769,"x":1246,"var":"starTwo","skin":"ui/StageSettlement/Star_little_yellow.png","gray":true,"anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
-            "label":"Image(Star_JB)",
+            "label":"Image(starTwo)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"skin":"ui/StageSettlement/Star_little_yellow.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":39,
             "child":[
                 ],
@@ -857,19 +620,12 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":730.9999999999998,"x":1382,"skin":"ui/StageSettlement/Star_little_yellow.png"},
+            "props":{"y":768,"x":1420,"var":"starThree","skin":"ui/StageSettlement/Star_little_yellow.png","gray":true,"anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
-            "label":"Image",
+            "label":"Image(starThree)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"skin":"ui/StageSettlement/Star_little_grey.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
             "compId":37,
             "child":[
                 ],

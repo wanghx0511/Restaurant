@@ -32,6 +32,12 @@ var StageOne = (function (_super) {
         _this.initLoop = 0;
         //总分
         _this.scoreTotal = 0;
+        //付帐
+        _this.money = 0;
+        //小费
+        _this.tip = 0;
+        //满意客人数
+        _this.manyi = 0;
         _this.stageSn = stageSn;
         console.log("当前关sn=" + stageSn);
         var confStage = _this.configStage.get(_this.stageSn);
@@ -40,6 +46,8 @@ var StageOne = (function (_super) {
         bg.loadImage("res/atlas/beijing.jpg");
         bg.pos(-488, 0);
         _this.addChild(bg);
+        var stageInfo = new StageInfo();
+        _this.addChild(stageInfo);
         //操作台
         var caozuotai = new Laya.Sprite();
         caozuotai.loadImage("res/atlas/caozuotai.png");
@@ -60,17 +68,23 @@ var StageOne = (function (_super) {
             kitchenware.pivot(pos.pivotX, pos.pivotY);
             _this.addChild(kitchenware);
             //如果是放置台则加到列表里
-            if (pos.class == "Plate") {
-                _this.plates.push(kitchenware);
-            }
-            else if (pos.class == "Pot") {
-                _this.pots.push(kitchenware);
-            }
-            else if (pos.class == "Crisper") {
-                _this.crisper.push(kitchenware);
-            }
-            else if (pos.class == "Trash") {
-                _this.trashCanObj = new Trash();
+            switch (pos.class) {
+                case "Plate": {
+                    _this.plates.push(kitchenware);
+                    break;
+                }
+                case "Pot": {
+                    _this.pots.push(kitchenware);
+                    break;
+                }
+                case "Crisper": {
+                    _this.crisper.push(kitchenware);
+                    break;
+                }
+                case "Trash": {
+                    _this.trashCanObj = new Trash();
+                    break;
+                }
             }
         }
         var items = eval(confStage.initItem);
@@ -95,9 +109,12 @@ var StageOne = (function (_super) {
         return _this;
     }
     //同步分数时调用
-    StageOne.prototype.addScore = function (score) {
-        console.log("加钱" + score);
-        this.scoreTotal += score;
+    StageOne.prototype.addScore = function (money, tip) {
+        this.money += money;
+        this.tip += tip;
+        this.scoreTotal = this.money + this.tip;
+        if (tip > 0)
+            this.manyi += 1;
     };
     StageOne.prototype.initCustomer = function () {
         var confStage = this.configStage.get(this.stageSn);
@@ -151,7 +168,7 @@ var StageOne = (function (_super) {
         Laya.stage.addChild(cashBag);
     };
     StageOne.prototype.stageOver = function () {
-        var stageSettlementInfo = new StageSettlementInfo(this.stageSn, this.scoreTotal);
+        var stageSettlementInfo = new StageSettlementInfo(this.stageSn);
         this.addChild(stageSettlementInfo);
     };
     return StageOne;

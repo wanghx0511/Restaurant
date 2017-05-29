@@ -10,7 +10,6 @@ class Pot extends Laya.Sprite{
         this.loadImage("stage/" + this.configKitchenware.picture);
     }
 
-
     //开始加工
     public machining(): void {
         //设定加工时间

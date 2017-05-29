@@ -33,33 +33,31 @@ var StageChooseInfo = (function (_super) {
         }
     };
     StageChooseInfo.prototype.createStageInfo = function (stageSn, initX, initY) {
-        var stageInfo = new Laya.Sprite();
-        var bg = new Laya.Image();
-        bg.loadImage("ui/StageChoose/Bg_Blue.png");
-        stageInfo.addChild(bg);
-        var stage = new Laya.Image();
-        stage.loadImage("ui/StageChoose/BT_Green.png");
-        bg.addChild(stage);
-        stage.pos(2, 124);
-        var bgLeft = new Laya.Image();
-        bgLeft.loadImage("ui/StageChoose/Star_Bg_left.png");
-        bg.addChild(bgLeft);
-        bgLeft.pos(-4, 43);
-        var bgMid = new Laya.Image();
-        bgMid.loadImage("ui/StageChoose/Star_Bg_mid.png");
-        bg.addChild(bgMid);
-        bgMid.pos(57, 11);
-        var bgRight = new Laya.Image();
-        bgRight.loadImage("ui/StageChoose/Star_Bg_right.png");
-        bg.addChild(bgRight);
-        bgRight.pos(141, 43);
-        var dayGreen = new Laya.Image();
-        dayGreen.loadImage("ui/StageChoose/Lable_Day_Green.png");
-        bg.addChild(dayGreen);
-        dayGreen.pos(54, 143);
+        var stageInfo;
+        var stageJson = Laya.LocalStorage.getJSON("stage");
+        if (stageJson == null)
+            stageJson = {};
+        if (stageSn == 1 || stageJson[stageSn - 1] != null) {
+            stageInfo = new ui.StageOpenUI();
+            if (stageJson[stageSn] != null) {
+                if (stageJson[stageSn] >= 1) {
+                    stageInfo.starLeft.visible = true;
+                }
+                if (stageJson[stageSn] >= 2) {
+                    stageInfo.starMid.visible = true;
+                }
+                if (stageJson[stageSn] >= 3) {
+                    stageInfo.starRight.visible = true;
+                }
+            }
+            stageInfo.on(Laya.Event.CLICK, this, this.onClick, [stageSn]);
+        }
+        else {
+            stageInfo = new ui.StageCloseUI();
+        }
+        stageInfo.stageSn.index = stageSn;
         stageInfo.pos(initX, initY);
-        stageInfo.size(bg.width, bg.height);
-        stageInfo.on(Laya.Event.CLICK, this, this.onClick, [stageSn]);
+        stageInfo.size(stageInfo.width, stageInfo.height);
         this.addChild(stageInfo);
     };
     StageChooseInfo.prototype.onClick = function (stageSn) {
@@ -71,6 +69,8 @@ var StageChooseInfo = (function (_super) {
             { url: "res/atlas/customer.json", type: Laya.Loader.ATLAS },
             { url: "res/atlas/sfx.json", type: Laya.Loader.ATLAS },
             { url: "res/atlas/ui/StageSettlement.json", type: Laya.Loader.ATLAS },
+            { url: "res/atlas/ui/Stage.json", type: Laya.Loader.ATLAS },
+            { url: "res/atlas/ui/Pause.json", type: Laya.Loader.ATLAS },
         ];
         new Loading(res, this.startStage, stageSn);
     };

@@ -2,140 +2,26 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":36,
-    "props":{"width":206,"sceneColor":"#000000","height":206},
+    "selecteID":3,
+    "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
-    "frames":[
-        {
-            "type":1,
-            "props":{"width":1316,"sceneColor":"#000000","height":919},
-            "frame":0,
-            "__InPool":false
-        }],
     "compId":1,
     "child":[
         {
             "x":15,
             "type":"Image",
-            "props":{"y":0,"x":0,"skin":"ui/StageChoose/Bg_Blue.png"},
+            "props":{"y":28,"x":1769,"var":"pause","skin":"ui/Stage/Pause.png"},
             "nodeParent":1,
-            "label":"Image",
+            "label":"Image(pause)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":82,"x":119,"skin":"ui/StageChoose/Bg_Blue.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":31,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":124,"x":2,"skin":"ui/StageChoose/BT_Green.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":152,"x":66,"skin":"ui/StageChoose/BT_Green.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":32,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":144,"x":31,"skin":"ui/StageChoose/Lable_Day_Green.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":156,"x":54,"skin":"ui/StageChoose/Lable_Day_Green.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":33,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":36,"x":5,"skin":"ui/StageChoose/Star_Bg_left.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":66,"x":31,"skin":"ui/StageChoose/Star_Bg_left.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":34,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":0,"x":58,"skin":"ui/StageChoose/Star_Bg_mid.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":42,"x":102,"skin":"ui/StageChoose/Star_Bg_mid.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":35,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":39,"x":131,"skin":"ui/StageChoose/Star_Bg_right.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{"y":69,"x":171,"skin":"ui/StageChoose/Star_Bg_right.png"},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":36,
+            "compId":2,
             "child":[
                 ]
         }],

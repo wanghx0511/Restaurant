@@ -26,8 +26,7 @@ class CashBag extends Laya.Sprite {
             tipAdd = this.customer.moneyAdd * this.customer.confCustomer.tip / 100;
         }
 
-        var total : number = this.customer.moneyAdd + tipAdd;
-        StageManager.stage.addScore(total);
+        StageManager.stage.addScore(this.customer.moneyAdd, tipAdd);
         this.customer.mayDestory(1);
         this.destroy();
     }

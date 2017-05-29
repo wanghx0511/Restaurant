@@ -30,7 +30,13 @@ class StageOne extends Laya.Sprite{
     //顾客出现的横坐标集
     public showPosX : number[];
     //总分
-    private scoreTotal : number = 0;
+    public scoreTotal : number = 0;
+    //付帐
+    public money: number = 0;
+    //小费
+    public tip: number = 0;
+    //满意客人数
+    public manyi: number = 0;
 
     constructor(stageSn : number) {
         super();
@@ -43,6 +49,9 @@ class StageOne extends Laya.Sprite{
         bg.loadImage("res/atlas/beijing.jpg");
         bg.pos(-488, 0);
         this.addChild(bg);
+
+        var stageInfo = new StageInfo();
+        this.addChild(stageInfo);
 
         //操作台
         var caozuotai = new Laya.Sprite();
@@ -63,20 +72,24 @@ class StageOne extends Laya.Sprite{
             kitchenware.pivot(pos.pivotX, pos.pivotY);
             this.addChild(kitchenware);
             //如果是放置台则加到列表里
-            if(pos.class == "Plate") {
-                this.plates.push(kitchenware);
-            }
-            //如果是锅则加到列表里
-            else if(pos.class == "Pot") {
-                this.pots.push(kitchenware);
-            }
-            //如果是保温炉加到列表里
-            else if(pos.class == "Crisper") {
-                this.crisper.push(kitchenware);
-            }
-
-            else if(pos.class == "Trash") {
-                this.trashCanObj = new Trash();
+            switch(pos.class) {
+                case "Plate": {
+                    this.plates.push(kitchenware);
+                    break;
+                }
+                case "Pot": {
+                    this.pots.push(kitchenware);
+                    break;
+                }
+                case "Crisper": {
+                    this.crisper.push(kitchenware);
+                    break;
+                }
+                case "Trash": {
+                    this.trashCanObj = new Trash();
+                    break;
+                }
+                
             }
         }
 
@@ -103,9 +116,11 @@ class StageOne extends Laya.Sprite{
     }
 
     //同步分数时调用
-    public addScore(score : number){
-        console.log("加钱" + score);
-        this.scoreTotal += score;
+    public addScore(money : number, tip: number){
+        this.money += money;
+        this.tip += tip;
+        this.scoreTotal = this.money + this.tip;
+        if(tip > 0) this.manyi += 1;
     }
 
     public initCustomer() {
@@ -161,7 +176,7 @@ class StageOne extends Laya.Sprite{
     }
 
     public stageOver() {
-        var stageSettlementInfo = new StageSettlementInfo(this.stageSn, this.scoreTotal);
+        var stageSettlementInfo = new StageSettlementInfo(this.stageSn);
         this.addChild(stageSettlementInfo);
     }
 }
