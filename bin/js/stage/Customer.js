@@ -57,7 +57,7 @@ var Customer = (function (_super) {
             bar.skin = "customer/progress_patientShadow.png";
             bar.pos(this.bubble.width - 100, this.bubble.height - 30);
             bar.value = this.value;
-            bar.rotation = 270;
+            //bar.rotation = 270;
             bar.sizeGrid = "0,0,0,0,1";
             this.bar = bar;
             Laya.timer.loop(1000, this, this.updateValue);
