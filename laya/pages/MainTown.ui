@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":3,
-    "selecteID":8,
+    "selectedBox":13,
+    "selecteID":24,
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
     "label":"View",
@@ -204,7 +204,7 @@
             "props":{"y":22.999999999999964,"x":566.9999999999999,"width":853,"name":"Top","height":246},
             "nodeParent":1,
             "label":"Sprite(Top)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
@@ -218,10 +218,11 @@
             "compId":13,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":114,"x":785,"skin":"ui/MainTown/btInfo.png","name":"info"},
+                    "props":{"y":114,"x":785,"var":"upgrade","skin":"ui/MainTown/btInfo.png","name":"info"},
                     "nodeParent":13,
-                    "label":"Image(info)",
+                    "label":"Image(upgrade)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -238,6 +239,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "props":{"y":7.000000000000014,"x":13,"width":225,"name":"Res01","height":183},
                     "nodeParent":13,
@@ -256,6 +258,7 @@
                     "compId":57,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":-9.000000000000075,"x":27.999999999999886,"skin":"ui/MainTown/restaurant1.png","name":"Res01"},
                             "nodeParent":57,
@@ -277,6 +280,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":113,"x":14,"width":202,"skin":"ui/MainTown/progressBg.png","sizeGrid":"0,39,0,31","name":"Progressbg","height":56},
                             "nodeParent":57,
@@ -357,6 +361,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "props":{"y":44,"x":291,"width":225,"name":"Res02","height":183},
                     "nodeParent":13,
@@ -375,6 +380,7 @@
                     "compId":58,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":6.000000000000007,"x":23,"skin":"ui/MainTown/restaurant2.png","name":"Res02"},
                             "nodeParent":58,
@@ -395,6 +401,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":109.00000000000006,"x":18.999999999999886,"width":202,"skin":"ui/MainTown/progressBg.png","sizeGrid":"0,39,0,31","name":"Progressbg","height":56},
                             "nodeParent":58,
@@ -475,6 +482,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "props":{"y":8,"x":560,"width":225,"name":"Res03","height":183},
                     "nodeParent":13,
@@ -493,6 +501,7 @@
                     "compId":61,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":-11.999999999999961,"x":29.000000000000114,"skin":"ui/MainTown/restaurant3.png","name":"Res03"},
                             "nodeParent":61,
@@ -513,6 +522,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":112.00000000000003,"x":18.00000000000034,"width":202,"skin":"ui/MainTown/progressBg.png","sizeGrid":"0,39,0,31","name":"Progressbg","height":56},
                             "nodeParent":61,

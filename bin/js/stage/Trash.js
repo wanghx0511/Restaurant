@@ -33,7 +33,12 @@ var Trash = (function (_super) {
         // this.trashAni.play(0, false, "trashClose");
         // this.trashAni.destroy();
         //扣分
-        //gameMain.game.gameInfo.minusMoney(item.getConf().destroycost);
+        var money = 0;
+        for (var _i = 0, _a = item.mergeJson; _i < _a.length; _i++) {
+            var itemInfo = _a[_i];
+            money += itemInfo.price;
+        }
+        StageManager.stage.reduceScore(money);
     };
     Trash.prototype.onChangeImage = function () {
         this.trashCan.graphics.clear();

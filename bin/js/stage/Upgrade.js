@@ -21,8 +21,13 @@ var Upgrade = (function (_super) {
         //操作台
         var caozuotai = new Laya.Sprite();
         caozuotai.loadImage("res/atlas/caozuotai.png");
-        caozuotai.pos(-275, 490);
+        caozuotai.pos(-297, 490);
         _this.addChild(caozuotai);
+        //临时，退出升级的按钮
+        var img = new Laya.Image();
+        img.loadImage("ui/StageChoose/BT_Close.png");
+        img.on("click", _this, _this.onClose);
+        _this.addChild(img);
         //图片形式生成餐具
         //初始化关卡物品
         var kitchenwares = eval(confStage.initKitchenware);
@@ -48,12 +53,13 @@ var Upgrade = (function (_super) {
                 ui.setParam("kitchenware", sn, level);
                 _this.addChild(ui);
             }
+            kitchenware.name = "kitchenware_" + sn + "_" + level;
             _this.addChild(kitchenware);
         }
         var items = eval(confStage.initItem);
         for (var _a = 0, items_1 = items; _a < items_1.length; _a++) {
             var itemSn = items_1[_a];
-            level = StageManager.data["kitchenware"][sn];
+            level = StageManager.data["kitchenware"][itemSn];
             var pos = configPos.getBy("type", 2, "itemSn", itemSn, "level", level);
             if (pos == null)
                 continue;
@@ -69,13 +75,17 @@ var Upgrade = (function (_super) {
                 ui.pos(pos.uX, pos.uY);
                 ui.scale(pos.uScaleX, pos.uScaleY);
                 ui.pivot(pos.uPivotX, pos.uPivotY);
-                ui.setParam("item", sn, level);
+                ui.setParam("item", itemSn, level);
                 _this.addChild(ui);
             }
+            item.name = "item" + itemSn;
             _this.addChild(item);
         }
         return _this;
     }
+    Upgrade.prototype.onClose = function () {
+        this.removeSelf();
+    };
     return Upgrade;
 }(Laya.Sprite));
 //# sourceMappingURL=Upgrade.js.map

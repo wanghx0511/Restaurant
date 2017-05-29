@@ -57,7 +57,7 @@
         {
             "x":15,
             "type":"ProgressBar",
-            "props":{"y":17,"x":719,"width":642,"var":"progressBar","skin":"ui/Level/progress.png","height":60},
+            "props":{"y":20,"x":719,"width":642,"var":"progressBar","value":0,"skin":"ui/Level/progress.png","height":45},
             "nodeParent":1,
             "label":"ProgressBar(progressBar)",
             "isDirectory":false,
@@ -84,7 +84,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":20,"x":998,"var":"starLeft","skin":"ui/Level/starYellow.png"},
+            "props":{"y":42,"x":1026,"var":"starLeft","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"Image(starLeft)",
             "isDirectory":false,
@@ -98,7 +98,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":20,"x":1177,"var":"starMid","skin":"ui/Level/starYellow.png"},
+            "props":{"y":42,"x":1205,"var":"starMid","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"Image(starMid)",
             "isDirectory":false,
@@ -112,7 +112,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":20,"x":1277,"var":"starRight","skin":"ui/Level/starYellow.png"},
+            "props":{"y":42,"x":1333,"var":"starRight","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":1},
             "nodeParent":1,
             "label":"Image(starRight)",
             "isDirectory":false,

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":43,
-    "selecteID":12,
+    "selectedBox":1,
+    "selecteID":42,
     "props":{"width":1316,"sceneColor":"#000000","height":919},
     "nodeParent":-1,
     "label":"View",
@@ -724,126 +724,6 @@
                     "$HIDDEN":false
                 }],
             "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "props":{"y":755.9999999999999,"x":744,"width":430,"name":"Finish","height":282},
-            "nodeParent":1,
-            "label":"Sprite(Finish)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "frames":[
-                {
-                    "type":1,
-                    "props":{},
-                    "frame":0,
-                    "__InPool":false
-                }],
-            "compId":42,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":62.000000000000114,"x":2.999999999999943,"skin":"ui/FurniturePromote/BT_Blue.png","name":"Finish"},
-                    "nodeParent":42,
-                    "label":"Image(Finish)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/FurniturePromote/BT_Blue.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":5,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":34.999999999999886,"x":97.00000000000011,"skin":"ui/FurniturePromote/Lable_Finish.png"},
-                            "nodeParent":5,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "frames":[
-                                {
-                                    "type":1,
-                                    "props":{"skin":"ui/FurniturePromote/Lable_Finish.png"},
-                                    "frame":0,
-                                    "__InPool":false
-                                }],
-                            "compId":6,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        }],
-                    "$HIDDEN":false
-                },
-                {
-                    "type":"Label",
-                    "props":{"y":6,"x":95,"width":257,"text":"强化02:14后完成","name":"FinishTime","height":65,"fontSize":30,"font":"Microsoft YaHei","color":"#ffffff"},
-                    "nodeParent":42,
-                    "label":"Label(FinishTime)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"text":"label"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":11,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":211.0000000000001,"x":152,"skin":"ui/diamond_icon.png","name":"Diamond"},
-                    "nodeParent":42,
-                    "label":"Image(Diamond)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"skin":"ui/diamond_icon.png"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":13,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Label",
-                    "props":{"y":211.0000000000001,"x":220,"width":70,"text":"10","name":"Price","height":59,"fontSize":40,"font":"Microsoft YaHei","color":"#ffffff"},
-                    "nodeParent":42,
-                    "label":"Label(Price)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "frames":[
-                        {
-                            "type":1,
-                            "props":{"text":"label"},
-                            "frame":0,
-                            "__InPool":false
-                        }],
-                    "compId":14,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                }],
-            "$HIDDEN":true
         }],
     "animations":[
         {

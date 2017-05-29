@@ -50,7 +50,7 @@ class StageOne extends Laya.Sprite{
         bg.pos(-488, 0);
         this.addChild(bg);
 
-        var stageInfo = new StageInfo(stageSn);
+        var stageInfo = new StageInfo(confStage);
         this.addChild(stageInfo);
         this.uiInfo = stageInfo;
 
@@ -122,6 +122,15 @@ class StageOne extends Laya.Sprite{
         this.tip += tip;
         this.scoreTotal = this.money + this.tip;
         if(tip > 0) this.manyi += 1;
+        this.uiInfo.scoreChange(this.scoreTotal);
+    }
+
+    public reduceScore(money : number) {
+        this.money -= money;
+        if(this.money < 0) this.money = 0;
+        this.scoreTotal -= money
+        if(this.scoreTotal < 0) this.scoreTotal = 0;
+        this.uiInfo.scoreChange(this.scoreTotal);
     }
 
     public initCustomer() {

@@ -46,7 +46,7 @@ var StageOne = (function (_super) {
         bg.loadImage("res/atlas/beijing.jpg");
         bg.pos(-488, 0);
         _this.addChild(bg);
-        var stageInfo = new StageInfo(stageSn);
+        var stageInfo = new StageInfo(confStage);
         _this.addChild(stageInfo);
         _this.uiInfo = stageInfo;
         //操作台
@@ -116,6 +116,16 @@ var StageOne = (function (_super) {
         this.scoreTotal = this.money + this.tip;
         if (tip > 0)
             this.manyi += 1;
+        this.uiInfo.scoreChange(this.scoreTotal);
+    };
+    StageOne.prototype.reduceScore = function (money) {
+        this.money -= money;
+        if (this.money < 0)
+            this.money = 0;
+        this.scoreTotal -= money;
+        if (this.scoreTotal < 0)
+            this.scoreTotal = 0;
+        this.uiInfo.scoreChange(this.scoreTotal);
     };
     StageOne.prototype.initCustomer = function () {
         var confStage = this.configStage.get(this.stageSn);

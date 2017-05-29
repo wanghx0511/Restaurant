@@ -19,6 +19,8 @@ class PreUpgradeInfo extends ui.PreUpgradeInfoUI{
         this.visible = false;
         var upgradeInfo = new UpgradeInfo();
         upgradeInfo.setParam(this.type, this.sn, this);
+        upgradeInfo.pos(this.x, this.y);
+        upgradeInfo.pivot(this.pivotX, this.pivotY);
         this.parent.addChild(upgradeInfo);
     }
 
