@@ -22,21 +22,6 @@ var ui;
     ui.FurniturePromoteUI = FurniturePromoteUI;
 })(ui || (ui = {}));
 (function (ui) {
-    var MainInfoUI = (function (_super) {
-        __extends(MainInfoUI, _super);
-        function MainInfoUI() {
-            return _super.call(this) || this;
-        }
-        MainInfoUI.prototype.createChildren = function () {
-            _super.prototype.createChildren.call(this);
-            this.createView(ui.MainInfoUI.uiView);
-        };
-        return MainInfoUI;
-    }(View));
-    MainInfoUI.uiView = { "type": "View", "props": { "width": 1920, "height": 1080 }, "child": [{ "type": "Image", "props": { "y": 30, "x": 36, "width": 174, "skin": "ui/Icn84005.png", "height": 183 } }, { "type": "ProgressBar", "props": { "y": 113, "x": 220, "width": 127, "skin": "ui/progress_time.png", "height": 24 } }, { "type": "Label", "props": { "y": 59, "x": 215, "width": 135, "text": "大魔王", "strokeColor": "#9f4342", "stroke": 3, "height": 46, "fontSize": 40, "color": "#f9f3f3", "bold": true } }, { "type": "Image", "props": { "y": 501, "x": 839, "width": 189, "var": "start", "skin": "ui/2306700.png", "height": 179 } }] };
-    ui.MainInfoUI = MainInfoUI;
-})(ui || (ui = {}));
-(function (ui) {
     var MainTownUI = (function (_super) {
         __extends(MainTownUI, _super);
         function MainTownUI() {
@@ -125,21 +110,6 @@ var ui;
     }(View));
     StageInfoUI.uiView = { "type": "View", "props": { "width": 1895, "height": 145 }, "child": [{ "type": "Image", "props": { "y": 9, "x": 406, "skin": "ui/Level/bg02.png", "name": "bg01" } }, { "type": "Image", "props": { "y": 21, "x": 419, "skin": "ui/Level/bg01.png", "name": "bg02" } }, { "type": "Image", "props": { "y": 8, "x": 386, "skin": "ui/Level/costumeicon.png", "name": "Costume" } }, { "type": "Image", "props": { "y": 8, "x": 707, "skin": "ui/Level/Progress_bg.png", "name": "progressbg" } }, { "type": "Image", "props": { "y": 21, "x": 719, "width": 377, "skin": "ui/Level/Progress_orange.png", "sizeGrid": "0,47,0,54", "name": "progress", "height": 50 } }, { "type": "Image", "props": { "y": 6, "x": 704, "skin": "ui/Level/gold.png", "name": "JB" } }, { "type": "Image", "props": { "y": 20, "x": 998, "skin": "ui/Level/starYellow.png", "name": "star_yellow1" } }, { "type": "Image", "props": { "y": 20, "x": 998, "skin": "ui/Level/starGrey.png", "name": "star_grey1" } }, { "type": "Image", "props": { "y": 20, "x": 1177, "skin": "ui/Level/starYellow.png", "name": "star_yellow2" } }, { "type": "Image", "props": { "y": 20, "x": 1177, "skin": "ui/Level/starGrey.png", "name": "star_grey2" } }, { "type": "Image", "props": { "y": 20, "x": 1277, "skin": "ui/Level/starYellow.png", "name": "star_yellow3" } }, { "type": "Image", "props": { "y": 20, "x": 1277, "skin": "ui/Level/starGrey.png", "name": "star_grey3" } }, { "type": "Image", "props": { "y": 8, "x": 1759, "var": "pause", "skin": "ui/Level/btPause.png" } }, { "type": "Image", "props": { "y": 8, "x": 11, "skin": "ui/Level/dayBg.png", "name": "Day" } }] };
     ui.StageInfoUI = StageInfoUI;
-})(ui || (ui = {}));
-(function (ui) {
-    var StageOneInfoUI = (function (_super) {
-        __extends(StageOneInfoUI, _super);
-        function StageOneInfoUI() {
-            return _super.call(this) || this;
-        }
-        StageOneInfoUI.prototype.createChildren = function () {
-            _super.prototype.createChildren.call(this);
-            this.createView(ui.StageOneInfoUI.uiView);
-        };
-        return StageOneInfoUI;
-    }(View));
-    StageOneInfoUI.uiView = { "type": "View", "props": { "width": 1920, "height": 1080 }, "child": [{ "type": "Sprite", "props": { "y": 123, "x": -57, "width": 1975, "name": "Furniture", "height": 377 }, "child": [{ "type": "Image", "props": { "y": 93, "x": 1870, "skin": "stage/zhuozi2.png", "scaleY": 0.67, "scaleX": 0.67, "name": "Desk1_R3" } }, { "type": "Image", "props": { "y": 93.00000000000003, "x": 1415, "skin": "stage/zhuozi2.png", "scaleY": 0.67, "scaleX": 0.67, "name": "Desk1_R3" } }, { "type": "Image", "props": { "y": 92.00000000000006, "x": 344, "skin": "stage/zhuozi2.png", "scaleY": 0.67, "scaleX": 0.67, "name": "Desk1_R3" } }, { "type": "Image", "props": { "y": 93, "x": -142, "skin": "stage/zhuozi2.png", "scaleY": 0.67, "scaleX": 0.67, "name": "Desk1_R3" } }, { "type": "Image", "props": { "y": 106.99999999999997, "x": 1149.9999999999998, "skin": "stage/zhuozi2.png", "scaleY": 0.82, "scaleX": 0.82, "name": "Desk1_R2" } }, { "type": "Image", "props": { "y": 105.99999999999997, "x": 520.9999999999998, "skin": "stage/zhuozi2.png", "scaleY": 0.82, "scaleX": 0.82, "name": "Desk1_R2" } }, { "type": "Image", "props": { "y": 115, "x": 28, "skin": "stage/zhuozi2.png", "name": "Desk1_R1" } }, { "type": "Image", "props": { "y": 109, "x": 787, "skin": "stage/zhuozi2.png", "name": "Desk1_R1" } }, { "type": "Image", "props": { "y": 129.00000000000006, "x": 1579, "skin": "stage/zhuozi2.png", "name": "Desk1_R1" } }] }, { "type": "Image", "props": { "y": 44, "x": 91, "var": "start", "skin": "ui/start.png" } }] };
-    ui.StageOneInfoUI = StageOneInfoUI;
 })(ui || (ui = {}));
 (function (ui) {
     var StageOpenUI = (function (_super) {
