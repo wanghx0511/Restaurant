@@ -40,10 +40,10 @@ var Customer = (function (_super) {
         //气泡
         this.bubble = new Laya.Sprite;
         this.bubble.loadImage("customer/" + this.confCustomer.bubblePic);
-        this.bubble.pos(this.confCustomer.bubblePosX, 0);
+        this.bubble.pos(this.confCustomer.bubblePosX, -50);
         //需求
         this.needs = eval(this.confCustomer.needs);
-        var needsPosY = 0;
+        var needsPosY = 20;
         for (var _i = 0, _a = this.needs; _i < _a.length; _i++) {
             var itemSn = _a[_i];
             var configItem = new ConfigItem();
@@ -51,15 +51,15 @@ var Customer = (function (_super) {
             // var config = configItem.get(itemSn);
             var image = new Laya.Image;
             image.loadImage("stage/" + config.picture);
-            image.scale(0.4, 0.4);
+            image.scale(0.7, 0.7);
             this.bubble.addChild(image);
             var bar = new Laya.ProgressBar();
             bar.skin = "customer/progress_patientShadow.png";
-            bar.pos(this.bubble.width - 5 * bar.width, 50);
+            bar.pos(this.bubble.width - 4 * bar.width, 25);
             bar.value = 1;
             this.bubble.addChild(bar);
-            image.pos(0, needsPosY);
-            needsPosY += 50;
+            image.pos(25, needsPosY);
+            needsPosY += 100;
             var test;
             test = [itemSn, image];
             this.recordBubblePic.push(test);
@@ -211,7 +211,7 @@ var Customer = (function (_super) {
             customer.y = customer.confCustomer.posY;
             customer.useX = posX;
             Laya.Tween.to(customer, { x: posX }, new Utils().calcTweenNeedTime(posX), null, new Laya.Handler(customer, customer.addBubble));
-            Laya.stage.addChild(customer);
+            StageManager.stage.addChildAt(customer, 2);
         }
         if (StageManager.stage.showCustomer.length == 0 && StageManager.stage.ranksCustomer.length == 0) {
             StageManager.stage.stageOver();
