@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":14,
+    "selecteID":17,
     "props":{"width":1895,"sceneColor":"#000000","height":145},
     "nodeParent":-1,
     "label":"View",
@@ -56,32 +56,16 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "props":{"y":8,"x":707,"skin":"ui/Level/Progress_bg.png","name":"progressbg"},
+            "type":"ProgressBar",
+            "props":{"y":20,"x":719,"width":642,"var":"progressBar","value":0,"skin":"ui/Level/progress.png","height":45},
             "nodeParent":1,
-            "label":"Image(progressbg)",
-            "isOpen":true,
+            "label":"ProgressBar(progressBar)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":5,
+            "compId":17,
             "child":[
-                ],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":21,"x":719,"width":377,"skin":"ui/Level/Progress_orange.png","sizeGrid":"0,47,0,54","name":"progress","height":50},
-            "nodeParent":1,
-            "label":"Image(progress)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":6,
-            "child":[
-                ],
-            "$HIDDEN":false
+                ]
         },
         {
             "x":15,
@@ -100,9 +84,9 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":20,"x":998,"skin":"ui/Level/starYellow.png","name":"star_yellow1"},
+            "props":{"y":42,"x":1026,"var":"starLeft","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
-            "label":"Image(star_yellow1)",
+            "label":"Image(starLeft)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -114,23 +98,9 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":20,"x":998,"skin":"ui/Level/starGrey.png","name":"star_grey1"},
+            "props":{"y":42,"x":1205,"var":"starMid","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
-            "label":"Image(star_grey1)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":9,
-            "child":[
-                ],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":20,"x":1177,"skin":"ui/Level/starYellow.png","name":"star_yellow2"},
-            "nodeParent":1,
-            "label":"Image(star_yellow2)",
+            "label":"Image(starMid)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -142,41 +112,13 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":20,"x":1177,"skin":"ui/Level/starGrey.png","name":"star_grey2"},
+            "props":{"y":42,"x":1333,"var":"starRight","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":1},
             "nodeParent":1,
-            "label":"Image(star_grey2)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":11,
-            "child":[
-                ],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":20,"x":1277,"skin":"ui/Level/starYellow.png","name":"star_yellow3"},
-            "nodeParent":1,
-            "label":"Image(star_yellow3)",
+            "label":"Image(starRight)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":12,
-            "child":[
-                ],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":20,"x":1277,"skin":"ui/Level/starGrey.png","name":"star_grey3"},
-            "nodeParent":1,
-            "label":"Image(star_grey3)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":13,
             "child":[
                 ],
             "$HIDDEN":false
@@ -198,15 +140,27 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":8,"x":11,"skin":"ui/Level/dayBg.png","name":"Day"},
+            "props":{"y":8,"x":11,"skin":"ui/Level/dayBg.png"},
             "nodeParent":1,
-            "label":"Image(Day)",
-            "isDirectory":false,
+            "label":"Image",
+            "isOpen":false,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
+            "hasChild":true,
             "compId":15,
             "child":[
-                ],
+                {
+                    "type":"Clip",
+                    "props":{"y":56,"x":38,"var":"day","skin":"ui/Level/numWhite.png","index":1,"clipX":10},
+                    "nodeParent":15,
+                    "label":"Clip(day)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":18,
+                    "child":[
+                        ]
+                }],
             "$HIDDEN":false
         }],
     "animations":[

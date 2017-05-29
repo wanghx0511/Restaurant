@@ -128,7 +128,10 @@ class Customer extends Laya.Sprite{
             return;
         } 
         //到这了，说明是有需求的
-        var money = confItem.price;
+        var money = 0;
+        for(var itemInfo of item.mergeJson) {
+            money += itemInfo.price;
+        }
         this.moneyAdd += money;
         this.gives.push(confItem.itemSn);
         item.destroy();

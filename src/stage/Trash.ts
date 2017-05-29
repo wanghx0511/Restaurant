@@ -33,8 +33,13 @@ class Trash extends Laya.Sprite{
         // this.addChild(this.trashAni);
         // this.trashAni.play(0, false, "trashClose");
         // this.trashAni.destroy();
+        
         //扣分
-        //gameMain.game.gameInfo.minusMoney(item.getConf().destroycost);
+        var money = 0;
+        for(var itemInfo of item.mergeJson) {
+            money += itemInfo.price;
+        }
+        StageManager.stage.reduceScore(money);
     }
 
     private onChangeImage(){

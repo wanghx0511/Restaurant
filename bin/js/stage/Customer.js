@@ -117,13 +117,17 @@ var Customer = (function (_super) {
             return;
         }
         //到这了，说明是有需求的
-        var money = confItem.price;
+        var money = 0;
+        for (var _i = 0, _a = item.mergeJson; _i < _a.length; _i++) {
+            var itemInfo = _a[_i];
+            money += itemInfo.price;
+        }
         this.moneyAdd += money;
         this.gives.push(confItem.itemSn);
         item.destroy();
         var imageToDestory;
-        for (var _i = 0, _a = this.recordBubblePic; _i < _a.length; _i++) {
-            var child = _a[_i];
+        for (var _b = 0, _c = this.recordBubblePic; _b < _c.length; _b++) {
+            var child = _c[_b];
             if (child[0] == confItem.itemSn) {
                 imageToDestory = child[1];
                 break;
@@ -132,12 +136,12 @@ var Customer = (function (_super) {
         imageToDestory.visible = false;
         //看看给齐了没有，如果没有就return
         var matchNum = this.matchNum;
-        for (var _b = 0, _c = this.needs; _b < _c.length; _b++) {
-            var need = _c[_b];
+        for (var _d = 0, _e = this.needs; _d < _e.length; _d++) {
+            var need = _e[_d];
             if (matchNum != this.matchNum)
                 break;
-            for (var _d = 0, _e = this.gives; _d < _e.length; _d++) {
-                var give = _e[_d];
+            for (var _f = 0, _g = this.gives; _f < _g.length; _f++) {
+                var give = _g[_f];
                 if (need == give)
                     this.matchNum += 1;
                 break;

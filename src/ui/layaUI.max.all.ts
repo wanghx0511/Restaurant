@@ -105,9 +105,14 @@ module ui {
 
 module ui {
     export class StageInfoUI extends View {
+		public progressBar:Laya.ProgressBar;
+		public starLeft:Laya.Image;
+		public starMid:Laya.Image;
+		public starRight:Laya.Image;
 		public pause:Laya.Image;
+		public day:Laya.Clip;
 
-        public static  uiView:any ={"type":"View","props":{"width":1895,"height":145},"child":[{"type":"Image","props":{"y":9,"x":406,"skin":"ui/Level/bg02.png","name":"bg01"}},{"type":"Image","props":{"y":21,"x":419,"skin":"ui/Level/bg01.png","name":"bg02"}},{"type":"Image","props":{"y":8,"x":386,"skin":"ui/Level/costumeicon.png","name":"Costume"}},{"type":"Image","props":{"y":8,"x":707,"skin":"ui/Level/Progress_bg.png","name":"progressbg"}},{"type":"Image","props":{"y":21,"x":719,"width":377,"skin":"ui/Level/Progress_orange.png","sizeGrid":"0,47,0,54","name":"progress","height":50}},{"type":"Image","props":{"y":6,"x":704,"skin":"ui/Level/gold.png","name":"JB"}},{"type":"Image","props":{"y":20,"x":998,"skin":"ui/Level/starYellow.png","name":"star_yellow1"}},{"type":"Image","props":{"y":20,"x":998,"skin":"ui/Level/starGrey.png","name":"star_grey1"}},{"type":"Image","props":{"y":20,"x":1177,"skin":"ui/Level/starYellow.png","name":"star_yellow2"}},{"type":"Image","props":{"y":20,"x":1177,"skin":"ui/Level/starGrey.png","name":"star_grey2"}},{"type":"Image","props":{"y":20,"x":1277,"skin":"ui/Level/starYellow.png","name":"star_yellow3"}},{"type":"Image","props":{"y":20,"x":1277,"skin":"ui/Level/starGrey.png","name":"star_grey3"}},{"type":"Image","props":{"y":8,"x":1759,"var":"pause","skin":"ui/Level/btPause.png"}},{"type":"Image","props":{"y":8,"x":11,"skin":"ui/Level/dayBg.png","name":"Day"}}]};
+        public static  uiView:any ={"type":"View","props":{"width":1895,"height":145},"child":[{"type":"Image","props":{"y":9,"x":406,"skin":"ui/Level/bg02.png","name":"bg01"}},{"type":"Image","props":{"y":21,"x":419,"skin":"ui/Level/bg01.png","name":"bg02"}},{"type":"Image","props":{"y":8,"x":386,"skin":"ui/Level/costumeicon.png","name":"Costume"}},{"type":"ProgressBar","props":{"y":20,"x":719,"width":642,"var":"progressBar","value":0,"skin":"ui/Level/progress.png","height":45}},{"type":"Image","props":{"y":6,"x":704,"skin":"ui/Level/gold.png","name":"JB"}},{"type":"Image","props":{"y":42,"x":1026,"var":"starLeft","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":0.5}},{"type":"Image","props":{"y":42,"x":1205,"var":"starMid","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":0.5}},{"type":"Image","props":{"y":42,"x":1333,"var":"starRight","skin":"ui/Level/starYellow.png","gray":true,"anchorY":0.5,"anchorX":1}},{"type":"Image","props":{"y":8,"x":1759,"var":"pause","skin":"ui/Level/btPause.png"}},{"type":"Image","props":{"y":8,"x":11,"skin":"ui/Level/dayBg.png"},"child":[{"type":"Clip","props":{"y":56,"x":38,"var":"day","skin":"ui/Level/numWhite.png","index":1,"clipX":10}}]}]};
         constructor(){ super()}
         createChildren():void {
         
