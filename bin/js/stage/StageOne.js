@@ -48,6 +48,7 @@ var StageOne = (function (_super) {
         _this.addChild(bg);
         var stageInfo = new StageInfo();
         _this.addChild(stageInfo);
+        _this.uiInfo = stageInfo;
         //操作台
         var caozuotai = new Laya.Sprite();
         caozuotai.loadImage("res/atlas/caozuotai.png");
@@ -170,6 +171,7 @@ var StageOne = (function (_super) {
     StageOne.prototype.stageOver = function () {
         var stageSettlementInfo = new StageSettlementInfo(this.stageSn);
         this.addChild(stageSettlementInfo);
+        this.uiInfo.removeSelf();
     };
     return StageOne;
 }(Laya.Sprite));

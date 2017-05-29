@@ -48,13 +48,14 @@ var StageSettlementInfo = (function (_super) {
         if (stageJson == null) {
             stageJson = {};
         }
-        stageJson[this.stageSn] = star;
-        Laya.LocalStorage.setJSON("stage", stageJson);
+        if (stageJson[this.stageSn] == null || stageJson[this.stageSn] < star) {
+            stageJson[this.stageSn] = star;
+            Laya.LocalStorage.setJSON("stage", stageJson);
+        }
         //营业额
         this.money.text = stage.money + "";
         this.tip.text = stage.tip + "";
         this.manyi.text = stage.manyi + "";
-        //var list: number[] = eval(stageConf.customerSn);
         var list = JSON.parse(stageConf.customerSn);
         this.bumanyi.text = list.length - stage.manyi + "";
         //进度条
