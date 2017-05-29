@@ -53,21 +53,21 @@ var Customer = (function (_super) {
             image.loadImage("stage/" + config.picture);
             image.scale(0.7, 0.7);
             this.bubble.addChild(image);
-            var bar = new Laya.ProgressBar();
-            bar.skin = "customer/progress_patientShadow.png";
-            bar.pos(this.bubble.width - 100, this.bubble.height - 30);
-            bar.value = this.value;
-            //bar.rotation = 270;
-            bar.sizeGrid = "0,0,0,0,1";
-            this.bar = bar;
-            Laya.timer.loop(1000, this, this.updateValue);
-            this.bubble.addChild(bar);
             image.pos(25, needsPosY);
             needsPosY += 100;
             var test;
             test = [itemSn, image];
             this.recordBubblePic.push(test);
         }
+        var bar = new Laya.ProgressBar();
+        bar.skin = "customer/progress_patientShadow.png";
+        bar.pos(this.bubble.width - 100, this.bubble.height - 30);
+        bar.value = this.value;
+        bar.rotation = 270;
+        bar.sizeGrid = "0,0,0,0,1";
+        this.bar = bar;
+        Laya.timer.loop(1000, this, this.updateValue);
+        this.bubble.addChild(bar);
         this.addChild(this.bubble);
         Laya.timer.once(this.confCustomer.tiptime, this, this.changeTipStatus);
         Laya.timer.once(this.confCustomer.waittime, this, this.loseCustomer);
@@ -75,7 +75,12 @@ var Customer = (function (_super) {
     Customer.prototype.updateValue = function () {
         var progress = 1000 / this.confCustomer.waittime;
         this.value -= progress;
+        if (this.value < 0)
+            this.value = 0;
         this.bar.value = this.value;
+        if (this.value == 0) {
+            Laya.timer.clear(1000, this.updateValue);
+        }
     };
     // private onClick(e : Laya.Event) {
     //     if(this.status == 0) {
