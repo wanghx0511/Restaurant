@@ -23,13 +23,13 @@ var Customer = (function (_super) {
         _this.canDesTween = false;
         //跑路中的就别截获了
         _this.isRunning = false;
+        //等待过程条的value
+        _this.value = 1;
         //顾客
         _this.confCustomer = confCustomer;
         _this.customerPic = "customer/" + _this.confCustomer.picture;
         _this.loadImage(_this.customerPic);
         _this.useX = posX;
-        _this.scaleY = 1.5;
-        _this.scaleX = 1.5;
         _this.on("click", _this, _this.onCustomerClick);
         return _this;
     }
@@ -56,7 +56,7 @@ var Customer = (function (_super) {
             var bar = new Laya.ProgressBar();
             bar.skin = "customer/progress_patientShadow.png";
             bar.pos(this.bubble.width - 4 * bar.width, 25);
-            bar.value = 1;
+            bar.value = this.value;
             this.bubble.addChild(bar);
             image.pos(25, needsPosY);
             needsPosY += 100;
