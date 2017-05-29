@@ -19,8 +19,8 @@ var StageMain = (function (_super) {
         caozuotai.pos(-275, 490);
         _this.addChild(caozuotai);
         //主界面
-        // var mainTown = new MainTown();
-        // this.addChild(mainTown);
+        var mainTown = new MainTown();
+        _this.addChild(mainTown);
         // var upgrade = new Upgrade(1);
         // this.addChild(upgrade);
         //添加UI

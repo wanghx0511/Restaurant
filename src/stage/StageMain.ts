@@ -18,8 +18,8 @@ class StageMain extends Laya.Sprite{
         this.addChild(caozuotai);
 
         //主界面
-        // var mainTown = new MainTown();
-        // this.addChild(mainTown);
+        var mainTown = new MainTown();
+        this.addChild(mainTown);
 
         // var upgrade = new Upgrade(1);
         // this.addChild(upgrade);
