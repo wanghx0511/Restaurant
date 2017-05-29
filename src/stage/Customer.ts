@@ -85,7 +85,11 @@ class Customer extends Laya.Sprite{
     public updateValue() : void {
         var progress = 1000 / this.confCustomer.waittime;
         this.value -= progress;
+        if(this.value < 0) this.value = 0;
         this.bar.value = this.value;
+        if(this.value == 0) {
+            Laya.timer.clear(1000, this.updateValue);
+        }
     }
 
     // private onClick(e : Laya.Event) {
