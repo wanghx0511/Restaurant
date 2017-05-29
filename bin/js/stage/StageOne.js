@@ -46,7 +46,7 @@ var StageOne = (function (_super) {
         bg.loadImage("res/atlas/beijing.jpg");
         bg.pos(-488, 0);
         _this.addChild(bg);
-        var stageInfo = new StageInfo();
+        var stageInfo = new StageInfo(stageSn);
         _this.addChild(stageInfo);
         _this.uiInfo = stageInfo;
         //操作台

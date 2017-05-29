@@ -2,6 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
+    "selecteID":8,
     "props":{"y":269,"x":-516,"width":600,"sceneColor":"#000000","height":400,"alpha":1},
     "nodeParent":-1,
     "label":"View",
@@ -21,7 +22,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":-225,"x":685,"skin":"ui/shadow_big.png","sizeGrid":"0,78,0,82"},
+            "props":{"y":-225,"x":685,"skin":"ui/Upgrade/shadow_big.png","sizeGrid":"0,78,0,82"},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -41,7 +42,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":-186,"x":704,"skin":"ui/point_big.png","scaleY":0.9,"scaleX":0.9},
+            "props":{"y":-186,"x":704,"skin":"ui/Upgrade/point_big.png","scaleY":0.9,"scaleX":0.9},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -62,7 +63,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":-186,"x":753,"skin":"ui/point_big.png","scaleY":0.9,"scaleX":0.9},
+            "props":{"y":-186,"x":753,"skin":"ui/Upgrade/point_big.png","scaleY":0.9,"scaleX":0.9},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -83,7 +84,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":-186,"x":806,"skin":"ui/point_big.png","scaleY":0.9,"scaleX":0.9},
+            "props":{"y":-186,"x":806,"skin":"ui/Upgrade/point_big.png","scaleY":0.9,"scaleX":0.9},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -104,7 +105,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":-186,"x":857,"skin":"ui/point_big.png","scaleY":0.9,"scaleX":0.9},
+            "props":{"y":-186,"x":857,"skin":"ui/Upgrade/point_big.png","scaleY":0.9,"scaleX":0.9},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -125,7 +126,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":-102,"x":818,"var":"strength","skin":"ui/quick_finish.png"},
+            "props":{"y":-102,"x":818,"var":"strength","skin":"ui/Upgrade/quick_finish.png"},
             "nodeParent":1,
             "label":"Image(strength)",
             "isDirectory":false,
@@ -146,7 +147,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":-102,"x":643,"var":"upgrade","skin":"ui/upgrade.png"},
+            "props":{"y":-102,"x":643,"var":"upgrade","skin":"ui/Upgrade/upgrade.png"},
             "nodeParent":1,
             "label":"Image(upgrade)",
             "isDirectory":false,

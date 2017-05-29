@@ -5,9 +5,10 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var StageInfo = (function (_super) {
     __extends(StageInfo, _super);
-    function StageInfo() {
+    function StageInfo(stageSn) {
         var _this = _super.call(this) || this;
         _this.pause.on(Laya.Event.CLICK, _this, _this.onPause);
+        _this.day.index = stageSn;
         return _this;
     }
     StageInfo.prototype.onPause = function () {

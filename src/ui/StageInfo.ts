@@ -1,8 +1,9 @@
 class StageInfo extends ui.StageInfoUI{
 
-    constructor() {
+    constructor(stageSn: number) {
         super();
         this.pause.on(Laya.Event.CLICK, this, this.onPause);
+        this.day.index = stageSn;
     }
 
     private onPause() {

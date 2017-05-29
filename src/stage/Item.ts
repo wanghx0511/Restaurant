@@ -6,11 +6,13 @@ class Item extends Laya.Sprite{
     public box: any;
     //加工进度0: 生， 1：熟 2：焦
     public progress: number;
+    public mergeJson: any[] = [];
 
     constructor(confItem: any) {
         super();
         this.confItem = confItem;
         this.loadImage("stage/" + this.confItem.picture);
+        this.mergeJson.push(confItem);
 
         //注册点击事件
         this.on(Laya.Event.CLICK, this, this.onClick);
@@ -138,6 +140,8 @@ class Item extends Laya.Sprite{
             var configItem: ConfigItem = new ConfigItem();
             item.confItem = configItem.getBy("itemSn", config.mergeId, "level", 1);
             item.loadImage("stage/" + item.confItem.picture);
+
+            item.mergeJson.push(this.confItem);
             return true;
         }
         return false;

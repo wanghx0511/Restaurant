@@ -158,7 +158,7 @@ module ui {
 		public strength:Laya.Image;
 		public upgrade:Laya.Image;
 
-        public static  uiView:any ={"type":"View","props":{"y":269,"x":-516,"width":600,"height":400,"alpha":1},"child":[{"type":"Image","props":{"y":-225,"x":685,"skin":"ui/shadow_big.png","sizeGrid":"0,78,0,82"}},{"type":"Image","props":{"y":-186,"x":704,"skin":"ui/point_big.png","scaleY":0.9,"scaleX":0.9}},{"type":"Image","props":{"y":-186,"x":753,"skin":"ui/point_big.png","scaleY":0.9,"scaleX":0.9}},{"type":"Image","props":{"y":-186,"x":806,"skin":"ui/point_big.png","scaleY":0.9,"scaleX":0.9}},{"type":"Image","props":{"y":-186,"x":857,"skin":"ui/point_big.png","scaleY":0.9,"scaleX":0.9}},{"type":"Image","props":{"y":-102,"x":818,"var":"strength","skin":"ui/quick_finish.png"}},{"type":"Image","props":{"y":-102,"x":643,"var":"upgrade","skin":"ui/upgrade.png"}}]};
+        public static  uiView:any ={"type":"View","props":{"y":269,"x":-516,"width":600,"height":400,"alpha":1},"child":[{"type":"Image","props":{"y":-225,"x":685,"skin":"ui/Upgrade/shadow_big.png","sizeGrid":"0,78,0,82"}},{"type":"Image","props":{"y":-186,"x":704,"skin":"ui/Upgrade/point_big.png","scaleY":0.9,"scaleX":0.9}},{"type":"Image","props":{"y":-186,"x":753,"skin":"ui/Upgrade/point_big.png","scaleY":0.9,"scaleX":0.9}},{"type":"Image","props":{"y":-186,"x":806,"skin":"ui/Upgrade/point_big.png","scaleY":0.9,"scaleX":0.9}},{"type":"Image","props":{"y":-186,"x":857,"skin":"ui/Upgrade/point_big.png","scaleY":0.9,"scaleX":0.9}},{"type":"Image","props":{"y":-102,"x":818,"var":"strength","skin":"ui/Upgrade/quick_finish.png"}},{"type":"Image","props":{"y":-102,"x":643,"var":"upgrade","skin":"ui/Upgrade/upgrade.png"}}]};
         constructor(){ super()}
         createChildren():void {
         

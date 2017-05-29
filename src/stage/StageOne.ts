@@ -50,7 +50,7 @@ class StageOne extends Laya.Sprite{
         bg.pos(-488, 0);
         this.addChild(bg);
 
-        var stageInfo = new StageInfo();
+        var stageInfo = new StageInfo(stageSn);
         this.addChild(stageInfo);
         this.uiInfo = stageInfo;
 

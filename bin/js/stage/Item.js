@@ -9,8 +9,10 @@ var Item = (function (_super) {
         var _this = _super.call(this) || this;
         //是否出售状态
         _this.state = false;
+        _this.mergeJson = [];
         _this.confItem = confItem;
         _this.loadImage("stage/" + _this.confItem.picture);
+        _this.mergeJson.push(confItem);
         //注册点击事件
         _this.on(Laya.Event.CLICK, _this, _this.onClick);
         return _this;
@@ -126,6 +128,7 @@ var Item = (function (_super) {
             var configItem = new ConfigItem();
             item.confItem = configItem.getBy("itemSn", config.mergeId, "level", 1);
             item.loadImage("stage/" + item.confItem.picture);
+            item.mergeJson.push(this.confItem);
             return true;
         }
         return false;

@@ -9,7 +9,6 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
         super();
         this.upgrade.on("click", this, this.onUpgradeClick);
         this.strength.on("click", this, this.onStrengthClick);
-        this.info.on("click", this, this.onInfoClick);
     }
 
     public setParam(type : string, sn : number, sUi : PreUpgradeInfo) {
