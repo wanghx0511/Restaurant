@@ -66,11 +66,11 @@ var Customer = (function (_super) {
         bar.rotation = 270;
         bar.sizeGrid = "0,0,0,0,1";
         this.bar = bar;
-        Laya.timer.loop(1000, this, this.updateValue);
+        this.timer.loop(1000, this, this.updateValue);
         this.bubble.addChild(bar);
         this.addChild(this.bubble);
-        Laya.timer.once(this.confCustomer.tiptime, this, this.changeTipStatus);
-        Laya.timer.once(this.confCustomer.waittime, this, this.loseCustomer);
+        this.timer.once(this.confCustomer.tiptime, this, this.changeTipStatus);
+        this.timer.once(this.confCustomer.waittime, this, this.loseCustomer);
     };
     Customer.prototype.updateValue = function () {
         var progress = 1000 / this.confCustomer.waittime;
@@ -78,9 +78,6 @@ var Customer = (function (_super) {
         if (this.value < 0)
             this.value = 0;
         this.bar.value = this.value;
-        if (this.value == 0) {
-            Laya.timer.clear(1000, this.updateValue);
-        }
     };
     // private onClick(e : Laya.Event) {
     //     if(this.status == 0) {

@@ -9,6 +9,7 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
         super();
         this.upgrade.on("click", this, this.onUpgradeClick);
         this.strength.on("click", this, this.onStrengthClick);
+        this.on("click" , this, this.onStrengthClick);
     }
 
     public setParam(type : string, sn : number, sUi : PreUpgradeInfo) {
@@ -19,7 +20,7 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
 
     private onUpgradeClick(){
         this.promoteInfo = new PromoteInfo();
-        this.promoteInfo.setParam(this.type, this.sn);
+        this.promoteInfo.setParam(this.type, this.sn, this.sUi.upgrade);
         this.promoteInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
         this.promoteInfo.pivot(this.promoteInfo.width / 2, this.promoteInfo.height /2);
         this.parent.addChild(this.promoteInfo);
@@ -28,6 +29,7 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
     }
 
     private onStrengthClick(){
+        this.sUi.upgrade.upgradeStatus(false);
         this.sUi.visible = true;
         this.removeSelf();
     }

@@ -9,6 +9,7 @@ var UpgradeInfo = (function (_super) {
         var _this = _super.call(this) || this;
         _this.upgrade.on("click", _this, _this.onUpgradeClick);
         _this.strength.on("click", _this, _this.onStrengthClick);
+        _this.on("click", _this, _this.onStrengthClick);
         return _this;
     }
     UpgradeInfo.prototype.setParam = function (type, sn, sUi) {
@@ -18,7 +19,7 @@ var UpgradeInfo = (function (_super) {
     };
     UpgradeInfo.prototype.onUpgradeClick = function () {
         this.promoteInfo = new PromoteInfo();
-        this.promoteInfo.setParam(this.type, this.sn);
+        this.promoteInfo.setParam(this.type, this.sn, this.sUi.upgrade);
         this.promoteInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
         this.promoteInfo.pivot(this.promoteInfo.width / 2, this.promoteInfo.height / 2);
         this.parent.addChild(this.promoteInfo);
@@ -26,6 +27,7 @@ var UpgradeInfo = (function (_super) {
         this.removeSelf();
     };
     UpgradeInfo.prototype.onStrengthClick = function () {
+        this.sUi.upgrade.upgradeStatus(false);
         this.sUi.visible = true;
         this.removeSelf();
     };

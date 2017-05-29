@@ -5,6 +5,7 @@ class Upgrade extends Laya.Sprite{
     private configItem: ConfigItem = new ConfigItem();
     private configKitchenware : ConfigKitchenware = new ConfigKitchenware();
     private upgradeUI : PreUpgradeInfo;
+    private isUpdating : boolean = false;
 
     constructor(stageSn : number) {
         super();
@@ -50,7 +51,7 @@ class Upgrade extends Laya.Sprite{
                 ui.pos(pos.uX, pos.uY);
                 ui.scale(pos.uScaleX, pos.uScaleY);
                 ui.pivot(pos.uPivotX, pos.uPivotY);
-                ui.setParam("kitchenware", sn, level);
+                ui.setParam("kitchenware", sn, level, this);
                 this.addChild(ui);
             }
             kitchenware.name = "kitchenware_"+sn+"_"+level;
@@ -74,7 +75,7 @@ class Upgrade extends Laya.Sprite{
                 ui.pos(pos.uX, pos.uY);
                 ui.scale(pos.uScaleX, pos.uScaleY);
                 ui.pivot(pos.uPivotX, pos.uPivotY);
-                ui.setParam("item", itemSn, level);
+                ui.setParam("item", itemSn, level, this);
                 this.addChild(ui);
             }
             item.name = "item" + itemSn;
@@ -87,4 +88,11 @@ class Upgrade extends Laya.Sprite{
         this.removeSelf();
     }
 
+    public upgradeStatus(isUpdating : boolean){
+        this.isUpdating = isUpdating;
+    }
+
+    public getStatus() : boolean{
+        return this.isUpdating;
+    }
 }

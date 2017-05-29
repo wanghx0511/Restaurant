@@ -10,18 +10,22 @@ var PreUpgradeInfo = (function (_super) {
         _this.on("click", _this, _this.onClick);
         return _this;
     }
-    PreUpgradeInfo.prototype.setParam = function (type, sn, level) {
+    PreUpgradeInfo.prototype.setParam = function (type, sn, level, upgrade) {
         this.type = type;
         this.sn = sn;
         this.level = level;
+        this.upgrade = upgrade;
     };
     PreUpgradeInfo.prototype.onClick = function () {
+        if (this.upgrade.getStatus())
+            return;
         this.visible = false;
         var upgradeInfo = new UpgradeInfo();
         upgradeInfo.setParam(this.type, this.sn, this);
         upgradeInfo.pos(this.x, this.y);
         upgradeInfo.pivot(this.pivotX, this.pivotY);
         this.parent.addChild(upgradeInfo);
+        this.upgrade.upgradeStatus(true);
     };
     return PreUpgradeInfo;
 }(ui.PreUpgradeInfoUI));

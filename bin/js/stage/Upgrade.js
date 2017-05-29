@@ -10,6 +10,7 @@ var Upgrade = (function (_super) {
         _this.configStage = new ConfigStage();
         _this.configItem = new ConfigItem();
         _this.configKitchenware = new ConfigKitchenware();
+        _this.isUpdating = false;
         _this.stageSn = stageSn;
         console.log("当前关sn=" + stageSn);
         var confStage = _this.configStage.get(_this.stageSn);
@@ -50,7 +51,7 @@ var Upgrade = (function (_super) {
                 ui.pos(pos.uX, pos.uY);
                 ui.scale(pos.uScaleX, pos.uScaleY);
                 ui.pivot(pos.uPivotX, pos.uPivotY);
-                ui.setParam("kitchenware", sn, level);
+                ui.setParam("kitchenware", sn, level, _this);
                 _this.addChild(ui);
             }
             kitchenware.name = "kitchenware_" + sn + "_" + level;
@@ -75,7 +76,7 @@ var Upgrade = (function (_super) {
                 ui.pos(pos.uX, pos.uY);
                 ui.scale(pos.uScaleX, pos.uScaleY);
                 ui.pivot(pos.uPivotX, pos.uPivotY);
-                ui.setParam("item", itemSn, level);
+                ui.setParam("item", itemSn, level, _this);
                 _this.addChild(ui);
             }
             item.name = "item" + itemSn;
@@ -85,6 +86,12 @@ var Upgrade = (function (_super) {
     }
     Upgrade.prototype.onClose = function () {
         this.removeSelf();
+    };
+    Upgrade.prototype.upgradeStatus = function (isUpdating) {
+        this.isUpdating = isUpdating;
+    };
+    Upgrade.prototype.getStatus = function () {
+        return this.isUpdating;
     };
     return Upgrade;
 }(Laya.Sprite));
