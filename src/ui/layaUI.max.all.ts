@@ -33,6 +33,20 @@ module ui {
 }
 
 module ui {
+    export class PatientBarUI extends View {
+		public pBar:Laya.ProgressBar;
+
+        public static  uiView:any ={"type":"View","props":{"width":30,"height":300},"child":[{"type":"ProgressBar","props":{"y":7,"x":4,"var":"pBar","skin":"ui/Stage/progress_patientShadow.png"}}]};
+        constructor(){ super()}
+        createChildren():void {
+        
+            super.createChildren();
+            this.createView(ui.PatientBarUI.uiView);
+        }
+    }
+}
+
+module ui {
     export class PauseInfoUI extends View {
 		public continue:Laya.Image;
 		public close:Laya.Image;
