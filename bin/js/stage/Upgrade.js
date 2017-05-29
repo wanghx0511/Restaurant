@@ -42,7 +42,10 @@ var Upgrade = (function (_super) {
             //在level=1的东西下边加一个ui
             if (level == 1) {
                 var ui = new PreUpgradeInfo();
-                ui.pos(pos.x, pos.y);
+                ui.pos(pos.uX, pos.uY);
+                ui.scale(pos.uScaleX, pos.uScaleY);
+                ui.pivot(pos.uPivotX, pos.uPivotY);
+                ui.setParam("kitchenware", sn, level);
                 _this.addChild(ui);
             }
             _this.addChild(kitchenware);
@@ -63,7 +66,10 @@ var Upgrade = (function (_super) {
             //在level=1的东西下边加一个ui
             if (level == 1) {
                 var ui = new PreUpgradeInfo();
-                ui.pos(pos.pivotX - item.width, pos.pivotY - item.height);
+                ui.pos(pos.uX, pos.uY);
+                ui.scale(pos.uScaleX, pos.uScaleY);
+                ui.pivot(pos.uPivotX, pos.uPivotY);
+                ui.setParam("item", sn, level);
                 _this.addChild(ui);
             }
             _this.addChild(item);
