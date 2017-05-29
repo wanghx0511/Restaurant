@@ -55,7 +55,7 @@ var Customer = (function (_super) {
             this.bubble.addChild(image);
             var bar = new Laya.ProgressBar();
             bar.skin = "customer/progress_patientShadow.png";
-            bar.pos(this.bubble.width - 4 * bar.width, 25);
+            bar.pos(this.bubble.width - 120, 25);
             bar.value = this.value;
             bar.rotation = 90;
             bar.sizeGrid = "0,0,0,0,1";
