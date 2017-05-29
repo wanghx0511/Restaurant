@@ -19,7 +19,7 @@ var MainTown = (function (_super) {
         //操作台
         var caozuotai = new Laya.Sprite();
         caozuotai.loadImage("res/atlas/caozuotai.png");
-        caozuotai.pos(-275, 490);
+        caozuotai.pos(-297, 490);
         _this.addChild(caozuotai);
         //图片形式生成餐具
         //初始化关卡物品
