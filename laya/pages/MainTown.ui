@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":1,
-    "selecteID":2,
+    "selectedBox":3,
+    "selecteID":8,
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
     "label":"View",
@@ -1180,7 +1180,7 @@
             "props":{"y":902.9999999999999,"x":941.9999999999999,"width":966,"name":"BottomRight","height":174},
             "nodeParent":1,
             "label":"Sprite(BottomRight)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
@@ -1194,6 +1194,7 @@
             "compId":3,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":16.000000000000114,"x":26.999999999999886,"skin":"ui/MainTown/bg02.png","name":"bg"},
                     "nodeParent":3,
@@ -1214,6 +1215,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":34,"x":39.000000000000114,"skin":"ui/MainTown/btCard.png","name":"Card"},
                     "nodeParent":3,
@@ -1234,6 +1236,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":24.000000000000114,"x":263.9999999999998,"skin":"ui/MainTown/btBag.png","name":"Bag"},
                     "nodeParent":3,
@@ -1255,6 +1258,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":24.000000000000114,"x":410,"skin":"ui/MainTown/btAchievement.png","name":"Achievement"},
                     "nodeParent":3,
@@ -1275,10 +1279,11 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":20,"x":613.9999999999998,"skin":"ui/MainTown/btOpen.png","name":"Open"},
+                    "props":{"y":20,"x":613.9999999999998,"var":"start","skin":"ui/MainTown/btOpen.png","name":"Open"},
                     "nodeParent":3,
-                    "label":"Image(Open)",
+                    "label":"Image(start)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -1295,6 +1300,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":12,"x":510,"skin":"ui/MainTown/redpoint.png"},
                     "nodeParent":3,

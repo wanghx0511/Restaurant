@@ -1,16 +1,12 @@
-class Upgrade extends Laya.Sprite{
+class MainTown extends Laya.Sprite{
 
-    private stageSn : number;
     private configStage : ConfigStage = new ConfigStage();
     private configItem: ConfigItem = new ConfigItem();
     private configKitchenware : ConfigKitchenware = new ConfigKitchenware();
-    private upgradeUI : PreUpgradeInfo;
 
-    constructor(stageSn : number) {
+    constructor() {
         super();
-        this.stageSn = stageSn;
-        console.log("当前关sn=" + stageSn);
-        var confStage = this.configStage.get(this.stageSn);
+        var confStage = this.configStage.get(1);
 
         //场景图
         var bg = new Laya.Sprite();
@@ -38,12 +34,6 @@ class Upgrade extends Laya.Sprite{
             kitchenware.pos(pos.x, pos.y);
             kitchenware.scale(pos.scaleX, pos.scaleY);
             kitchenware.pivot(pos.pivotX, pos.pivotY);
-            //在level=1的东西下边加一个ui
-            if(level == 1) {
-                var ui = new PreUpgradeInfo();
-                ui.pos(pos.x, pos.y);
-                this.addChild(ui);
-            }
             this.addChild(kitchenware);
         }
 
@@ -58,12 +48,6 @@ class Upgrade extends Laya.Sprite{
             item.pos(pos.x, pos.y);
             item.scale(pos.scaleX, pos.scaleY);
             item.pivot(pos.pivotX, pos.pivotY);
-            //在level=1的东西下边加一个ui
-            if(level == 1) {
-                var ui = new PreUpgradeInfo();
-                ui.pos(pos.pivotX - item.width, pos.pivotY - item.height);
-                this.addChild(ui);
-            }
             this.addChild(item);
         }
 

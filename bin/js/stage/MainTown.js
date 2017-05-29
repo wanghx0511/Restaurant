@@ -3,16 +3,14 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Upgrade = (function (_super) {
-    __extends(Upgrade, _super);
-    function Upgrade(stageSn) {
+var MainTown = (function (_super) {
+    __extends(MainTown, _super);
+    function MainTown() {
         var _this = _super.call(this) || this;
         _this.configStage = new ConfigStage();
         _this.configItem = new ConfigItem();
         _this.configKitchenware = new ConfigKitchenware();
-        _this.stageSn = stageSn;
-        console.log("当前关sn=" + stageSn);
-        var confStage = _this.configStage.get(_this.stageSn);
+        var confStage = _this.configStage.get(1);
         //场景图
         var bg = new Laya.Sprite();
         bg.loadImage("res/atlas/beijing.jpg");
@@ -39,12 +37,6 @@ var Upgrade = (function (_super) {
             kitchenware.pos(pos.x, pos.y);
             kitchenware.scale(pos.scaleX, pos.scaleY);
             kitchenware.pivot(pos.pivotX, pos.pivotY);
-            //在level=1的东西下边加一个ui
-            if (level == 1) {
-                var ui = new PreUpgradeInfo();
-                ui.pos(pos.x, pos.y);
-                _this.addChild(ui);
-            }
             _this.addChild(kitchenware);
         }
         var items = eval(confStage.initItem);
@@ -60,16 +52,10 @@ var Upgrade = (function (_super) {
             item.pos(pos.x, pos.y);
             item.scale(pos.scaleX, pos.scaleY);
             item.pivot(pos.pivotX, pos.pivotY);
-            //在level=1的东西下边加一个ui
-            if (level == 1) {
-                var ui = new PreUpgradeInfo();
-                ui.pos(pos.pivotX - item.width, pos.pivotY - item.height);
-                _this.addChild(ui);
-            }
             _this.addChild(item);
         }
         return _this;
     }
-    return Upgrade;
+    return MainTown;
 }(Laya.Sprite));
-//# sourceMappingURL=Upgrade.js.map
+//# sourceMappingURL=MainTown.js.map

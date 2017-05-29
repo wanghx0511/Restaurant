@@ -1,7 +1,7 @@
 //游戏主场景
 class StageMain extends Laya.Sprite{
     //主场景UI
-    public stageOneInfo: StageOneInfo;
+    public mainTownInfo: MainTownInfo;
 
     constructor() {
         super();
@@ -17,13 +17,19 @@ class StageMain extends Laya.Sprite{
         caozuotai.pos(-275, 490);
         this.addChild(caozuotai);
 
-        //添加UI
-        var stageOneInfo = new StageOneInfo();
-        this.stageOneInfo = stageOneInfo;
-        this.addChild(this.stageOneInfo);
+        //主界面
+        // var mainTown = new MainTown();
+        // this.addChild(mainTown);
 
+        var upgrade = new Upgrade(1);
+        this.addChild(upgrade);
+        //添加UI
+        // var mainTownInfo = new MainTownInfo();
+        // this.mainTownInfo = mainTownInfo;
+        // this.addChild(this.mainTownInfo);
+        
         //事件
-        this.stageOneInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
+        // this.mainTownInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
     }
 
     private onStageClick(e: Laya.Event) {

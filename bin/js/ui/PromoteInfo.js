@@ -13,53 +13,49 @@ var PromoteInfo = (function (_super) {
         _this.close.on("click", _this, _this.onCloseClick);
         return _this;
     }
-    PromoteInfo.prototype.setParam = function (type, listName, stageOneInfo) {
+    PromoteInfo.prototype.setParam = function (type, sn) {
         this.type = type;
-        this.listName = listName;
-        this.stageOneInfo = stageOneInfo;
         var skin = "";
         if (type == "item") {
-            var confItem = this.configItem.getBy("itemSn", this.listName, "level", StageManager.data["item"][this.listName]);
+            var confItem = this.configItem.getBy("itemSn", sn, "level", StageManager.data["item"][sn]);
             skin = "stage/" + confItem.picture;
         }
         else if (type == "kitchenware") {
-            var confKitchenware = this.configKitchenware.getBy("id", this.listName, "level", StageManager.data["kitchenware"][this.listName]);
+            var confKitchenware = this.configKitchenware.getBy("id", sn, "level", StageManager.data["kitchenware"][sn]);
             skin = "stage/" + confKitchenware.picture;
         }
         this.item.skin = skin;
     };
     PromoteInfo.prototype.onUpgradeClick = function () {
-        if (this.type == "item") {
-            var confItem = this.configItem.getBy("itemSn", this.listName, "level", StageManager.data["item"][this.listName] + 1);
-            var img = this.stageOneInfo.getChildByName("item" + this.listName);
-            // img.graphics.clear();
-            img.skin = "stage/" + confItem.picture;
-        }
-        else if (this.type == "kitchenware") {
-            var confKitchenware = this.configKitchenware.getBy("id", this.listName, "level", StageManager.data["kitchenware"][this.listName] + 1);
-            var obj = this.stageOneInfo.getChildByName("k" + this.listName);
-            var objList = obj._childs;
-            var imgList = [];
-            var length = objList.length;
-            for (var i = 0; i < length; i++) {
-                imgList.push(objList.pop());
-            }
-            // imgList.reverse();
-            for (var _i = 0, imgList_1 = imgList; _i < imgList_1.length; _i++) {
-                var img = imgList_1[_i];
-                img.skin = "stage/" + confKitchenware.picture;
-                img.visible = true;
-                obj._childs.push(img);
-            }
-            var j = 0;
-            obj._childs.reverse();
-        }
-        this.stageOneInfo.releaseUpdating();
-        this.removeSelf();
+        // if(this.type == "item") {
+        //     var confItem = this.configItem.getBy("itemSn", this.listName, "level", StageManager.data["item"][this.listName] + 1);
+        //     var img = this.stageOneInfo.getChildByName("item"+this.listName) as Laya.Image;
+        //     // img.graphics.clear();
+        //     img.skin = "stage/"+confItem.picture;
+        // } 
+        // else if(this.type == "kitchenware") {
+        //     var confKitchenware = this.configKitchenware.getBy("id", this.listName, "level", StageManager.data["kitchenware"][this.listName] + 1);
+        //     var obj = this.stageOneInfo.getChildByName("k"+this.listName) as Laya.List;
+        //     var objList = obj._childs;
+        //     var imgList : Laya.Image[] = [];
+        //     var length = objList.length;
+        //     for(var i = 0; i < length; i++){
+        //         imgList.push(objList.pop());
+        //     }
+        //     // imgList.reverse();
+        //     for (var img of imgList) {
+        //         img.skin = "stage/"+confKitchenware.picture;
+        //         img.visible = true;
+        //         obj._childs.push(img);
+        //     }
+        //     var j = 0;
+        //     obj._childs.reverse();
+        // }
+        // this.stageOneInfo.releaseUpdating();
+        // this.removeSelf();
     };
     PromoteInfo.prototype.onCloseClick = function () {
         this.removeSelf();
-        this.stageOneInfo.releaseUpdating();
     };
     return PromoteInfo;
 }(ui.FurniturePromoteUI));

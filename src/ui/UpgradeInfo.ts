@@ -1,10 +1,8 @@
 class UpgradeInfo extends ui.UpgradeInfoUI{
 
     private type : string;
-    private listName : string;
-    private stageOneInfo : StageOneInfo;
-    private uiVar : string;
-    private stageManager : StageManager = new StageManager();
+    private sn : number;
+    private sUi : PreUpgradeInfo;
     private promoteInfo : PromoteInfo;
 
     constructor() {
@@ -14,20 +12,19 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
         this.info.on("click", this, this.onInfoClick);
     }
 
-    public setParam(type : string, listName : string, stageOneInfo : StageOneInfo, uiVar : string) {
+    public setParam(type : string, sn : number, sUi : PreUpgradeInfo) {
         this.type = type;
-        this.listName = listName;
-        this.stageOneInfo = stageOneInfo;
-        this.uiVar = uiVar;
+        this.sn = sn;
+        this.sUi = sUi;
     }
 
     private onUpgradeClick(){
         this.promoteInfo = new PromoteInfo();
-        this.promoteInfo.setParam(this.type, this.listName, this.stageOneInfo);
+        this.promoteInfo.setParam(this.type, this.sn);
         this.promoteInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
         this.promoteInfo.pivot(this.promoteInfo.width / 2, this.promoteInfo.height /2);
-        this.stageOneInfo.addChild(this.promoteInfo);
-        eval("this.stageOneInfo." + this.uiVar + ".visible = true;");
+        Laya.stage.addChild(this.promoteInfo);
+        this.sUi.visible = true;
         this.removeSelf();
     }
 
@@ -37,8 +34,7 @@ class UpgradeInfo extends ui.UpgradeInfoUI{
 
     private onInfoClick(){
         this.removeSelf();
-        eval("this.stageOneInfo." + this.uiVar + ".visible = true;");
-        this.stageOneInfo.releaseUpdating();
+        this.sUi.visible = true;
     }
 
 }

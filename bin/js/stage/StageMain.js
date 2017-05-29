@@ -18,13 +18,18 @@ var StageMain = (function (_super) {
         caozuotai.loadImage("res/atlas/caozuotai.png");
         caozuotai.pos(-275, 490);
         _this.addChild(caozuotai);
-        //添加UI
-        var stageOneInfo = new StageOneInfo();
-        _this.stageOneInfo = stageOneInfo;
-        _this.addChild(_this.stageOneInfo);
-        //事件
-        _this.stageOneInfo.start.on(Laya.Event.CLICK, _this, _this.onStageClick);
+        //主界面
+        // var mainTown = new MainTown();
+        // this.addChild(mainTown);
+        var upgrade = new Upgrade(1);
+        _this.addChild(upgrade);
         return _this;
+        //添加UI
+        // var mainTownInfo = new MainTownInfo();
+        // this.mainTownInfo = mainTownInfo;
+        // this.addChild(this.mainTownInfo);
+        //事件
+        // this.mainTownInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
     }
     StageMain.prototype.onStageClick = function (e) {
         if (this.getChildByName("stageChooseInfo") != null)
