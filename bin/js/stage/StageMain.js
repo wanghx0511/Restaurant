@@ -21,15 +21,15 @@ var StageMain = (function (_super) {
         //主界面
         // var mainTown = new MainTown();
         // this.addChild(mainTown);
-        var upgrade = new Upgrade(1);
-        _this.addChild(upgrade);
-        return _this;
+        // var upgrade = new Upgrade(1);
+        // this.addChild(upgrade);
         //添加UI
-        // var mainTownInfo = new MainTownInfo();
-        // this.mainTownInfo = mainTownInfo;
-        // this.addChild(this.mainTownInfo);
+        var mainTownInfo = new MainTownInfo();
+        _this.mainTownInfo = mainTownInfo;
+        _this.addChild(_this.mainTownInfo);
         //事件
-        // this.mainTownInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
+        _this.mainTownInfo.start.on(Laya.Event.CLICK, _this, _this.onStageClick);
+        return _this;
     }
     StageMain.prototype.onStageClick = function (e) {
         if (this.getChildByName("stageChooseInfo") != null)

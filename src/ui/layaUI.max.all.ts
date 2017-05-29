@@ -18,20 +18,6 @@ module ui {
 }
 
 module ui {
-    export class MainInfoUI extends View {
-		public start:Laya.Image;
-
-        public static  uiView:any ={"type":"View","props":{"width":1920,"height":1080},"child":[{"type":"Image","props":{"y":30,"x":36,"width":174,"skin":"ui/Icn84005.png","height":183}},{"type":"ProgressBar","props":{"y":113,"x":220,"width":127,"skin":"ui/progress_time.png","height":24}},{"type":"Label","props":{"y":59,"x":215,"width":135,"text":"大魔王","strokeColor":"#9f4342","stroke":3,"height":46,"fontSize":40,"color":"#f9f3f3","bold":true}},{"type":"Image","props":{"y":501,"x":839,"width":189,"var":"start","skin":"ui/2306700.png","height":179}}]};
-        constructor(){ super()}
-        createChildren():void {
-        
-            super.createChildren();
-            this.createView(ui.MainInfoUI.uiView);
-        }
-    }
-}
-
-module ui {
     export class MainTownUI extends View {
 		public start:Laya.Image;
 
@@ -106,7 +92,7 @@ module ui {
     export class StageInfoUI extends View {
 		public pause:Laya.Image;
 
-        public static  uiView:any ={"type":"View","props":{"width":1920,"height":1080},"child":[{"type":"Image","props":{"y":28,"x":1769,"var":"pause","skin":"ui/Stage/Pause.png"}}]};
+        public static  uiView:any ={"type":"View","props":{"width":1895,"height":145},"child":[{"type":"Image","props":{"y":9,"x":406,"skin":"ui/Level/bg02.png","name":"bg01"}},{"type":"Image","props":{"y":21,"x":419,"skin":"ui/Level/bg01.png","name":"bg02"}},{"type":"Image","props":{"y":8,"x":386,"skin":"ui/Level/costumeicon.png","name":"Costume"}},{"type":"Image","props":{"y":8,"x":707,"skin":"ui/Level/Progress_bg.png","name":"progressbg"}},{"type":"Image","props":{"y":21,"x":719,"width":377,"skin":"ui/Level/Progress_orange.png","sizeGrid":"0,47,0,54","name":"progress","height":50}},{"type":"Image","props":{"y":6,"x":704,"skin":"ui/Level/gold.png","name":"JB"}},{"type":"Image","props":{"y":20,"x":998,"skin":"ui/Level/starYellow.png","name":"star_yellow1"}},{"type":"Image","props":{"y":20,"x":998,"skin":"ui/Level/starGrey.png","name":"star_grey1"}},{"type":"Image","props":{"y":20,"x":1177,"skin":"ui/Level/starYellow.png","name":"star_yellow2"}},{"type":"Image","props":{"y":20,"x":1177,"skin":"ui/Level/starGrey.png","name":"star_grey2"}},{"type":"Image","props":{"y":20,"x":1277,"skin":"ui/Level/starYellow.png","name":"star_yellow3"}},{"type":"Image","props":{"y":20,"x":1277,"skin":"ui/Level/starGrey.png","name":"star_grey3"}},{"type":"Image","props":{"y":8,"x":1759,"var":"pause","skin":"ui/Level/btPause.png"}},{"type":"Image","props":{"y":8,"x":11,"skin":"ui/Level/dayBg.png","name":"Day"}}]};
         constructor(){ super()}
         createChildren():void {
         

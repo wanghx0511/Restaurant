@@ -10,7 +10,7 @@ var PauseInfo = (function (_super) {
         _this.close.on(Laya.Event.CLICK, _this, _this.onClose);
         _this.continue.on(Laya.Event.CLICK, _this, _this.onClose);
         _this.quit.on(Laya.Event.CLICK, _this, _this.onClose);
-        _this.timer.once(100, _this, _this.onAdded);
+        _this.timer.once(10, _this, _this.onAdded);
         return _this;
     }
     PauseInfo.prototype.onClose = function () {

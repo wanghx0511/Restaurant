@@ -1,6 +1,6 @@
 //1号餐厅场景
 class StageOne extends Laya.Sprite{
-    public uiInfo: StageOneInfo;
+    public uiInfo: StageInfo;
     private configItem: ConfigItem = new ConfigItem();
     private configCustomer : ConfigCustomer = new ConfigCustomer();
     public configStage : ConfigStage = new ConfigStage();
@@ -52,6 +52,7 @@ class StageOne extends Laya.Sprite{
 
         var stageInfo = new StageInfo();
         this.addChild(stageInfo);
+        this.uiInfo = stageInfo;
 
         //操作台
         var caozuotai = new Laya.Sprite();
@@ -178,5 +179,6 @@ class StageOne extends Laya.Sprite{
     public stageOver() {
         var stageSettlementInfo = new StageSettlementInfo(this.stageSn);
         this.addChild(stageSettlementInfo);
+        this.uiInfo.removeSelf();
     }
 }

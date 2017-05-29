@@ -22,21 +22,6 @@ var ui;
     ui.FurniturePromoteUI = FurniturePromoteUI;
 })(ui || (ui = {}));
 (function (ui) {
-    var MainInfoUI = (function (_super) {
-        __extends(MainInfoUI, _super);
-        function MainInfoUI() {
-            return _super.call(this) || this;
-        }
-        MainInfoUI.prototype.createChildren = function () {
-            _super.prototype.createChildren.call(this);
-            this.createView(ui.MainInfoUI.uiView);
-        };
-        return MainInfoUI;
-    }(View));
-    MainInfoUI.uiView = { "type": "View", "props": { "width": 1920, "height": 1080 }, "child": [{ "type": "Image", "props": { "y": 30, "x": 36, "width": 174, "skin": "ui/Icn84005.png", "height": 183 } }, { "type": "ProgressBar", "props": { "y": 113, "x": 220, "width": 127, "skin": "ui/progress_time.png", "height": 24 } }, { "type": "Label", "props": { "y": 59, "x": 215, "width": 135, "text": "大魔王", "strokeColor": "#9f4342", "stroke": 3, "height": 46, "fontSize": 40, "color": "#f9f3f3", "bold": true } }, { "type": "Image", "props": { "y": 501, "x": 839, "width": 189, "var": "start", "skin": "ui/2306700.png", "height": 179 } }] };
-    ui.MainInfoUI = MainInfoUI;
-})(ui || (ui = {}));
-(function (ui) {
     var MainTownUI = (function (_super) {
         __extends(MainTownUI, _super);
         function MainTownUI() {
@@ -123,7 +108,7 @@ var ui;
         };
         return StageInfoUI;
     }(View));
-    StageInfoUI.uiView = { "type": "View", "props": { "width": 1920, "height": 1080 }, "child": [{ "type": "Image", "props": { "y": 28, "x": 1769, "var": "pause", "skin": "ui/Stage/Pause.png" } }] };
+    StageInfoUI.uiView = { "type": "View", "props": { "width": 1895, "height": 145 }, "child": [{ "type": "Image", "props": { "y": 9, "x": 406, "skin": "ui/Level/bg02.png", "name": "bg01" } }, { "type": "Image", "props": { "y": 21, "x": 419, "skin": "ui/Level/bg01.png", "name": "bg02" } }, { "type": "Image", "props": { "y": 8, "x": 386, "skin": "ui/Level/costumeicon.png", "name": "Costume" } }, { "type": "Image", "props": { "y": 8, "x": 707, "skin": "ui/Level/Progress_bg.png", "name": "progressbg" } }, { "type": "Image", "props": { "y": 21, "x": 719, "width": 377, "skin": "ui/Level/Progress_orange.png", "sizeGrid": "0,47,0,54", "name": "progress", "height": 50 } }, { "type": "Image", "props": { "y": 6, "x": 704, "skin": "ui/Level/gold.png", "name": "JB" } }, { "type": "Image", "props": { "y": 20, "x": 998, "skin": "ui/Level/starYellow.png", "name": "star_yellow1" } }, { "type": "Image", "props": { "y": 20, "x": 998, "skin": "ui/Level/starGrey.png", "name": "star_grey1" } }, { "type": "Image", "props": { "y": 20, "x": 1177, "skin": "ui/Level/starYellow.png", "name": "star_yellow2" } }, { "type": "Image", "props": { "y": 20, "x": 1177, "skin": "ui/Level/starGrey.png", "name": "star_grey2" } }, { "type": "Image", "props": { "y": 20, "x": 1277, "skin": "ui/Level/starYellow.png", "name": "star_yellow3" } }, { "type": "Image", "props": { "y": 20, "x": 1277, "skin": "ui/Level/starGrey.png", "name": "star_grey3" } }, { "type": "Image", "props": { "y": 8, "x": 1759, "var": "pause", "skin": "ui/Level/btPause.png" } }, { "type": "Image", "props": { "y": 8, "x": 11, "skin": "ui/Level/dayBg.png", "name": "Day" } }] };
     ui.StageInfoUI = StageInfoUI;
 })(ui || (ui = {}));
 (function (ui) {

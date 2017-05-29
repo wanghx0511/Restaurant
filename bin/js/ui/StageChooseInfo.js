@@ -71,6 +71,7 @@ var StageChooseInfo = (function (_super) {
             { url: "res/atlas/ui/StageSettlement.json", type: Laya.Loader.ATLAS },
             { url: "res/atlas/ui/Stage.json", type: Laya.Loader.ATLAS },
             { url: "res/atlas/ui/Pause.json", type: Laya.Loader.ATLAS },
+            { url: "res/atlas/ui/Level.json", type: Laya.Loader.ATLAS },
         ];
         new Loading(res, this.startStage, stageSn);
     };

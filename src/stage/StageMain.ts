@@ -21,15 +21,15 @@ class StageMain extends Laya.Sprite{
         // var mainTown = new MainTown();
         // this.addChild(mainTown);
 
-        var upgrade = new Upgrade(1);
-        this.addChild(upgrade);
+        // var upgrade = new Upgrade(1);
+        // this.addChild(upgrade);
         //添加UI
-        // var mainTownInfo = new MainTownInfo();
-        // this.mainTownInfo = mainTownInfo;
-        // this.addChild(this.mainTownInfo);
+        var mainTownInfo = new MainTownInfo();
+        this.mainTownInfo = mainTownInfo;
+        this.addChild(this.mainTownInfo);
         
         //事件
-        // this.mainTownInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
+        this.mainTownInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
     }
 
     private onStageClick(e: Laya.Event) {

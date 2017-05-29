@@ -15,5 +15,5 @@ var StageInfo = (function (_super) {
         this.parent.addChild(pauseInfo);
     };
     return StageInfo;
-}(ui.stageInfoUI));
+}(ui.StageInfoUI));
 //# sourceMappingURL=StageInfo.js.map
