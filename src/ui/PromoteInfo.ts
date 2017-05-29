@@ -2,6 +2,7 @@ class PromoteInfo extends ui.FurniturePromoteUI{
 
     private type : string;
     private sn : number;
+    private upgrade : Upgrade;
     private configItem: ConfigItem = new ConfigItem();
     private configKitchenware : ConfigKitchenware = new ConfigKitchenware();
     private configPos : ConfigPos = new ConfigPos();
@@ -12,9 +13,10 @@ class PromoteInfo extends ui.FurniturePromoteUI{
         this.close.on("click", this, this.onCloseClick);
     }
 
-    public setParam(type : string, sn : number) {
+    public setParam(type : string, sn : number, upgrade : Upgrade) {
         this.type = type;
         this.sn = sn;
+        this.upgrade = upgrade;
         var skin : string = "";
         if(type == "item"){
             var level = StageManager.data["item"][sn];
@@ -38,12 +40,6 @@ class PromoteInfo extends ui.FurniturePromoteUI{
             var level = StageManager.data["item"][this.sn];
             var confItem = this.configItem.getBy("itemSn", this.sn, "level", level+1);
             var pos = this.configPos.getBy("type", 2, "itemSn", this.sn, "level", level+1);
-            // var item = new Laya.Image();
-            // item.loadImage("stage/" + confItem.picture);
-            // item.pos(pos.x, pos.y);
-            // item.scale(pos.scaleX, pos.scaleY);
-            // item.pivot(pos.pivotX, pos.pivotY);
-            // this.parent.addChild(item);
             var item = this.parent.getChildByName("item"+this.sn) as Laya.Image;
             item.skin = "stage/" + confItem.picture;
         } 
@@ -61,44 +57,12 @@ class PromoteInfo extends ui.FurniturePromoteUI{
             this.parent.addChild(kitchenware);
         }
         this.removeSelf();
-
-        // if(this.type == "item") {
-        //     var confItem = this.configItem.getBy("itemSn", this.listName, "level", StageManager.data["item"][this.listName] + 1);
-        //     var img = this.stageOneInfo.getChildByName("item"+this.listName) as Laya.Image;
-        //     // img.graphics.clear();
-        //     img.skin = "stage/"+confItem.picture;
-        // } 
-
-        // else if(this.type == "kitchenware") {
-        //     var confKitchenware = this.configKitchenware.getBy("id", this.listName, "level", StageManager.data["kitchenware"][this.listName] + 1);
-        //     var obj = this.stageOneInfo.getChildByName("k"+this.listName) as Laya.List;
-            
-        //     var objList = obj._childs;
-        //     var imgList : Laya.Image[] = [];
-        //     var length = objList.length;
-        //     for(var i = 0; i < length; i++){
-        //         imgList.push(objList.pop());
-        //     }
-            
-        //     // imgList.reverse();
-        //     for (var img of imgList) {
-        //         img.skin = "stage/"+confKitchenware.picture;
-        //         img.visible = true;
-        //         obj._childs.push(img);
-        //     }
-        //     var j = 0;
-        //     obj._childs.reverse();
-            
-        // }
-        // this.stageOneInfo.releaseUpdating();
-        // this.removeSelf();
-
-
+        this.upgrade.upgradeStatus(false);
     }
 
     private onCloseClick(){
         this.removeSelf();
-        
+        this.upgrade.upgradeStatus(false);
     }
 
 }
