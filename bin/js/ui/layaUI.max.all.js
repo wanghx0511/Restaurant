@@ -37,6 +37,21 @@ var ui;
     ui.MainTownUI = MainTownUI;
 })(ui || (ui = {}));
 (function (ui) {
+    var PatientBarUI = (function (_super) {
+        __extends(PatientBarUI, _super);
+        function PatientBarUI() {
+            return _super.call(this) || this;
+        }
+        PatientBarUI.prototype.createChildren = function () {
+            _super.prototype.createChildren.call(this);
+            this.createView(ui.PatientBarUI.uiView);
+        };
+        return PatientBarUI;
+    }(View));
+    PatientBarUI.uiView = { "type": "View", "props": { "width": 30, "height": 300 }, "child": [{ "type": "ProgressBar", "props": { "y": 7, "x": 4, "var": "pBar", "skin": "ui/Stage/progress_patientShadow.png" } }] };
+    ui.PatientBarUI = PatientBarUI;
+})(ui || (ui = {}));
+(function (ui) {
     var PauseInfoUI = (function (_super) {
         __extends(PauseInfoUI, _super);
         function PauseInfoUI() {
