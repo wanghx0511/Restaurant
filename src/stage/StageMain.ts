@@ -20,7 +20,7 @@ class StageMain extends Laya.Sprite{
         //主界面
         var mainTown = new MainTown();
         this.addChild(mainTown);
-
+        //测试升级用代码
         // var upgrade = new Upgrade(1);
         // this.addChild(upgrade);
         //添加UI
@@ -30,6 +30,7 @@ class StageMain extends Laya.Sprite{
         
         //事件
         this.mainTownInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
+        this.mainTownInfo.upgrade.on(Laya.Event.CLICK, this, this.onUpgradeClick);
     }
 
     private onStageClick(e: Laya.Event) {
@@ -41,4 +42,10 @@ class StageMain extends Laya.Sprite{
         stageChooseInfo.pivot(stageChooseInfo.width/2, stageChooseInfo.height/2);
         stageChooseInfo.pos(Laya.stage.width/2, Laya.stage.height/2);
     }
+
+    private onUpgradeClick(e: Laya.Event){
+        var upgrade = new Upgrade(1);
+        this.addChild(upgrade);
+    }
+
 }

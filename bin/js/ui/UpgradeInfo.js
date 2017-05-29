@@ -21,15 +21,13 @@ var UpgradeInfo = (function (_super) {
         this.promoteInfo.setParam(this.type, this.sn);
         this.promoteInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
         this.promoteInfo.pivot(this.promoteInfo.width / 2, this.promoteInfo.height / 2);
-        Laya.stage.addChild(this.promoteInfo);
+        this.parent.addChild(this.promoteInfo);
         this.sUi.visible = true;
         this.removeSelf();
     };
     UpgradeInfo.prototype.onStrengthClick = function () {
-    };
-    UpgradeInfo.prototype.onInfoClick = function () {
-        this.removeSelf();
         this.sUi.visible = true;
+        this.removeSelf();
     };
     return UpgradeInfo;
 }(ui.UpgradeInfoUI));

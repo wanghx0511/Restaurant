@@ -21,6 +21,7 @@ var StageMain = (function (_super) {
         //主界面
         var mainTown = new MainTown();
         _this.addChild(mainTown);
+        //测试升级用代码
         // var upgrade = new Upgrade(1);
         // this.addChild(upgrade);
         //添加UI
@@ -29,6 +30,7 @@ var StageMain = (function (_super) {
         _this.addChild(_this.mainTownInfo);
         //事件
         _this.mainTownInfo.start.on(Laya.Event.CLICK, _this, _this.onStageClick);
+        _this.mainTownInfo.upgrade.on(Laya.Event.CLICK, _this, _this.onUpgradeClick);
         return _this;
     }
     StageMain.prototype.onStageClick = function (e) {
@@ -39,6 +41,10 @@ var StageMain = (function (_super) {
         this.addChild(stageChooseInfo);
         stageChooseInfo.pivot(stageChooseInfo.width / 2, stageChooseInfo.height / 2);
         stageChooseInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
+    };
+    StageMain.prototype.onUpgradeClick = function (e) {
+        var upgrade = new Upgrade(1);
+        this.addChild(upgrade);
     };
     return StageMain;
 }(Laya.Sprite));
