@@ -159,7 +159,7 @@ class StageOne extends Laya.Sprite{
                     customer.y = confCustomer.posY;
                     //入场动画结束后 ，出现气泡
                     Laya.Tween.to(customer, {x : posX}, new Utils().calcTweenNeedTime(posX), null, new Laya.Handler(customer, customer.addBubble));
-                    this.addChild(customer);
+                    this.addChildAt(customer, 2);
                     // customer.addBubble();
                     var customerEle : [number, Customer] = [confCustomer.sn, customer];
                     this.showCustomer.push(customerEle);
@@ -181,7 +181,7 @@ class StageOne extends Laya.Sprite{
         var cashBag : CashBag = new CashBag(customer);
         // var x : number = customer.x;
         // var y : number = customer.y;
-        cashBag.pos(customer.x, customer.y + customer.height);
+        cashBag.pos(customer.x, customer.y + customer.height - 530);
         Laya.stage.addChild(cashBag);
     }
 
