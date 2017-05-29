@@ -61,8 +61,9 @@ class Customer extends Laya.Sprite{
             this.bubble.addChild(image);
             var bar = new Laya.ProgressBar();
             bar.skin = "customer/progress_patientShadow.png"
-            bar.pos(this.bubble.width - bar.width, 0);
+            bar.pos(this.bubble.width -  5 * bar.width, 50 );
             bar.value = 1;
+            this.bubble.addChild(bar);
             image.pos(0, needsPosY);
             needsPosY += 50;
             var test : [number, Laya.Image];

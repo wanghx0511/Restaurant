@@ -53,9 +53,11 @@ var Customer = (function (_super) {
             image.loadImage("stage/" + config.picture);
             image.scale(0.4, 0.4);
             this.bubble.addChild(image);
-            var barUi = new PatientBarInfo();
-            barUi.pos(this.bubble.width - barUi.width, 0);
-            barUi.pBar.value = 1;
+            var bar = new Laya.ProgressBar();
+            bar.skin = "customer/progress_patientShadow.png";
+            bar.pos(this.bubble.width - 5 * bar.width, 50);
+            bar.value = 1;
+            this.bubble.addChild(bar);
             image.pos(0, needsPosY);
             needsPosY += 50;
             var test;
