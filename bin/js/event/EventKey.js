@@ -4,4 +4,5 @@ var EventKey = (function () {
     return EventKey;
 }());
 EventKey.GAME_START = "GAME_START";
+EventKey.STAGE_OVER = "STAGE_OVER";
 //# sourceMappingURL=EventKey.js.map

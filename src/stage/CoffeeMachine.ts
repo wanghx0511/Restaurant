@@ -34,7 +34,7 @@ class CoffeeMachine extends Laya.Sprite{
         item.box = this;
         item.state = true;
         item.pos(this.x, this.y);
-        this.addChild(item);
+        this.parent.addChild(item);
         this.ani.clear();
     }
 
