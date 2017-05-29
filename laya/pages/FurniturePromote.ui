@@ -395,7 +395,7 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "props":{"y":245,"x":284,"width":409,"var":"item","skin":"ui/zhuozi2.png","pivotY":177,"pivotX":212,"name":"Furniture","height":335},
+                    "props":{"y":245,"x":284,"width":409,"var":"item","skin":"stage/baowenlu.png","pivotY":177,"pivotX":212,"name":"Furniture","height":335},
                     "nodeParent":43,
                     "label":"Image(item)",
                     "isDirectory":false,
