@@ -57,6 +57,10 @@ var Customer = (function (_super) {
             bar.skin = "customer/progress_patientShadow.png";
             bar.pos(this.bubble.width - 4 * bar.width, 25);
             bar.value = this.value;
+            bar.rotation = 90;
+            bar.sizeGrid = "0,0,0,0,1";
+            this.bar = bar;
+            Laya.timer.loop(1000, this, this.updateValue);
             this.bubble.addChild(bar);
             image.pos(25, needsPosY);
             needsPosY += 100;
@@ -67,6 +71,11 @@ var Customer = (function (_super) {
         this.addChild(this.bubble);
         Laya.timer.once(this.confCustomer.tiptime, this, this.changeTipStatus);
         Laya.timer.once(this.confCustomer.waittime, this, this.loseCustomer);
+    };
+    Customer.prototype.updateValue = function () {
+        var progress = 1000 / this.confCustomer.waittime;
+        this.value -= progress;
+        this.bar.value = this.value;
     };
     // private onClick(e : Laya.Event) {
     //     if(this.status == 0) {

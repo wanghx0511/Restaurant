@@ -27,6 +27,8 @@ class Customer extends Laya.Sprite{
     private isRunning : boolean = false;
     //等待过程条的value
     private value : number = 1;
+    //过程条
+    private bar : Laya.ProgressBar;
 
     constructor(confCustomer : any, posX : number) {
         super();
@@ -63,6 +65,10 @@ class Customer extends Laya.Sprite{
             bar.skin = "customer/progress_patientShadow.png"
             bar.pos(this.bubble.width -  4 * bar.width, 25 );
             bar.value = this.value;
+            bar.rotation = 90;
+            bar.sizeGrid="0,0,0,0,1";
+            this.bar = bar;
+            Laya.timer.loop(1000, this, this.updateValue);
             this.bubble.addChild(bar);
             image.pos(25, needsPosY);
             needsPosY += 100;
@@ -74,6 +80,12 @@ class Customer extends Laya.Sprite{
 
         Laya.timer.once(this.confCustomer.tiptime, this, this.changeTipStatus);
         Laya.timer.once(this.confCustomer.waittime , this, this.loseCustomer);
+    }
+
+    public updateValue() : void {
+        var progress = 1000 / this.confCustomer.waittime;
+        this.value -= progress;
+        this.bar.value = this.value;
     }
 
     // private onClick(e : Laya.Event) {
