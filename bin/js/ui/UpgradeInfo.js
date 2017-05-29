@@ -9,7 +9,6 @@ var UpgradeInfo = (function (_super) {
         var _this = _super.call(this) || this;
         _this.upgrade.on("click", _this, _this.onUpgradeClick);
         _this.strength.on("click", _this, _this.onStrengthClick);
-        _this.info.on("click", _this, _this.onInfoClick);
         return _this;
     }
     UpgradeInfo.prototype.setParam = function (type, sn, sUi) {

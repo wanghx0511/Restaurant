@@ -41,6 +41,7 @@ class GameMain{
             {url:"res/atlas/ui/StageChoose.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/ui/FurniturePromote.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/ui/MainTown.json",type:Laya.Loader.ATLAS},
+            {url:"res/atlas/ui/Upgrade.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/stage.json",type:Laya.Loader.ATLAS},
             {url:"res/atlas/beijing.jpg",type:Laya.Loader.IMAGE},
         ];
