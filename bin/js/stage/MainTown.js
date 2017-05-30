@@ -54,6 +54,7 @@ var MainTown = (function (_super) {
             item.pivot(pos.pivotX, pos.pivotY);
             _this.addChild(item);
         }
+        Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
         return _this;
     }
     return MainTown;

@@ -51,6 +51,7 @@ class MainTown extends Laya.Sprite{
             this.addChild(item);
         }
 
+        Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
     }
 
 }
