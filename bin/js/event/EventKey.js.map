@@ -1,1 +1,1 @@
-{"version":3,"file":"EventKey.js","sourceRoot":"","sources":["../../../src/event/EventKey.ts"],"names":[],"mappings":"AAAA;IAAA;IAEA,CAAC;IAAD,eAAC;AAAD,CAAC,AAFD;AACkB,mBAAU,GAAW,YAAY,CAAC"}
+{"version":3,"file":"EventKey.js","sourceRoot":"","sources":["../../../src/event/EventKey.ts"],"names":[],"mappings":"AAAA;IAAA;IAGA,CAAC;IAAD,eAAC;AAAD,CAAC,AAHD;AACkB,mBAAU,GAAW,YAAY,CAAC;AAClC,mBAAU,GAAW,YAAY,CAAC"}

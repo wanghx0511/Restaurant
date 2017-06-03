@@ -35,7 +35,7 @@ var CoffeeMachine = (function (_super) {
         item.box = this;
         item.state = true;
         item.pos(this.x, this.y);
-        this.addChild(item);
+        this.parent.addChild(item);
         this.ani.clear();
     };
     CoffeeMachine.prototype.onClick = function (e) {

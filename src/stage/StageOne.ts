@@ -114,6 +114,7 @@ class StageOne extends Laya.Sprite{
         this.startTimeStamp = this.customerTimer.currTimer;
         //计时器开始计时
         this.customerTimer.loop(100, this, this.initCustomer);
+        Laya.SoundManager.playMusic("res/music/LevelBGM.mp3");
     }
 
     //同步分数时调用
@@ -189,5 +190,8 @@ class StageOne extends Laya.Sprite{
         var stageSettlementInfo = new StageSettlementInfo(this.stageSn);
         this.addChild(stageSettlementInfo);
         this.uiInfo.removeSelf();
+        for(var i = 0; i< this._childs.length; i++) {
+            Laya.timer.clearAll(this._childs[i]);
+        }
     }
 }

@@ -107,6 +107,7 @@ var StageOne = (function (_super) {
         _this.startTimeStamp = _this.customerTimer.currTimer;
         //计时器开始计时
         _this.customerTimer.loop(100, _this, _this.initCustomer);
+        Laya.SoundManager.playMusic("res/music/LevelBGM.mp3");
         return _this;
     }
     //同步分数时调用
@@ -182,6 +183,9 @@ var StageOne = (function (_super) {
         var stageSettlementInfo = new StageSettlementInfo(this.stageSn);
         this.addChild(stageSettlementInfo);
         this.uiInfo.removeSelf();
+        for (var i = 0; i < this._childs.length; i++) {
+            Laya.timer.clearAll(this._childs[i]);
+        }
     };
     return StageOne;
 }(Laya.Sprite));
