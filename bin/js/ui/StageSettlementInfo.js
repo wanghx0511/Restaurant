@@ -54,7 +54,7 @@ var StageSettlementInfo = (function (_super) {
         }
         //营业额
         this.money.text = stage.money + "";
-        this.tip.text = stage.tip + "";
+        this.tip.text = Math.round(stage.tip) + "";
         this.manyi.text = stage.manyi + "";
         var list = JSON.parse(stageConf.customerSn);
         this.bumanyi.text = list.length - stage.manyi + "";
