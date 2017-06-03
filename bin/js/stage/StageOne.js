@@ -73,7 +73,7 @@ var StageOne = (function (_super) {
                 kitchenware.pos(pos.x, pos.y);
                 kitchenware.scale(pos.scaleX, pos.scaleY);
                 kitchenware.pivot(pos.pivotX, pos.pivotY);
-                _this.addChild(kitchenware);
+                _this.addChildAt(kitchenware, 3);
                 //如果是放置台则加到列表里
                 switch (pos.class) {
                     case "Plate": {

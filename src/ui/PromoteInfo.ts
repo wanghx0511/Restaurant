@@ -102,7 +102,7 @@ class PromoteInfo extends ui.FurniturePromoteUI{
             }
             var nameLevel = this.level + 1;
             kitchenware.name = "kitchenware_"+this.sn+"_"+nameLevel;
-            this.parent.addChild(kitchenware);
+            this.parent.addChildAt(kitchenware, 3);
         }
         upgradeJson[this.type][this.sn] = this.level + 1;
         Laya.LocalStorage.setJSON("upgrade", upgradeJson);

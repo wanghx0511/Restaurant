@@ -60,7 +60,7 @@ class Upgrade extends Laya.Sprite{
                     this.addChild(ui);
                 }
                 kitchenware.name = "kitchenware_"+sn+"_"+p;
-                this.addChild(kitchenware);
+                this.addChildAt(kitchenware, 3);
             }
             
         }
