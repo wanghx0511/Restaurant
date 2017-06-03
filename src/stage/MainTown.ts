@@ -6,6 +6,17 @@ class MainTown extends Laya.Sprite{
 
     constructor() {
         super();
+
+        this.initImg();
+
+        Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
+    }
+
+    //提出来，退出升级的时候调用一下
+    public initImg() : void {
+        //先清掉，在重新生成
+        this.removeChildren();
+
         //场景图
         var bg = new Laya.Sprite();
         bg.loadImage("res/atlas/beijing.jpg");
@@ -19,13 +30,6 @@ class MainTown extends Laya.Sprite{
         caozuotai.pos(-297, 490);
         this.addChild(caozuotai);
 
-        this.initImg();
-
-        Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
-    }
-
-    //提出来，退出升级的时候调用一下
-    public initImg() : void {
         var confStage = this.configStage.get(1);
         var upgradeJson = Laya.LocalStorage.getJSON("upgrade");
         if(upgradeJson == null) upgradeJson = StageManager.data;

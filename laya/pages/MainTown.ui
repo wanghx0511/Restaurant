@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":13,
-    "selecteID":24,
+    "selectedBox":10,
+    "selecteID":19,
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
     "label":"View",
@@ -967,7 +967,7 @@
             "props":{"y":158.00000000000003,"x":19.999999999999908,"width":136,"name":"Left","height":881},
             "nodeParent":1,
             "label":"Sprite(Left)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
@@ -981,6 +981,7 @@
             "compId":10,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":-2.0000000000000284,"x":4.000000000000075,"skin":"ui/MainTown/btSignIn.png","name":"SignIn"},
                     "nodeParent":10,
@@ -1001,6 +1002,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":121.99999999999997,"x":4.000000000000075,"skin":"ui/MainTown/btTask.png","name":"Task"},
                     "nodeParent":10,
@@ -1021,6 +1023,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":248.99999999999997,"x":4.000000000000075,"skin":"ui/MainTown/btActivity.png","name":"Activity"},
                     "nodeParent":10,
@@ -1042,6 +1045,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":369,"x":9.000000000000167,"skin":"ui/MainTown/btEmail.png","name":"Email"},
                     "nodeParent":10,
@@ -1062,6 +1066,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":497.9999999999999,"x":3.000000000000057,"skin":"ui/MainTown/btFriend.png","name":"Friend"},
                     "nodeParent":10,
@@ -1082,10 +1087,11 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":623.9999999999999,"x":4.000000000000075,"skin":"ui/MainTown/btSetting.png","name":"Setting"},
+                    "props":{"y":623.9999999999999,"x":4.000000000000075,"var":"setting","skin":"ui/MainTown/btSetting.png","name":"Setting"},
                     "nodeParent":10,
-                    "label":"Image(Setting)",
+                    "label":"Image(setting)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -1102,6 +1108,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":749.9999999999999,"x":4.000000000000075,"skin":"ui/MainTown/btBank.png","name":"Rank"},
                     "nodeParent":10,

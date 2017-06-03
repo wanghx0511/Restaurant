@@ -31,6 +31,8 @@ var StageMain = (function (_super) {
         //事件
         _this.mainTownInfo.start.on(Laya.Event.CLICK, _this, _this.onStageClick);
         _this.mainTownInfo.upgrade.on(Laya.Event.CLICK, _this, _this.onUpgradeClick);
+        //临时测试，在点设置的时候清数据
+        _this.mainTownInfo.setting.on(Laya.Event.CLICK, _this, _this.onClearLocalData);
         return _this;
     }
     StageMain.prototype.onStageClick = function (e) {
@@ -45,6 +47,11 @@ var StageMain = (function (_super) {
     StageMain.prototype.onUpgradeClick = function (e) {
         var upgrade = new Upgrade(1);
         this.addChild(upgrade);
+    };
+    StageMain.prototype.onClearLocalData = function (e) {
+        Laya.LocalStorage.clear();
+        var mainTown = this.getChildByName("mainTown");
+        mainTown.initImg();
     };
     return StageMain;
 }(Laya.Sprite));

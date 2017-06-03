@@ -31,6 +31,8 @@ class StageMain extends Laya.Sprite{
         //事件
         this.mainTownInfo.start.on(Laya.Event.CLICK, this, this.onStageClick);
         this.mainTownInfo.upgrade.on(Laya.Event.CLICK, this, this.onUpgradeClick);
+        //临时测试，在点设置的时候清数据
+        this.mainTownInfo.setting.on(Laya.Event.CLICK, this, this.onClearLocalData);
     }
 
     private onStageClick(e: Laya.Event) {
@@ -46,6 +48,12 @@ class StageMain extends Laya.Sprite{
     private onUpgradeClick(e: Laya.Event){
         var upgrade = new Upgrade(1);
         this.addChild(upgrade);
+    }
+
+    private onClearLocalData(e : Laya.Event) {
+        Laya.LocalStorage.clear();
+        var mainTown = this.getChildByName("mainTown") as MainTown;
+        mainTown.initImg();
     }
 
 }

@@ -10,23 +10,25 @@ var MainTown = (function (_super) {
         _this.configStage = new ConfigStage();
         _this.configItem = new ConfigItem();
         _this.configKitchenware = new ConfigKitchenware();
-        //场景图
-        var bg = new Laya.Sprite();
-        bg.loadImage("res/atlas/beijing.jpg");
-        bg.pos(-488, 0);
-        _this.addChild(bg);
-        _this.name = "mainTown";
-        //操作台
-        var caozuotai = new Laya.Sprite();
-        caozuotai.loadImage("res/atlas/caozuotai.png");
-        caozuotai.pos(-297, 490);
-        _this.addChild(caozuotai);
         _this.initImg();
         Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
         return _this;
     }
     //提出来，退出升级的时候调用一下
     MainTown.prototype.initImg = function () {
+        //先清掉，在重新生成
+        this.removeChildren();
+        //场景图
+        var bg = new Laya.Sprite();
+        bg.loadImage("res/atlas/beijing.jpg");
+        bg.pos(-488, 0);
+        this.addChild(bg);
+        this.name = "mainTown";
+        //操作台
+        var caozuotai = new Laya.Sprite();
+        caozuotai.loadImage("res/atlas/caozuotai.png");
+        caozuotai.pos(-297, 490);
+        this.addChild(caozuotai);
         var confStage = this.configStage.get(1);
         var upgradeJson = Laya.LocalStorage.getJSON("upgrade");
         if (upgradeJson == null)
