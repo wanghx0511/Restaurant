@@ -5,17 +5,17 @@ class StageMain extends Laya.Sprite{
 
     constructor() {
         super();
-        //场景图
-        var bg = new Laya.Sprite();
-        bg.loadImage("res/atlas/beijing.jpg");
-        bg.pos(-488, 0);
-        this.addChild(bg);
+        // //场景图
+        // var bg = new Laya.Sprite();
+        // bg.loadImage("res/atlas/beijing.jpg");
+        // bg.pos(-488, 0);
+        // this.addChild(bg);
 
-        //操作台
-        var caozuotai = new Laya.Sprite();
-        caozuotai.loadImage("res/atlas/caozuotai.png");
-        caozuotai.pos(-275, 490);
-        this.addChild(caozuotai);
+        // //操作台
+        // var caozuotai = new Laya.Sprite();
+        // caozuotai.loadImage("res/atlas/caozuotai.png");
+        // caozuotai.pos(-275, 490);
+        // this.addChild(caozuotai);
 
         //主界面
         var mainTown = new MainTown();

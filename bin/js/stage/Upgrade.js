@@ -92,6 +92,8 @@ var Upgrade = (function (_super) {
         return _this;
     }
     Upgrade.prototype.onClose = function () {
+        var mainTown = this.parent.getChildByName("mainTown");
+        mainTown.initImg();
         this.removeSelf();
         // Laya.LocalStorage.removeItem("upgrade");
     };

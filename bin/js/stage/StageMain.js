@@ -8,16 +8,16 @@ var StageMain = (function (_super) {
     __extends(StageMain, _super);
     function StageMain() {
         var _this = _super.call(this) || this;
-        //场景图
-        var bg = new Laya.Sprite();
-        bg.loadImage("res/atlas/beijing.jpg");
-        bg.pos(-488, 0);
-        _this.addChild(bg);
-        //操作台
-        var caozuotai = new Laya.Sprite();
-        caozuotai.loadImage("res/atlas/caozuotai.png");
-        caozuotai.pos(-275, 490);
-        _this.addChild(caozuotai);
+        // //场景图
+        // var bg = new Laya.Sprite();
+        // bg.loadImage("res/atlas/beijing.jpg");
+        // bg.pos(-488, 0);
+        // this.addChild(bg);
+        // //操作台
+        // var caozuotai = new Laya.Sprite();
+        // caozuotai.loadImage("res/atlas/caozuotai.png");
+        // caozuotai.pos(-275, 490);
+        // this.addChild(caozuotai);
         //主界面
         var mainTown = new MainTown();
         _this.addChild(mainTown);
