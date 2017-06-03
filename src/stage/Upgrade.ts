@@ -93,6 +93,8 @@ class Upgrade extends Laya.Sprite{
     }
 
     private onClose(){
+        var mainTown = this.parent.getChildByName("mainTown") as MainTown;
+        mainTown.initImg();
         this.removeSelf();
         // Laya.LocalStorage.removeItem("upgrade");
     }

@@ -10,20 +10,27 @@ var MainTown = (function (_super) {
         _this.configStage = new ConfigStage();
         _this.configItem = new ConfigItem();
         _this.configKitchenware = new ConfigKitchenware();
-        var confStage = _this.configStage.get(1);
-        var upgradeJson = Laya.LocalStorage.getJSON("upgrade");
-        if (upgradeJson == null)
-            upgradeJson = StageManager.data;
         //场景图
         var bg = new Laya.Sprite();
         bg.loadImage("res/atlas/beijing.jpg");
         bg.pos(-488, 0);
         _this.addChild(bg);
+        _this.name = "mainTown";
         //操作台
         var caozuotai = new Laya.Sprite();
         caozuotai.loadImage("res/atlas/caozuotai.png");
         caozuotai.pos(-297, 490);
         _this.addChild(caozuotai);
+        _this.initImg();
+        Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
+        return _this;
+    }
+    //提出来，退出升级的时候调用一下
+    MainTown.prototype.initImg = function () {
+        var confStage = this.configStage.get(1);
+        var upgradeJson = Laya.LocalStorage.getJSON("upgrade");
+        if (upgradeJson == null)
+            upgradeJson = StageManager.data;
         //图片形式生成餐具
         //初始化关卡物品
         var kitchenwares = eval(confStage.initKitchenware);
@@ -31,7 +38,7 @@ var MainTown = (function (_super) {
         for (var _i = 0, kitchenwares_1 = kitchenwares; _i < kitchenwares_1.length; _i++) {
             var sn = kitchenwares_1[_i];
             var level = upgradeJson["kitchenware"][sn];
-            var configKitchenware = _this.configKitchenware.getBy("id", sn, "level", level);
+            var configKitchenware = this.configKitchenware.getBy("id", sn, "level", level);
             for (var p = 1; p <= configKitchenware.spacenum; p++) {
                 var pos = configPos.getBy("type", 1, "itemSn", sn, "level", p);
                 if (pos == null)
@@ -41,7 +48,7 @@ var MainTown = (function (_super) {
                 kitchenware.pos(pos.x, pos.y);
                 kitchenware.scale(pos.scaleX, pos.scaleY);
                 kitchenware.pivot(pos.pivotX, pos.pivotY);
-                _this.addChildAt(kitchenware, 2);
+                this.addChildAt(kitchenware, 2);
             }
         }
         var items = eval(confStage.initItem);
@@ -51,17 +58,15 @@ var MainTown = (function (_super) {
             var pos = configPos.getBy("type", 2, "itemSn", itemSn, "level", level);
             if (pos == null)
                 continue;
-            var configItem = _this.configItem.getBy("itemSn", itemSn, "level", level);
+            var configItem = this.configItem.getBy("itemSn", itemSn, "level", level);
             var item = new Laya.Image(); //Item(configItem);
             item.loadImage("stage/" + configItem.picture);
             item.pos(pos.x, pos.y);
             item.scale(pos.scaleX, pos.scaleY);
             item.pivot(pos.pivotX, pos.pivotY);
-            _this.addChild(item);
+            this.addChild(item);
         }
-        Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
-        return _this;
-    }
+    };
     return MainTown;
 }(Laya.Sprite));
 //# sourceMappingURL=MainTown.js.map
