@@ -60,43 +60,51 @@ class StageOne extends Laya.Sprite{
         caozuotai.pos(-297, 490);
         this.addChild(caozuotai);
 
+        //拿本地存储的等级
+        var upgradeJson = Laya.LocalStorage.getJSON("upgrade");
+        if(upgradeJson == null) upgradeJson = StageManager.data;
         //初始化关卡物品
         var kitchenwares = eval(confStage.initKitchenware);
         var configPos = new ConfigPos();
         for(var sn of kitchenwares) {
-            var level = StageManager.data["kitchenware"][sn];
-            var pos = configPos.getBy("type", 1, "itemSn", sn, "level", level);
-            if(pos == null) continue;
-            var kitchenware = eval("new " + pos.class + "(" + sn + "," + 1 + ")");
-            kitchenware.pos(pos.x, pos.y);
-            kitchenware.scale(pos.scaleX, pos.scaleY);
-            kitchenware.pivot(pos.pivotX, pos.pivotY);
-            this.addChild(kitchenware);
-            //如果是放置台则加到列表里
-            switch(pos.class) {
-                case "Plate": {
-                    this.plates.push(kitchenware);
-                    break;
+            var level = upgradeJson["kitchenware"][sn];
+            var configKitchenware = this.configKitchenware.getBy("id", sn, "level", level);
+            for(var p=1; p <= configKitchenware.spacenum; p++){
+                var pos = configPos.getBy("type", 1, "itemSn", sn, "level", p);
+                if(pos == null) continue;
+                var kitchenware = eval("new " + pos.class + "(" + sn + "," + 1 + ")");
+                kitchenware.pos(pos.x, pos.y);
+                kitchenware.scale(pos.scaleX, pos.scaleY);
+                kitchenware.pivot(pos.pivotX, pos.pivotY);
+                this.addChild(kitchenware);
+
+                //如果是放置台则加到列表里
+                switch(pos.class) {
+                    case "Plate": {
+                        this.plates.push(kitchenware);
+                        break;
+                    }
+                    case "Pot": {
+                        this.pots.push(kitchenware);
+                        break;
+                    }
+                    case "Crisper": {
+                        this.crisper.push(kitchenware);
+                        break;
+                    }
+                    case "Trash": {
+                        this.trashCanObj = new Trash();
+                        break;
+                    }
+                    
                 }
-                case "Pot": {
-                    this.pots.push(kitchenware);
-                    break;
-                }
-                case "Crisper": {
-                    this.crisper.push(kitchenware);
-                    break;
-                }
-                case "Trash": {
-                    this.trashCanObj = new Trash();
-                    break;
-                }
-                
             }
+            
         }
 
         var items = eval(confStage.initItem);
         for(var itemSn of items) {
-            level = StageManager.data["kitchenware"][sn];
+            level = upgradeJson["kitchenware"][sn];
             var pos = configPos.getBy("type", 2, "itemSn", itemSn, "level", level);
             if(pos == null) continue;
             var configItem = this.configItem.getBy("itemSn", itemSn, "level", level);

@@ -54,44 +54,51 @@ var StageOne = (function (_super) {
         caozuotai.loadImage("res/atlas/caozuotai.png");
         caozuotai.pos(-297, 490);
         _this.addChild(caozuotai);
+        //拿本地存储的等级
+        var upgradeJson = Laya.LocalStorage.getJSON("upgrade");
+        if (upgradeJson == null)
+            upgradeJson = StageManager.data;
         //初始化关卡物品
         var kitchenwares = eval(confStage.initKitchenware);
         var configPos = new ConfigPos();
         for (var _i = 0, kitchenwares_1 = kitchenwares; _i < kitchenwares_1.length; _i++) {
             var sn = kitchenwares_1[_i];
-            var level = StageManager.data["kitchenware"][sn];
-            var pos = configPos.getBy("type", 1, "itemSn", sn, "level", level);
-            if (pos == null)
-                continue;
-            var kitchenware = eval("new " + pos.class + "(" + sn + "," + 1 + ")");
-            kitchenware.pos(pos.x, pos.y);
-            kitchenware.scale(pos.scaleX, pos.scaleY);
-            kitchenware.pivot(pos.pivotX, pos.pivotY);
-            _this.addChild(kitchenware);
-            //如果是放置台则加到列表里
-            switch (pos.class) {
-                case "Plate": {
-                    _this.plates.push(kitchenware);
-                    break;
-                }
-                case "Pot": {
-                    _this.pots.push(kitchenware);
-                    break;
-                }
-                case "Crisper": {
-                    _this.crisper.push(kitchenware);
-                    break;
-                }
-                case "Trash": {
-                    _this.trashCanObj = new Trash();
-                    break;
+            var level = upgradeJson["kitchenware"][sn];
+            var configKitchenware = _this.configKitchenware.getBy("id", sn, "level", level);
+            for (var p = 1; p <= configKitchenware.spacenum; p++) {
+                var pos = configPos.getBy("type", 1, "itemSn", sn, "level", p);
+                if (pos == null)
+                    continue;
+                var kitchenware = eval("new " + pos.class + "(" + sn + "," + 1 + ")");
+                kitchenware.pos(pos.x, pos.y);
+                kitchenware.scale(pos.scaleX, pos.scaleY);
+                kitchenware.pivot(pos.pivotX, pos.pivotY);
+                _this.addChild(kitchenware);
+                //如果是放置台则加到列表里
+                switch (pos.class) {
+                    case "Plate": {
+                        _this.plates.push(kitchenware);
+                        break;
+                    }
+                    case "Pot": {
+                        _this.pots.push(kitchenware);
+                        break;
+                    }
+                    case "Crisper": {
+                        _this.crisper.push(kitchenware);
+                        break;
+                    }
+                    case "Trash": {
+                        _this.trashCanObj = new Trash();
+                        break;
+                    }
                 }
             }
         }
         var items = eval(confStage.initItem);
         for (var _a = 0, items_1 = items; _a < items_1.length; _a++) {
             var itemSn = items_1[_a];
-            level = StageManager.data["kitchenware"][sn];
+            level = upgradeJson["kitchenware"][sn];
             var pos = configPos.getBy("type", 2, "itemSn", itemSn, "level", level);
             if (pos == null)
                 continue;

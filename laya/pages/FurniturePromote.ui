@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":42,
+    "selecteID":1,
     "props":{"width":1316,"sceneColor":"#000000","height":919},
     "nodeParent":-1,
     "label":"View",
@@ -144,10 +144,10 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":4,"x":33,"skin":"ui/FurniturePromote/Star_bg.png","name":"star_bg1"},
+                            "props":{"y":4,"x":33,"var":"sb1","skin":"ui/FurniturePromote/Star_bg.png","name":"star_bg1"},
                             "nodeParent":31,
-                            "label":"Image(star_bg1)",
-                            "isOpen":false,
+                            "label":"Image(sb1)",
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -161,10 +161,11 @@
                             "compId":26,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
-                                    "props":{"y":8.000000000000114,"x":4.000000000000227,"skin":"ui/FurniturePromote/Star.png","name":"star1"},
+                                    "props":{"y":8.000000000000114,"x":4.000000000000227,"var":"s1","skin":"ui/FurniturePromote/Star.png","name":"star1"},
                                     "nodeParent":26,
-                                    "label":"Image(star1)",
+                                    "label":"Image(s1)",
                                     "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
@@ -181,15 +182,15 @@
                                         ],
                                     "$HIDDEN":false
                                 }],
-                            "$HIDDEN":false
+                            "$HIDDEN":true
                         },
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":4,"x":85,"width":46,"skin":"ui/FurniturePromote/Star_bg.png","name":"star_bg2","height":46},
+                            "props":{"y":4,"x":85,"width":46,"var":"sb2","skin":"ui/FurniturePromote/Star_bg.png","name":"star_bg2","height":46},
                             "nodeParent":31,
-                            "label":"Image(star_bg2)",
-                            "isOpen":false,
+                            "label":"Image(sb2)",
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -203,10 +204,11 @@
                             "compId":35,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
-                                    "props":{"y":8.000000000000114,"x":4.000000000000227,"skin":"ui/FurniturePromote/Star.png","name":"star1"},
+                                    "props":{"y":8.000000000000114,"x":4.000000000000227,"var":"s2","skin":"ui/FurniturePromote/Star.png","name":"star1"},
                                     "nodeParent":35,
-                                    "label":"Image(star1)",
+                                    "label":"Image(s2)",
                                     "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
@@ -228,10 +230,10 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":4,"x":132,"width":46,"skin":"ui/FurniturePromote/Star_bg.png","name":"star_bg2","height":46},
+                            "props":{"y":4,"x":132,"width":46,"var":"sb3","skin":"ui/FurniturePromote/Star_bg.png","name":"star_bg2","height":46},
                             "nodeParent":31,
-                            "label":"Image(star_bg2)",
-                            "isOpen":false,
+                            "label":"Image(sb3)",
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -245,10 +247,11 @@
                             "compId":37,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
-                                    "props":{"y":8.000000000000114,"x":4.000000000000227,"skin":"ui/FurniturePromote/Star.png","name":"star1"},
+                                    "props":{"y":8.000000000000114,"x":4.000000000000227,"var":"s3","skin":"ui/FurniturePromote/Star.png","name":"star1"},
                                     "nodeParent":37,
-                                    "label":"Image(star1)",
+                                    "label":"Image(s3)",
                                     "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
@@ -270,10 +273,10 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":8,"x":35,"skin":"ui/FurniturePromote/Round_bg.png","name":"round_bg1"},
+                            "props":{"y":8,"x":35,"var":"pb1","skin":"ui/FurniturePromote/Round_bg.png","name":"round_bg1"},
                             "nodeParent":31,
-                            "label":"Image(round_bg1)",
-                            "isOpen":false,
+                            "label":"Image(pb1)",
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -287,10 +290,11 @@
                             "compId":33,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
-                                    "props":{"y":7.000000000000114,"x":4.999999999999886,"skin":"ui/FurniturePromote/Round.png","name":"round1"},
+                                    "props":{"y":7.000000000000114,"x":4.999999999999886,"var":"p1","skin":"ui/FurniturePromote/Round.png","name":"round1"},
                                     "nodeParent":33,
-                                    "label":"Image(round1)",
+                                    "label":"Image(p1)",
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
@@ -306,15 +310,15 @@
                                         ],
                                     "$HIDDEN":false
                                 }],
-                            "$HIDDEN":true
+                            "$HIDDEN":false
                         },
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":8,"x":86.00000000000011,"skin":"ui/FurniturePromote/Round_bg.png","name":"round_bg2"},
+                            "props":{"y":8,"x":86.00000000000011,"var":"pb2","skin":"ui/FurniturePromote/Round_bg.png","name":"round_bg2"},
                             "nodeParent":31,
-                            "label":"Image(round_bg2)",
-                            "isOpen":false,
+                            "label":"Image(pb2)",
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -328,10 +332,11 @@
                             "compId":29,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
-                                    "props":{"y":6.000000000000114,"x":4.999999999999773,"skin":"ui/FurniturePromote/Round.png","name":"round2"},
+                                    "props":{"y":6.000000000000114,"x":4.999999999999773,"var":"p2","skin":"ui/FurniturePromote/Round.png","name":"round2"},
                                     "nodeParent":29,
-                                    "label":"Image(round2)",
+                                    "label":"Image(p2)",
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
@@ -352,10 +357,10 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":8,"x":135,"skin":"ui/FurniturePromote/Round_bg.png","name":"round_bg3"},
+                            "props":{"y":8,"x":135,"var":"pb3","skin":"ui/FurniturePromote/Round_bg.png","name":"round_bg3"},
                             "nodeParent":31,
-                            "label":"Image(round_bg3)",
-                            "isOpen":false,
+                            "label":"Image(pb3)",
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -369,10 +374,11 @@
                             "compId":30,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
-                                    "props":{"y":6,"x":4.999999999999886,"skin":"ui/FurniturePromote/Round.png","name":"round3"},
+                                    "props":{"y":6,"x":4.999999999999886,"var":"p3","skin":"ui/FurniturePromote/Round.png","name":"round3"},
                                     "nodeParent":30,
-                                    "label":"Image(round3)",
+                                    "label":"Image(p3)",
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
