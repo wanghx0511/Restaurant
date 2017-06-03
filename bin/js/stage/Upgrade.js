@@ -60,7 +60,7 @@ var Upgrade = (function (_super) {
                     _this.addChild(ui);
                 }
                 kitchenware.name = "kitchenware_" + sn + "_" + p;
-                _this.addChild(kitchenware);
+                _this.addChildAt(kitchenware, 3);
             }
         }
         var items = eval(confStage.initItem);

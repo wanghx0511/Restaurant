@@ -11,6 +11,9 @@ var MainTown = (function (_super) {
         _this.configItem = new ConfigItem();
         _this.configKitchenware = new ConfigKitchenware();
         var confStage = _this.configStage.get(1);
+        var upgradeJson = Laya.LocalStorage.getJSON("upgrade");
+        if (upgradeJson == null)
+            upgradeJson = StageManager.data;
         //场景图
         var bg = new Laya.Sprite();
         bg.loadImage("res/atlas/beijing.jpg");
@@ -27,22 +30,24 @@ var MainTown = (function (_super) {
         var configPos = new ConfigPos();
         for (var _i = 0, kitchenwares_1 = kitchenwares; _i < kitchenwares_1.length; _i++) {
             var sn = kitchenwares_1[_i];
-            var level = StageManager.data["kitchenware"][sn];
-            var pos = configPos.getBy("type", 1, "itemSn", sn, "level", level);
-            if (pos == null)
-                continue;
-            var confKitchenware = _this.configKitchenware.getBy("id", sn, "level", level);
-            var kitchenware = new Laya.Image(); //eval("new " + pos.class + "(" + sn + "," + 1 + ")");
-            kitchenware.loadImage("stage/" + confKitchenware.picture);
-            kitchenware.pos(pos.x, pos.y);
-            kitchenware.scale(pos.scaleX, pos.scaleY);
-            kitchenware.pivot(pos.pivotX, pos.pivotY);
-            _this.addChild(kitchenware);
+            var level = upgradeJson["kitchenware"][sn];
+            var configKitchenware = _this.configKitchenware.getBy("id", sn, "level", level);
+            for (var p = 1; p <= configKitchenware.spacenum; p++) {
+                var pos = configPos.getBy("type", 1, "itemSn", sn, "level", p);
+                if (pos == null)
+                    continue;
+                var kitchenware = new Laya.Image(); //eval("new " + pos.class + "(" + sn + "," + 1 + ")");
+                kitchenware.loadImage("stage/" + configKitchenware.picture);
+                kitchenware.pos(pos.x, pos.y);
+                kitchenware.scale(pos.scaleX, pos.scaleY);
+                kitchenware.pivot(pos.pivotX, pos.pivotY);
+                _this.addChildAt(kitchenware, 2);
+            }
         }
         var items = eval(confStage.initItem);
         for (var _a = 0, items_1 = items; _a < items_1.length; _a++) {
             var itemSn = items_1[_a];
-            level = StageManager.data["kitchenware"][sn];
+            level = upgradeJson["kitchenware"][sn];
             var pos = configPos.getBy("type", 2, "itemSn", itemSn, "level", level);
             if (pos == null)
                 continue;
