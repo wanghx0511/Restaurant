@@ -84,6 +84,7 @@ class StageSettlementInfo extends ui.StageSettlementUI{
 
     private onClose() {
         StageManager.stage.removeSelf();
+        Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
     }
 
     private onAgain() {

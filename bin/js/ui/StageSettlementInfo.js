@@ -76,6 +76,7 @@ var StageSettlementInfo = (function (_super) {
     };
     StageSettlementInfo.prototype.onClose = function () {
         StageManager.stage.removeSelf();
+        Laya.SoundManager.playMusic("res/music/MainBGM.mp3");
     };
     StageSettlementInfo.prototype.onAgain = function () {
         StageManager.stage.removeSelf();
