@@ -10,18 +10,32 @@ var PreUpgradeInfo = (function (_super) {
         _this.on("click", _this, _this.onClick);
         return _this;
     }
-    PreUpgradeInfo.prototype.setParam = function (type, sn, level, upgrade) {
+    PreUpgradeInfo.prototype.setUpgrade = function (upgrade) {
+        this.upgrade = upgrade;
+    };
+    PreUpgradeInfo.prototype.setParam = function (type, sn, level) {
         this.type = type;
         this.sn = sn;
         this.level = level;
-        this.upgrade = upgrade;
+        this.p1.visible = false;
+        this.p2.visible = false;
+        this.p3.visible = false;
+        if (level >= 2) {
+            this.p1.visible = true;
+        }
+        if (level >= 3) {
+            this.p2.visible = true;
+        }
+        if (level >= 4) {
+            this.p3.visible = true;
+        }
     };
     PreUpgradeInfo.prototype.onClick = function () {
         if (this.upgrade.getStatus())
             return;
         this.visible = false;
         var upgradeInfo = new UpgradeInfo();
-        upgradeInfo.setParam(this.type, this.sn, this);
+        upgradeInfo.setParam(this.type, this.sn, this, this.level);
         upgradeInfo.pos(this.x, this.y);
         upgradeInfo.pivot(this.pivotX, this.pivotY);
         this.parent.addChild(upgradeInfo);

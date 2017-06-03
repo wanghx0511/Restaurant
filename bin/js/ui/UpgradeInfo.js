@@ -12,14 +12,31 @@ var UpgradeInfo = (function (_super) {
         _this.on("click", _this, _this.onStrengthClick);
         return _this;
     }
-    UpgradeInfo.prototype.setParam = function (type, sn, sUi) {
+    UpgradeInfo.prototype.setParam = function (type, sn, sUi, level) {
         this.type = type;
         this.sn = sn;
         this.sUi = sUi;
+        this.level = level;
+        this.p1.visible = false;
+        this.p2.visible = false;
+        this.p3.visible = false;
+        this.p4.visible = false;
+        if (level >= 2) {
+            this.p1.visible = true;
+        }
+        if (level >= 3) {
+            this.p2.visible = true;
+        }
+        if (level >= 4) {
+            this.p3.visible = true;
+        }
+        if (level >= 5) {
+            this.p4.visible = true;
+        }
     };
     UpgradeInfo.prototype.onUpgradeClick = function () {
         this.promoteInfo = new PromoteInfo();
-        this.promoteInfo.setParam(this.type, this.sn, this.sUi.upgrade);
+        this.promoteInfo.setParam(this.type, this.sn, this.sUi.upgrade, this.level, this.sUi);
         this.promoteInfo.pos(Laya.stage.width / 2, Laya.stage.height / 2);
         this.promoteInfo.pivot(this.promoteInfo.width / 2, this.promoteInfo.height / 2);
         this.parent.addChild(this.promoteInfo);
