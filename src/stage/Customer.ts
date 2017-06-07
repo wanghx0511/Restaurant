@@ -29,6 +29,10 @@ class Customer extends Laya.Sprite{
     private value : number = 1;
     //过程条
     private bar : Laya.ProgressBar;
+    //jump状态
+    private jumpStatus : boolean = true;
+    //停止蹦跳
+    private stopJump : boolean = false;
 
     constructor(confCustomer : any, posX : number) {
         super();
@@ -38,14 +42,41 @@ class Customer extends Laya.Sprite{
         this.loadImage(this.customerPic);
         this.useX = posX;
         this.on("click", this, this.onCustomerClick);
-        
+        // this.timer.frameLoop(15, this, this.up);
+        // this.timer.frameLoop(30, this, this.down);
+        this.timer.loop(40, this, this.jump);
     }
+
+    public jump(){
+        if(this.stopJump) return;
+        if(this.jumpStatus) {
+            this.y += 3;
+        } else {
+            this.y -= 3;
+        }
+        if(this.y >= 185){
+            this.jumpStatus = false;
+        } 
+        else if (this.y <= 155) {
+            this.jumpStatus = true;
+        }
+    }
+
+    // public up(){
+    //     // Laya.Tween.to(this, this.y + 50, 125);
+    //     this.y = this.y + 50;
+    // }
+    // public down() {
+    //     // Laya.Tween.to(this, this.y -100, 250);
+    //     this.y = this.y - 100;
+    // }
 
     public haveTips() : boolean {
         return this.tips;
     }
 
     public addBubble () {
+        this.stopJump = true;
         //气泡
         this.bubble = new Laya.Sprite;
         this.bubble.loadImage("customer/" + this.confCustomer.bubblePic);
@@ -116,6 +147,7 @@ class Customer extends Laya.Sprite{
             this.bubble.destroy();
             Laya.Tween.to(this, {x : Laya.stage.width}, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.destroy));
         }
+        this.stopJump = false;
     }
 
     private onCustomerClick(e : Laya.Event) {
@@ -174,7 +206,7 @@ class Customer extends Laya.Sprite{
         //完成了，去掉客人图，换成钱图
         Laya.Tween.to(this, {x : Laya.stage.width}, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.mayDestory,[2]));
         StageManager.stage.addCashBag(this);
-
+        this.stopJump = false;
         // this.graphics.clear();
         // if(this.tips) {
         //     this.loadImage(this.cashTipsPic);

@@ -25,18 +25,50 @@ var Customer = (function (_super) {
         _this.isRunning = false;
         //等待过程条的value
         _this.value = 1;
+        //jump状态
+        _this.jumpStatus = true;
+        //停止蹦跳
+        _this.stopJump = false;
         //顾客
         _this.confCustomer = confCustomer;
         _this.customerPic = "customer/" + _this.confCustomer.picture;
         _this.loadImage(_this.customerPic);
         _this.useX = posX;
         _this.on("click", _this, _this.onCustomerClick);
+        // this.timer.frameLoop(15, this, this.up);
+        // this.timer.frameLoop(30, this, this.down);
+        _this.timer.loop(40, _this, _this.jump);
         return _this;
     }
+    Customer.prototype.jump = function () {
+        if (this.stopJump)
+            return;
+        if (this.jumpStatus) {
+            this.y += 3;
+        }
+        else {
+            this.y -= 3;
+        }
+        if (this.y >= 185) {
+            this.jumpStatus = false;
+        }
+        else if (this.y <= 155) {
+            this.jumpStatus = true;
+        }
+    };
+    // public up(){
+    //     // Laya.Tween.to(this, this.y + 50, 125);
+    //     this.y = this.y + 50;
+    // }
+    // public down() {
+    //     // Laya.Tween.to(this, this.y -100, 250);
+    //     this.y = this.y - 100;
+    // }
     Customer.prototype.haveTips = function () {
         return this.tips;
     };
     Customer.prototype.addBubble = function () {
+        this.stopJump = true;
         //气泡
         this.bubble = new Laya.Sprite;
         this.bubble.loadImage("customer/" + this.confCustomer.bubblePic);
@@ -105,6 +137,7 @@ var Customer = (function (_super) {
             this.bubble.destroy();
             Laya.Tween.to(this, { x: Laya.stage.width }, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.destroy));
         }
+        this.stopJump = false;
     };
     Customer.prototype.onCustomerClick = function (e) {
         //当前选中的食物，给顾客了，瞎逼点的直接return
@@ -170,6 +203,7 @@ var Customer = (function (_super) {
         //完成了，去掉客人图，换成钱图
         Laya.Tween.to(this, { x: Laya.stage.width }, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.mayDestory, [2]));
         StageManager.stage.addCashBag(this);
+        this.stopJump = false;
         // this.graphics.clear();
         // if(this.tips) {
         //     this.loadImage(this.cashTipsPic);
