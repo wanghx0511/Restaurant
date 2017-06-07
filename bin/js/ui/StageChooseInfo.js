@@ -9,6 +9,7 @@ var StageChooseInfo = (function (_super) {
         var _this = _super.call(this) || this;
         _this.initStageList();
         _this.close.on(Laya.Event.CLICK, _this, _this.onClose);
+        _this.panel.vScrollBarSkin = "";
         return _this;
     }
     StageChooseInfo.prototype.onClose = function () {
@@ -19,15 +20,15 @@ var StageChooseInfo = (function (_super) {
         var confStage = new ConfigStage();
         var confJson = confStage.findAll();
         var i = 0;
-        var initX = 53;
-        var initY = 132;
+        var initX = 15;
+        var initY = 30;
         for (var _i = 0, confJson_1 = confJson; _i < confJson_1.length; _i++) {
             var conf = confJson_1[_i];
             this.createStageInfo(conf.sn, initX, initY);
             initX += 250;
             i++;
             if (i % 5 == 0) {
-                initX = 53;
+                initX = 15;
                 initY += 230;
             }
         }
@@ -58,7 +59,7 @@ var StageChooseInfo = (function (_super) {
         stageInfo.stageSn.index = stageSn;
         stageInfo.pos(initX, initY);
         stageInfo.size(stageInfo.width, stageInfo.height);
-        this.addChild(stageInfo);
+        this.panel.addChild(stageInfo);
     };
     StageChooseInfo.prototype.onClick = function (stageSn) {
         this.removeSelf();

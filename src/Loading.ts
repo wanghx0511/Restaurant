@@ -14,7 +14,7 @@ class Loading{
         this.context = context;
 
         this.bg = new Laya.Sprite();
-        this.bg.loadImage("res/atlas/loading.png");
+        this.bg.loadImage("res/atlas/Loading.png");
         Laya.stage.addChild(this.bg);
         //显示进度条图片
         this.progressShow();

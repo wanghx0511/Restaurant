@@ -20,7 +20,7 @@ class GameMain{
         var pro_res:Array<any> = [
             {url:"res/atlas/progress_time$bar.png",type:Laya.Loader.IMAGE},   //进度条的图片资源位置和类型
             {url:"res/atlas/progress_time.png",type:Laya.Loader.IMAGE},      //进度条的图片资源位置和类型 
-            {url:"res/atlas/loading.png",type:Laya.Loader.IMAGE},      //进度条的图片资源位置和类型
+            {url:"res/atlas/Loading.png",type:Laya.Loader.IMAGE},      //进度条的图片资源位置和类型
         ];
         //加载完进度条后执行onProLoaded方法
         Laya.loader.load(pro_res, Laya.Handler.create(this,this.onProLoaded));

@@ -33,6 +33,7 @@ class Customer extends Laya.Sprite{
     private jumpStatus : boolean = true;
     //停止蹦跳
     private stopJump : boolean = false;
+    private ani: Laya.Animation;
 
     constructor(confCustomer : any, posX : number) {
         super();
