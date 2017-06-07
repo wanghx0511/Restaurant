@@ -14,7 +14,7 @@ class Loading{
         this.context = context;
 
         this.bg = new Laya.Sprite();
-        this.bg.loadImage("res/atlas/loading.jpg");
+        this.bg.loadImage("res/atlas/loading.png");
         Laya.stage.addChild(this.bg);
         //显示进度条图片
         this.progressShow();
@@ -39,6 +39,7 @@ class Loading{
         //和text一样，需要先new一个进度条对象
         this.progressBar = new Laya.ProgressBar("res/atlas/progress_time.png");
         this.progressBar.width = 800;
+        this.progressBar.height = 40;
         this.progressBar.x = (Laya.stage.width - this.progressBar.width) / 2;
 		this.progressBar.y = Laya.stage.height / 1.5;
         this.progressBar.sizeGrid = "5,5,5,5";
