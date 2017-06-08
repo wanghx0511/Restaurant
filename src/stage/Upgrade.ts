@@ -75,6 +75,7 @@ class Upgrade extends Laya.Sprite{
         }
 
         var items = eval(confStage.initItem);
+        var posX = 0;var posY = 0; var scaleX=0; var scaleY = 0;var pivotX=0; var pivotY=0;
         for(var itemSn of items) {
             var level = upgradeJson["kitchenware"][itemSn];
             var pos = configPos.getBy("type", 2, "itemSn", itemSn, "level", level);
@@ -87,17 +88,25 @@ class Upgrade extends Laya.Sprite{
             item.pivot(pos.pivotX, pos.pivotY);
             //在level=1的东西下边加一个ui
             if(level == 1) {
-                var ui = new PreUpgradeInfo();
-                ui.pos(pos.uX, pos.uY);
-                ui.scale(pos.uScaleX, pos.uScaleY);
-                ui.pivot(pos.uPivotX, pos.uPivotY);
-                ui.setParam("item", itemSn, level);
-                ui.setUpgrade(this);
-                this.addChild(ui);
+                posX = pos.uX; posY = pos.uY;scaleX=pos.uScaleX; scaleY=pos.uScaleY;pivotX=pos.uPivotX;pivotY=pos.uPivotY;
+                // var ui = new PreUpgradeInfo();
+                // ui.pos(pos.uX, pos.uY);
+                // ui.scale(pos.uScaleX, pos.uScaleY);
+                // ui.pivot(pos.uPivotX, pos.uPivotY);
+                // ui.setParam("item", itemSn, level);
+                // ui.setUpgrade(this);
+                // this.addChild(ui);
             }
             item.name = "item" + itemSn;
             this.addChild(item);
         }
+        var ui = new PreUpgradeInfo();
+        ui.pos(posX, posY);
+        ui.scale(scaleX, scaleY);
+        ui.pivot(pivotX, pivotY);
+        ui.setParam("item", itemSn, level);
+        ui.setUpgrade(this);
+        this.addChild(ui);
 
     }
 

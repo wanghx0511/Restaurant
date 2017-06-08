@@ -15,7 +15,7 @@ var GameMain = (function () {
         var pro_res = [
             { url: "res/atlas/progress_time$bar.png", type: Laya.Loader.IMAGE },
             { url: "res/atlas/progress_time.png", type: Laya.Loader.IMAGE },
-            { url: "res/atlas/loading.png", type: Laya.Loader.IMAGE },
+            { url: "res/atlas/Loading.png", type: Laya.Loader.IMAGE },
         ];
         //加载完进度条后执行onProLoaded方法
         Laya.loader.load(pro_res, Laya.Handler.create(this, this.onProLoaded));

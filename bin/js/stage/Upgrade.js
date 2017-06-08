@@ -76,6 +76,12 @@ var Upgrade = (function (_super) {
             _this.addChild(ui);
         }
         var items = eval(confStage.initItem);
+        var posX = 0;
+        var posY = 0;
+        var scaleX = 0;
+        var scaleY = 0;
+        var pivotX = 0;
+        var pivotY = 0;
         for (var _a = 0, items_1 = items; _a < items_1.length; _a++) {
             var itemSn = items_1[_a];
             var level = upgradeJson["kitchenware"][itemSn];
@@ -90,17 +96,23 @@ var Upgrade = (function (_super) {
             item.pivot(pos.pivotX, pos.pivotY);
             //在level=1的东西下边加一个ui
             if (level == 1) {
-                var ui = new PreUpgradeInfo();
-                ui.pos(pos.uX, pos.uY);
-                ui.scale(pos.uScaleX, pos.uScaleY);
-                ui.pivot(pos.uPivotX, pos.uPivotY);
-                ui.setParam("item", itemSn, level);
-                ui.setUpgrade(_this);
-                _this.addChild(ui);
+                posX = pos.uX;
+                posY = pos.uY;
+                scaleX = pos.uScaleX;
+                scaleY = pos.uScaleY;
+                pivotX = pos.uPivotX;
+                pivotY = pos.uPivotY;
             }
             item.name = "item" + itemSn;
             _this.addChild(item);
         }
+        var ui = new PreUpgradeInfo();
+        ui.pos(posX, posY);
+        ui.scale(scaleX, scaleY);
+        ui.pivot(pivotX, pivotY);
+        ui.setParam("item", itemSn, level);
+        ui.setUpgrade(_this);
+        _this.addChild(ui);
         return _this;
     }
     Upgrade.prototype.onClose = function () {

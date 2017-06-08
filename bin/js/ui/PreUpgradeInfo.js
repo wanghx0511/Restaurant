@@ -20,6 +20,7 @@ var PreUpgradeInfo = (function (_super) {
         this.p1.visible = false;
         this.p2.visible = false;
         this.p3.visible = false;
+        this.p4.visible = false;
         if (level >= 2) {
             this.p1.visible = true;
         }
@@ -28,6 +29,9 @@ var PreUpgradeInfo = (function (_super) {
         }
         if (level >= 4) {
             this.p3.visible = true;
+        }
+        if (level >= 5) {
+            this.p4.visible = true;
         }
     };
     PreUpgradeInfo.prototype.onClick = function () {

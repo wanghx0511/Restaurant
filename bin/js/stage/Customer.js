@@ -35,8 +35,6 @@ var Customer = (function (_super) {
         _this.loadImage(_this.customerPic);
         _this.useX = posX;
         _this.on("click", _this, _this.onCustomerClick);
-        // this.timer.frameLoop(15, this, this.up);
-        // this.timer.frameLoop(30, this, this.down);
         _this.timer.loop(40, _this, _this.jump);
         return _this;
     }
@@ -56,14 +54,6 @@ var Customer = (function (_super) {
             this.jumpStatus = true;
         }
     };
-    // public up(){
-    //     // Laya.Tween.to(this, this.y + 50, 125);
-    //     this.y = this.y + 50;
-    // }
-    // public down() {
-    //     // Laya.Tween.to(this, this.y -100, 250);
-    //     this.y = this.y - 100;
-    // }
     Customer.prototype.haveTips = function () {
         return this.tips;
     };
@@ -111,13 +101,6 @@ var Customer = (function (_super) {
             this.value = 0;
         this.bar.value = this.value;
     };
-    // private onClick(e : Laya.Event) {
-    //     if(this.status == 0) {
-    //         this.onCustomerClick();
-    //     } else {
-    //         this.onCashClick();
-    //     }
-    // }
     //没小费了
     Customer.prototype.changeTipStatus = function () {
         this.tips = false;
@@ -204,12 +187,6 @@ var Customer = (function (_super) {
         Laya.Tween.to(this, { x: Laya.stage.width }, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.mayDestory, [2]));
         StageManager.stage.addCashBag(this);
         this.stopJump = false;
-        // this.graphics.clear();
-        // if(this.tips) {
-        //     this.loadImage(this.cashTipsPic);
-        // } else {
-        //     this.loadImage(this.cashPic);
-        // }
         Laya.timer.clear(this, this.loseCustomer);
         Laya.timer.clear(this, this.changeTipStatus);
     };
