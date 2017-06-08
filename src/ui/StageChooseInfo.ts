@@ -4,6 +4,7 @@ class StageChooseInfo extends ui.StageChooseInfoUI{
         super();
         this.initStageList();
         this.close.on(Laya.Event.CLICK, this, this.onClose);
+        this.panel.vScrollBarSkin = "";
     }
 
     private onClose() {
@@ -15,15 +16,15 @@ class StageChooseInfo extends ui.StageChooseInfoUI{
         var confStage = new ConfigStage();
         var confJson = confStage.findAll();
         var i = 0;
-        var initX = 53;
-        var initY = 132;
+        var initX = 15;
+        var initY = 30;
         
         for(var conf of confJson) {
             this.createStageInfo(conf.sn, initX, initY);
             initX += 250;
             i++;
             if(i % 5 == 0) {
-                initX = 53;
+                initX = 15;
                 initY += 230;
             }
         }
@@ -56,7 +57,7 @@ class StageChooseInfo extends ui.StageChooseInfoUI{
         stageInfo.stageSn.index = stageSn;
         stageInfo.pos(initX, initY);
         stageInfo.size(stageInfo.width, stageInfo.height);
-        this.addChild(stageInfo);
+        this.panel.addChild(stageInfo);
     }
 
 
