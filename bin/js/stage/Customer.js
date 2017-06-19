@@ -136,7 +136,7 @@ var Customer = (function (_super) {
         var needList = [];
         for (var i = 0; i < this.needs.length; i++) {
             // if(isNeed) break;
-            if (confItem.itemSn == this.needs[i]) {
+            if (confItem.itemSn == this.needs[i] && !isNeed) {
                 isNeed = true;
             }
             else {
@@ -167,10 +167,11 @@ var Customer = (function (_super) {
         }
         imageToDestory.visible = false;
         //看看给齐了没有，如果没有就return
+        var confNeeds = eval(this.confCustomer.needs);
         var matchNum = this.matchNum;
         for (var _d = 0, _e = this.needs; _d < _e.length; _d++) {
             var need = _e[_d];
-            if (matchNum != this.matchNum)
+            if (matchNum == confNeeds.length)
                 break;
             for (var _f = 0, _g = this.gives; _f < _g.length; _f++) {
                 var give = _g[_f];
@@ -179,8 +180,11 @@ var Customer = (function (_super) {
                 break;
             }
         }
+        //出现needs没有东西了，说明最后一个已经给了，matchNum++
+        if (this.needs.length == 0)
+            this.matchNum += 1;
         //匹配数小于需求数，说明没完成呢
-        if (this.matchNum < this.needs.length)
+        if (this.matchNum < confNeeds.length)
             return;
         this.bubble.destroy();
         //完成了，去掉客人图，换成钱图

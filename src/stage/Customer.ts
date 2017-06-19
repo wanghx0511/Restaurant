@@ -145,7 +145,7 @@ class Customer extends Laya.Sprite{
         var needList : number[] = [];
         for(var i = 0; i < this.needs.length; i++) {
             // if(isNeed) break;
-            if(confItem.itemSn == this.needs[i]) {
+            if(confItem.itemSn == this.needs[i] && !isNeed) {
                 isNeed = true;
             } else {
                 needList.push(this.needs[i]);
@@ -174,16 +174,19 @@ class Customer extends Laya.Sprite{
         imageToDestory.visible = false;
 
         //看看给齐了没有，如果没有就return
+        var confNeeds: number[] = eval(this.confCustomer.needs);
         var matchNum = this.matchNum;
         for(let need of this.needs) {
-            if(matchNum != this.matchNum) break;
+            if(matchNum == confNeeds.length) break;
             for(let give of this.gives) {
                 if(need == give) this.matchNum += 1;
                 break;
             }
         }
+        //出现needs没有东西了，说明最后一个已经给了，matchNum++
+        if(this.needs.length == 0) this.matchNum += 1;
         //匹配数小于需求数，说明没完成呢
-        if(this.matchNum < this.needs.length) return;
+        if(this.matchNum < confNeeds.length) return;
         this.bubble.destroy();
         //完成了，去掉客人图，换成钱图
         Laya.Tween.to(this, {x : Laya.stage.width}, new Utils().calcTweenNeedTime(Laya.stage.width - this.useX), null, new Laya.Handler(this, this.mayDestory,[2]));

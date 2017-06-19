@@ -1,5 +1,5 @@
 [
-{"bubblePic":"bubblebg.png","bubblePosX":-170,"name":"老吴","needs":"[12]","picture":"wuxiubo.png","posY":170,"sn":1,"tiedtime":16000,"tip":20,"tiptime":4000,"waittime":22000},
+{"bubblePic":"bubblebg.png","bubblePosX":-170,"name":"老吴","needs":"[12,12]","picture":"wuxiubo.png","posY":170,"sn":1,"tiedtime":16000,"tip":20,"tiptime":4000,"waittime":22000},
 {"bubblePic":"bubblebg.png","bubblePosX":-170,"name":"小刘","needs":"[14]","picture":"liuhaoran.png","posY":170,"sn":2,"tiedtime":16000,"tip":20,"tiptime":4000,"waittime":22000},
 {"bubblePic":"bubblebg.png","bubblePosX":-170,"name":"吴老板","needs":"[12,14]","picture":"wuxiubo.png","posY":170,"sn":3,"tiedtime":16000,"tip":20,"tiptime":4000,"waittime":22000},
 {"bubblePic":"bubblebg.png","bubblePosX":-170,"name":"刘老板","needs":"[8]","picture":"liuhaoran.png","posY":170,"sn":4,"tiedtime":16000,"tip":20,"tiptime":4000,"waittime":22000},
