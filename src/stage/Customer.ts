@@ -208,7 +208,7 @@ class Customer extends Laya.Sprite{
         //出现needs没有东西了，说明最后一个已经给了，matchNum++
         if(this.needs.length == 0) this.matchNum += 1;
         //return前，加一下耐心(测试用1s，单位为ms)
-        this.updateValue(1000);//confItem.addPatient);
+        this.updateValue(confItem.addPatient);
         //匹配数小于需求数，说明没完成呢
         if(this.matchNum < confNeeds.length) return;
         this.bubble.destroy();

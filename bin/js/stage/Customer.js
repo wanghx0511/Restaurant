@@ -207,7 +207,7 @@ var Customer = (function (_super) {
         if (this.needs.length == 0)
             this.matchNum += 1;
         //return前，加一下耐心(测试用1s，单位为ms)
-        this.updateValue(1000); //confItem.addPatient);
+        this.updateValue(confItem.addPatient);
         //匹配数小于需求数，说明没完成呢
         if (this.matchNum < confNeeds.length)
             return;
