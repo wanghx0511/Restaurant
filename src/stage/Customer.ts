@@ -34,6 +34,8 @@ class Customer extends Laya.Sprite{
     //停止蹦跳
     private stopJump : boolean = false;
     private ani: Laya.Animation;
+    //这个顾客加了多少耐心值
+    private addPatient : number = 0;
 
     constructor(confCustomer : any, posX : number) {
         super();
@@ -95,17 +97,37 @@ class Customer extends Laya.Sprite{
         bar.rotation = 270;
         bar.sizeGrid="0,0,0,0,1";
         this.bar = bar;
-        this.timer.loop(1000, this, this.updateValue);
+        this.timer.loop(1000, this, this.updateValue, [0]);
         this.bubble.addChild(bar);
         this.addChild(this.bubble);
 
         this.timer.once(this.confCustomer.tiptime, this, this.changeTipStatus);
-        this.timer.once(this.confCustomer.waittime , this, this.loseCustomer);
+        this.timer.once(this.confCustomer.waittime , this, this.checkIfAddPatient);
     }
 
-    public updateValue() : void {
-        var progress = 1000 / this.confCustomer.waittime;
-        this.value -= progress;
+    //检测一下是否有加耐心值，有的话再开一个计时器，没有直接跑
+    public checkIfAddPatient() : void{
+        console.log(this.addPatient);
+        if(this.addPatient == 0) {
+            console.log(1);
+            this.loseCustomer();
+        } else {
+            console.log(2);
+            this.timer.once(this.addPatient , this, this.loseCustomer);
+        }
+    }
+
+    public updateValue(addPatient : number) : void {
+        var progress = 0;
+        var addProgress = 0;
+        this.addPatient += addPatient;
+        if(this.addPatient != 0) {
+            progress = 1000 / (this.confCustomer.waittime + addPatient);
+            addProgress = addPatient / (this.confCustomer.waittime + addPatient);
+        } else {
+            progress =  1000 / this.confCustomer.waittime;
+        }
+        this.value = this.value - progress + addProgress;
         if(this.value < 0) this.value = 0;
         this.bar.value = this.value;
     }
@@ -185,6 +207,8 @@ class Customer extends Laya.Sprite{
         }
         //出现needs没有东西了，说明最后一个已经给了，matchNum++
         if(this.needs.length == 0) this.matchNum += 1;
+        //return前，加一下耐心(测试用1s，单位为ms)
+        this.updateValue(1000);//confItem.addPatient);
         //匹配数小于需求数，说明没完成呢
         if(this.matchNum < confNeeds.length) return;
         this.bubble.destroy();

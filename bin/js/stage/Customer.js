@@ -29,6 +29,8 @@ var Customer = (function (_super) {
         _this.jumpStatus = true;
         //停止蹦跳
         _this.stopJump = false;
+        //这个顾客加了多少耐心值
+        _this.addPatient = 0;
         //顾客
         _this.confCustomer = confCustomer;
         _this.customerPic = "customer/" + _this.confCustomer.picture;
@@ -88,15 +90,36 @@ var Customer = (function (_super) {
         bar.rotation = 270;
         bar.sizeGrid = "0,0,0,0,1";
         this.bar = bar;
-        this.timer.loop(1000, this, this.updateValue);
+        this.timer.loop(1000, this, this.updateValue, [0]);
         this.bubble.addChild(bar);
         this.addChild(this.bubble);
         this.timer.once(this.confCustomer.tiptime, this, this.changeTipStatus);
-        this.timer.once(this.confCustomer.waittime, this, this.loseCustomer);
+        this.timer.once(this.confCustomer.waittime, this, this.checkIfAddPatient);
     };
-    Customer.prototype.updateValue = function () {
-        var progress = 1000 / this.confCustomer.waittime;
-        this.value -= progress;
+    //检测一下是否有加耐心值，有的话再开一个计时器，没有直接跑
+    Customer.prototype.checkIfAddPatient = function () {
+        console.log(this.addPatient);
+        if (this.addPatient == 0) {
+            console.log(1);
+            this.loseCustomer();
+        }
+        else {
+            console.log(2);
+            this.timer.once(this.addPatient, this, this.loseCustomer);
+        }
+    };
+    Customer.prototype.updateValue = function (addPatient) {
+        var progress = 0;
+        var addProgress = 0;
+        this.addPatient += addPatient;
+        if (this.addPatient != 0) {
+            progress = 1000 / (this.confCustomer.waittime + addPatient);
+            addProgress = addPatient / (this.confCustomer.waittime + addPatient);
+        }
+        else {
+            progress = 1000 / this.confCustomer.waittime;
+        }
+        this.value = this.value - progress + addProgress;
         if (this.value < 0)
             this.value = 0;
         this.bar.value = this.value;
@@ -183,6 +206,8 @@ var Customer = (function (_super) {
         //出现needs没有东西了，说明最后一个已经给了，matchNum++
         if (this.needs.length == 0)
             this.matchNum += 1;
+        //return前，加一下耐心(测试用1s，单位为ms)
+        this.updateValue(1000); //confItem.addPatient);
         //匹配数小于需求数，说明没完成呢
         if (this.matchNum < confNeeds.length)
             return;
